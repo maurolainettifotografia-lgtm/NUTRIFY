@@ -1,0 +1,182 @@
+{
+  "app_name": "Nutrify",
+  "personality": "7 Dark-First Utility with 6 Glass / Luxe DARK elements",
+  "personality_one_liner": "A premium, high-contrast, performance-driven nutrition tracker that feels like a durable athletic tool with cinematic, glass-luxe polish.",
+  "color": {
+    "surface": "#0D0F12",
+    "onSurface": "#FFFFFF",
+    "surfaceSecondary": "#1A1D23",
+    "onSurfaceSecondary": "#F8FAFC",
+    "surfaceTertiary": "#252932",
+    "onSurfaceTertiary": "#E2E8F0",
+    "surfaceInverse": "#FFFFFF",
+    "onSurfaceInverse": "#0D0F12",
+    "brand": "#B8F34B",
+    "onBrand": "#000000",
+    "brandPrimary": "#B8F34B",
+    "onBrandPrimary": "#000000",
+    "brandSecondary": "#9AD532",
+    "onBrandSecondary": "#000000",
+    "brandTertiary": "rgba(184, 243, 75, 0.12)",
+    "onBrandTertiary": "#B8F34B",
+    "success": "#10B981",
+    "onSuccess": "#FFFFFF",
+    "warning": "#F59E0B",
+    "onWarning": "#FFFFFF",
+    "error": "#EF4444",
+    "onError": "#FFFFFF",
+    "info": "#4B5563",
+    "onInfo": "#FFFFFF",
+    "border": "#2E333D",
+    "borderStrong": "#3C4350",
+    "divider": "#232730",
+    "muted": "#9CA3AF"
+  },
+  "typography": {
+    "displayFontFamily": "Geist",
+    "textFontFamily": "Inter",
+    "scale": {
+      "sm": 12,
+      "base": 14,
+      "lg": 16,
+      "xl": 20,
+      "2xl": 24
+    }
+  },
+  "spacing": {
+    "rule": "Strict padding around premium cards. 16px (lg) padding for standard cards, 24px (xl) screen edge margin. Use 8px (sm) for internal element grouping.",
+    "xs": 4,
+    "sm": 8,
+    "md": 12,
+    "lg": 16,
+    "xl": 24,
+    "2xl": 32,
+    "3xl": 48
+  },
+  "radius_tokens": {
+    "sm": 6,
+    "md": 12,
+    "lg": 20,
+    "pill": 999
+  },
+  "shadow_tier": "0",
+  "navigation": "bottom_tabs",
+  "icon_set": "Phosphor",
+  "glassmorphism": {
+    "enabled": "true",
+    "do's": [
+      "Use heavy glass with a dark translucent tint (rgba(13, 15, 18, 0.85)) on the bottom tab bar and sticky headers.",
+      "Use glass overlay on the floating action button (FAB) for quick food add.",
+      "Apply glass effect to the onboarding/login modal cards over background imagery."
+    ],
+    "dont's": [
+      "Do not use glass on standard data cards (use solid #1A1D23 for performance and readability).",
+      "Do not blur chart backgrounds.",
+      "Do not use light frosted glass; keep it dark, deep, and cinematic."
+    ]
+  },
+  "platform_libraries": {
+    "glass": {
+      "ios": "expo-glass-effect",
+      "android": "expo-blur",
+      "low_end_android_fallback": "solid surfaceSecondary"
+    },
+    "image": "expo-image",
+    "blur": "expo-blur",
+    "bottom_sheet": "@gorhom/bottom-sheet",
+    "animation": "react-native-reanimated",
+    "gesture": "react-native-gesture-handler"
+  },
+  "screens": [
+    {
+      "name": "Welcome/Login",
+      "purpose": "A cinematic entry point that establishes the premium brand and captures the signature designer stamp.",
+      "states": {
+        "loading": "Dark screen with a glowing #B8F34B minimalist spinner.",
+        "empty": "N/A",
+        "error": "Standard error toast."
+      },
+      "layout": "Full-bleed dark athletic background image (hero_athletic) layered with a top-to-bottom vertical gradient scrim (transparent to 90% #0D0F12). At the top: 'NUTRIFY / by Mauro Lainetti' in clean typography. Bottom 30%: 'Entrar com Google' button (pill shaped, primary brand color or glass), and the copyright footer '© 2026 Nutrify — Mauro Lainetti. Todos os direitos reservados.' pinned to safe area bottom."
+    },
+    {
+      "name": "Onboarding",
+      "purpose": "Collect user metrics (name, sex, birth date, height, weight, goal, activity level) in a sleek, non-fatiguing flow.",
+      "states": {
+        "loading": "Subtle progress bar pulse.",
+        "empty": "N/A",
+        "error": "Inline red validation text under inputs."
+      },
+      "layout": "Multi-step flow. Top sticky progress bar (#B8F34B). Clean typography for the question (e.g., 'Qual é o seu objetivo principal?'). Large tappable cards (surfaceSecondary) for options. Bottom sticky 'Continuar' button pinned above keyboard. Use smooth fade-through transitions."
+    },
+    {
+      "name": "Painel (Dashboard)",
+      "purpose": "The command center for daily macros, calories, and hydration, built for rapid scanning.",
+      "states": {
+        "loading": "Skeleton loaders matching the circular ring and macro bars.",
+        "empty": "Empty rings (0%), 'Nenhuma refeição registrada hoje'.",
+        "error": "Card displaying 'Erro ao carregar dados' with a retry button."
+      },
+      "layout": "Scrollable feed. Top header (glass) with greeting and date. Hero module: Large circular progress ring for calories (remaining in center, stroke in #B8F34B) surrounded by three horizontal progress bars for Macros (Proteína, Carboidratos, Gordura). Below: Hydration tracker widget (water icons). 'Modo Atleta' active indicator chip if toggled. Pinned FAB (glass) at bottom right for quickly adding food."
+    },
+    {
+      "name": "Diário (Food Diary)",
+      "purpose": "Detailed breakdown of the 6 daily meal categories and logged foods.",
+      "states": {
+        "loading": "Skeleton list items.",
+        "empty": "Illustration of dark plate/food (food_empty_state) + 'Seu diário está vazio. Adicione sua primeira refeição.'",
+        "error": "Toast alert."
+      },
+      "layout": "Segmented by categories: Café da Manhã, Almoço, Lanche, Jantar, Pré-treino, Pós-treino. Each category is a surfaceSecondary card with a header row displaying total calories for that meal, and a nested list of food items. Items show name, portion size, and calories. 'Adicionar alimento' button at the bottom of each section."
+    },
+    {
+      "name": "Buscar / IA (Food Search & AI)",
+      "purpose": "Quickly find foods via Open Food Facts or AI photo recognition.",
+      "states": {
+        "loading": "Scanner animation (neon green laser line scanning up/down) or search skeletons.",
+        "empty": "Camera viewfinder ready state, or 'Nenhum resultado encontrado' in text search.",
+        "error": "Error reading image -> retry."
+      },
+      "layout": "Top toggle (glass segmented control) for 'Texto' vs 'Câmera IA'. Camera mode: Full-screen camera view with a dark UI overlay and a #B8F34B focus box. Text mode: Search input (surfaceTertiary) with instant list results below. Food result cards display macro splits instantly."
+    },
+    {
+      "name": "Evolução (Reports)",
+      "purpose": "Visualize weight trends and nutritional consistency over time.",
+      "states": {
+        "loading": "Chart skeletons.",
+        "empty": "'Dados insuficientes para gerar o gráfico.'",
+        "error": "Retry chart load."
+      },
+      "layout": "Interactive Reanimated charts. Top tab filter (Semana, Mês, Ano). Line chart for weight progression (neon green line on dark grid). Bar chart for daily calorie averages. Cards below showing TMB/TDEE stats based on the Mifflin-St Jeor equation."
+    },
+    {
+      "name": "Perfil (Profile & Settings)",
+      "purpose": "Manage goals, Athlete Mode, and app settings.",
+      "states": {
+        "loading": "Spinner.",
+        "empty": "N/A",
+        "error": "Standard alert."
+      },
+      "layout": "List of settings rows (surfaceSecondary). 'Modo Atleta' gets a prominent toggle switch (highlighted to prevent double-counting exercise calories). Signature 'by Mauro Lainetti' placed elegantly at the bottom of the list."
+    }
+  ],
+  "images": {
+    "hero_athletic": {
+      "url": "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwxfHxhdGhsZXRlJTIwdHJhaW5pbmclMjBkYXJrJTIwYWVzdGhldGljfGVufDB8fHx8MTc5MjA3MTU3NXww&ixlib=rb-4.1.0&q=85",
+      "alt": "grayscale photo of man working out"
+    },
+    "food_empty_state": {
+      "url": "https://images.unsplash.com/photo-1645914589022-3917b99b9a69?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzF8MHwxfHNlYXJjaHwxfHxudXRyaXRpb24lMjBoZWFsdGh5JTIwZm9vZCUyMGRhcmslMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc5MjA3MTU3NXww&ixlib=rb-4.1.0&q=85",
+      "alt": "a black plate topped with three figs and a leaf"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Strictly use #0D0F12 for main background and #1A1D23 for standard cards. Do not deviate to lighter greys or pure black.",
+    "Implement the vibrant green (#B8F34B) selectively for primary actions, active states, progress rings, and Athlete Mode highlights. It is a high-contrast focal point.",
+    "The UI is exclusively in Brazilian Portuguese. Ensure all labels, placeholders, and error messages are correctly translated (e.g., 'Painel', 'Diário', 'Café da Manhã').",
+    "For the Welcome screen and Profile/Settings, position 'NUTRIFY / by Mauro Lainetti' and the copyright text exactly as requested by the user, elegantly integrated.",
+    "Any image used as a background MUST have a top-to-bottom gradient scrim fading into #0D0F12 at >=80% opacity at the bottom so text stays fully legible.",
+    "Avoid using generic blue or purple colors for states. If info state is needed, use neutral greys (#4B5563) to keep the palette strict.",
+    "Ensure the charts and circular progress rings are animated using react-native-reanimated for a premium, buttery-smooth feel.",
+    "Do not use generic Material styling; rely on generous padding (16-24px), subtle border raduis (12-20px), and removing borders or using very dark borders (#2E333D) to separate elements."
+  ]
+}

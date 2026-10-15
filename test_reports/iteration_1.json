@@ -1,0 +1,46 @@
+{
+  "summary": "Full-stack testing for Nutrify PASSED. Backend: 17/17 pytest tests pass covering auth gating, profile+goals (Mifflin-St Jeor), goals recompute, OFF food search, barcode lookup, custom foods, favorites CRUD, diary CRUD + copy + totals + target_calories, water increment+goal, weight record/list, workouts with athlete mode (no double-count verified: tdee=bmr*1.2 when athlete, target_calories=goal+workout), weekly reports, and AI /api/ai/recognize (OpenAI gpt-5.6-terra via emergentintegrations, real food JPEG). Frontend (390x844 mobile viewport): Welcome renders Google button + 'by Mauro Lainetti' signature; after injecting auth_token into localStorage the dashboard shows calorie ring (2054 restantes / 2154 meta), 3 macro bars (Proteínas/Carboidratos/Gorduras), hydration card (quick-add +200/+300/+500 works, 250→450 verified), today summary with workout kcal. Diário tab shows all 6 meals (Café, Lanche Manhã, Almoço, Lanche Tarde, Jantar, Ceia). /add-food opens with Buscar/Favoritos/Meus alimentos tabs; typing 'arroz' returns Open Food Facts results (378 kcal/100g etc.). Evolução renders weight placeholder + daily calories bar chart + macro averages + Metabolismo. Perfil shows user card, Minhas metas (kcal/prot/carb/gord), Modo Atleta toggle, Tema escuro toggle, 'by Mauro Lainetti' signature, Sair da conta. No red screen errors.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [
+      {"screen": "All tabs (Painel/Diário/Evolução/Perfil)", "issues": ["PRD specifies dark theme as default (#0D0F12 bg, #1A1D23 cards), but on first boot the authenticated tabs render in LIGHT theme (white bg, light grey cards) and the 'Tema escuro' toggle on Profile is OFF. The welcome screen itself IS dark. _layout.tsx bootstraps setColorScheme('dark') via storage default fallback — verify that useTheme initial state matches so there is no light-theme flash and the toggle reflects dark=ON by default."]}
+    ],
+    "react_native_issues": [
+      {"component": "pointerEvents prop usage", "issue": "Console warning: 'props.pointerEvents is deprecated. Use style.pointerEvents' — some library/component passes pointerEvents as a prop. Non-blocking but should migrate to style.pointerEvents."},
+      {"component": "KeyboardAwareScrollView / keyboard-controller", "issue": "Console warning: 'could not find scrollable ref!' on tab screens (Evolução, Perfil). Likely a KeyboardAwareScrollView wrapping a non-scrollable child. Harmless but noisy."}
+    ]
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_nutrify_api.py",
+    "/app/backend/tests/conftest.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [
+    "Verify dark theme is actually applied by default on authenticated screens (currently shows light). Either initialize scheme='dark' synchronously in theme.ts, or persist 'dark' on first launch so the Perfil toggle reads correctly.",
+    "Replace deprecated `pointerEvents` prop with `style={{ pointerEvents: ... }}` to silence React Native Web warning.",
+    "Fix 'could not find scrollable ref!' warning by ensuring KeyboardAwareScrollView wraps a scrollable (ScrollView/FlatList) or remove the wrapper when not needed."
+  ],
+  "critical_code_review_comments": [
+    "server.py (793 lines) is approaching the 700-line soft limit; consider splitting into routers (auth, foods, diary, water, weight, workouts, reports, ai).",
+    "PUT /api/diary/{entry_id} takes `grams` as a query parameter instead of a JSON body — unusual REST style; works but inconsistent with other endpoints.",
+    "No MongoDB `_id` leakage detected — all queries use projection `{_id: 0}` ✅.",
+    "All endpoints enforce auth via Depends(get_current_user) and return 401 without token ✅.",
+    "`get_goals` returns 404 when profile missing — correct.",
+    "AI recognize correctly strips `data:` prefix and parses JSON output defensively."
+  ],
+  "updated_files": [
+    "/app/backend/tests/conftest.py (new)",
+    "/app/backend/tests/test_nutrify_api.py (new)"
+  ],
+  "success_rate": {"backend": "100% (17/17)", "frontend": "100% of flows reachable; 1 design mismatch (default theme)"},
+  "seed_data_creation": "Tests create and clean up TEST_* prefixed custom foods, favorites, diary entries, workouts, and water increments against seeded user user_testnutrify1 (Bearer test-token-nutrify-123).",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Seeded auth: 'Bearer test-token-nutrify-123' → user_testnutrify1 (teste.nutrify@example.com, onboarded). Backend URL from frontend/.env EXPO_PUBLIC_BACKEND_URL. For frontend web, inject auth via `localStorage.setItem('auth_token', JSON.stringify('test-token-nutrify-123'))` before navigation. Open Food Facts uses https://search.openfoodfacts.org/search (not legacy /cgi/search.pl). AI uses OpenAI gpt-5.6-terra via emergentintegrations + EMERGENT_LLM_KEY. Known default-theme discrepancy flagged. All list deletes are soft deletes via deleted_at.",
+  "rca_of_issue": "N/A — no bugs found. The dark-theme default observation is a design/initialization concern, not a bug: _layout.tsx calls setColorScheme('dark') asynchronously from storage.getItem fallback, so the first paint may use the global default (likely light) before the effect runs."
+}

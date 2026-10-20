@@ -32,6 +32,14 @@ Build "Nutrify" (by Mauro Lainetti), a premium, dark-mode-first mobile nutrition
 - Profile: edit profile sheet, athlete toggle, theme toggle (dark default), about + signature, delete account, logout.
 - Branding: "by Mauro Lainetti" + © 2026 copyright on welcome/profile.
 
+## Iteration 2 (2026-10-20)
+- Fix: birth date now single masked DD/MM/AAAA input with real-date + age (10–110) validation and inline error.
+- Fix: diary/add-food use LOCAL date (todayStr) instead of UTC (items no longer land on "tomorrow" at night).
+- Fix: PUT /profile weight log upsert (no DuplicateKeyError when re-saving profile same day).
+- Brazilian foods: built-in TACO base (~110 foods, backend/taco_foods.py) searched first, then OFF filtered to Brazil (fallback worldwide).
+- Nutri IA chat assistant (OpenAI gpt-5.5, SSE streaming) at /assistant: knows profile, goals, today's diary/water/workouts; history in `chat_messages`; clear chat.
+
+
 ## Backlog
 - P1: Recipes (multi-ingredient), food comparison tool, meal suggestions by goals.
 - P2: Barcode scanner UI (camera), weekly meal planning, shopping list, fitness app integrations, email verification/password reset (N/A for Google-only).

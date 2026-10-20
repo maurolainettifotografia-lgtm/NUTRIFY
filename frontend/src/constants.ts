@@ -41,6 +41,12 @@ export const WORKOUT_TYPES = [
 export const SIGNATURE = "by Mauro Lainetti";
 export const COPYRIGHT = "© 2026 Nutrify — Mauro Lainetti. Todos os direitos reservados.";
 
+/** Local (not UTC) YYYY-MM-DD, so late-evening entries stay on the user's current day. */
+export function toDateStr(d: Date) {
+  const p = (n: number) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+}
+
 export function todayStr() {
-  return new Date().toISOString().slice(0, 10);
+  return toDateStr(new Date());
 }

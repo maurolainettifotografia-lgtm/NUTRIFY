@@ -9,13 +9,13 @@ import { apiFetch } from "@/src/api";
 import { Card } from "@/src/components/primitives";
 import { useToast } from "@/src/components/toast";
 import { DiaryEntry, useDiary } from "@/src/hooks";
-import { MEALS, todayStr } from "@/src/constants";
+import { MEALS, toDateStr, todayStr } from "@/src/constants";
 import { makeStyles, radius, spacing, useTheme } from "@/src/theme";
 
 function addDays(dateStr: string, n: number) {
   const d = new Date(dateStr + "T00:00:00");
   d.setDate(d.getDate() + n);
-  return d.toISOString().slice(0, 10);
+  return toDateStr(d);
 }
 
 export default function Diary() {

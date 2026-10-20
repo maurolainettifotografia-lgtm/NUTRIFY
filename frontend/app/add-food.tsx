@@ -9,7 +9,7 @@ import Ionicons from "@react-native-vector-icons/ionicons";
 import { apiFetch } from "@/src/api";
 import { Button } from "@/src/components/primitives";
 import { useToast } from "@/src/components/toast";
-import { MEAL_LABELS, MEALS } from "@/src/constants";
+import { MEAL_LABELS, MEALS, todayStr } from "@/src/constants";
 import { makeStyles, radius, spacing, useTheme } from "@/src/theme";
 
 type Food = {
@@ -43,7 +43,7 @@ export default function AddFood() {
   const qc = useQueryClient();
   const params = useLocalSearchParams<{ meal?: string; date?: string }>();
   const [meal, setMeal] = useState(params.meal ?? "almoco");
-  const date = params.date ?? new Date().toISOString().slice(0, 10);
+  const date = params.date ?? todayStr();
 
   const [tab, setTab] = useState<(typeof TABS)[number]["key"]>("search");
   const [q, setQ] = useState("");
@@ -385,7 +385,7 @@ const useStyles = makeStyles((colors) => ({
   container: { flex: 1, backgroundColor: colors.surface },
   header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: spacing.lg, paddingBottom: spacing.md },
   headerTitle: { color: colors.onSurface, fontSize: 17, fontWeight: "700" },
-  chipScroller: { maxHeight: 56, flexGrow: 0 },
+  chipScroller: { height: 52, minHeight: 52, flexGrow: 0, flexShrink: 0 },
   chipRow: { gap: spacing.sm, paddingHorizontal: spacing.lg, paddingVertical: spacing.sm },
   chip: { flexShrink: 0, height: 36, paddingHorizontal: spacing.md, borderRadius: radius.pill, backgroundColor: colors.surfaceSecondary, alignItems: "center", justifyContent: "center", borderWidth: 1, borderColor: colors.border },
   chipActive: { backgroundColor: colors.brandTertiary, borderColor: colors.brandPrimary },

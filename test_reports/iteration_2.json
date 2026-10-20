@@ -1,0 +1,45 @@
+{
+  "summary": "All requested flows tested. Backend: 10/10 new pytest cases pass (TACO Brazilian foods first for 'feijao'/'frango'/'arroz' with brand='TACO' and source='taco' and accent-insensitive match; non-onboarded user PUT /api/profile persists birth_date=1995-05-20 and returns computed goals; GET /api/chat/messages, DELETE /api/chat/messages, SSE POST /api/chat/stream — stream returns 'data: {delta}' events, closes with {done:true}, assistant reply is persisted). Frontend (390x844 mobile): (1) Onboarding birth-date step uses the single masked TextInput testID=input-birth; typing 8 digits shows DD/MM/YYYY; invalid dates 31/02/2000, 01/01/2099 (future) and 01/01/1900 (age>110) all show testID=birth-error and keep onboarding-continue disabled (aria-disabled=true); valid 20/05/1995 clears the error and enables the button. scrollWidth=clientWidth=390 → no horizontal overflow. (2) Diary → add-almoco → food-search-input 'arroz' → first result is TACO 'Arroz branco cozido' (128 kcal/100g) → confirm-add-food → entry appears in meal-almoco for TODAY (2026-10-20, local date) and dashboard totals update (256 kcal almoço). (3) Dashboard open-assistant → /assistant → empty state with suggestion-0..3 → tapping suggestion-1 streams Portuguese reply that uses the user's meta/consumo of today ('Você ainda pode consumir hoje cerca de 1930 kcal', lista protein/carb/gord/água faltantes, cita o arroz já consumido) via gpt-5.5 + emergentintegrations; chat-input + chat-send work; history persists on close/reopen (2 user + 2 assistant); clear-chat empties it. One real bug found: PUT /api/profile returns 500 (pymongo DuplicateKeyError on weights unique index user_id+date) when a user re-onboards on a day they already have a weight entry (e.g., after seed_test.py deletes the profile but not the weight). Reproduced during the end-to-end onboarding step after the pytest run — the user got stuck on /onboarding with a 500. Dark-theme-default and pointerEvents/scrollable-ref warnings from iteration_1 still present (non-blocking).",
+  "backend_issues": {
+    "critical": [
+      {"endpoint": "PUT /api/profile", "issue": "500 DuplicateKeyError on db.weights when creating profile for a user who already has a weights entry for today (e.g., re-onboarding after seed_test.py deletes the profile but keeps weights, or any legitimate re-onboard same day). server.py L275 does an unconditional insert_one into weights; it should upsert on (user_id, date) which has a unique index.", "priority": "HIGH"}
+    ],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [
+      {"flow": "Onboarding completion (test-token-new-456)", "issue": "'Concluir' on last step calls PUT /profile which fails 500 if the user already has a weights entry for today → user stuck on /onboarding, no toast. Hitting backend bug above. Cleaning weights (or fixing the backend upsert) unblocks it.", "affected_testIDs": ["onboarding-continue"]}
+    ],
+    "design_issues": [],
+    "react_native_issues": [
+      {"component": "pointerEvents prop", "issue": "Deprecated prop warning still present on web preview. Reference: library-level (gorhom bottom-sheet / reanimated). Non-blocking."},
+      {"component": "KeyboardAwareScrollView ref", "issue": "'could not find scrollable ref!' warnings persist on tab screens from iteration_1 — not blocking."}
+    ]
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_new_features.py",
+    "/app/backend/tests/test_nutrify_api.py",
+    "/app/test_reports/pytest/pytest_new_features.xml"
+  ],
+  "action_items": [
+    "Fix PUT /api/profile in /app/backend/server.py (around line 275): replace `db.weights.insert_one({...})` with an upsert on {user_id, date}, e.g. `db.weights.update_one({'user_id': uid, 'date': today_str()}, {'$set': {...}, '$setOnInsert': {'id': new_id(), 'created_at': now_utc()}}, upsert=True)`. Alternatively (less safe) also delete weights in seed_test.py — but the upsert fix prevents any real user from being blocked.",
+    "Optional: in seed_test.py also `db.weights.delete_many({'user_id': NEW_ID})` so re-running the seed guarantees a clean onboarding retry."
+  ],
+  "critical_code_review_comments": [
+    "server.py update_profile has an insert-only weights write that races with the unique index (user_id,date) — classic cause of 500 on repeat onboarding; must upsert.",
+    "server.py now ~910 lines, past the 700-line soft limit; splitting into routers (auth/foods/diary/chat/etc.) is overdue.",
+    "/api/chat/stream buffers full assistant reply before persisting — fine, but note the stored content loses the newlines/bullets ordering only if the client reassembles differently (verified OK here).",
+    "assistant.tsx: BASE comes from process.env.EXPO_PUBLIC_BACKEND_URL ✅; fetch call uses expo/fetch so SSE streaming works in RN. ok.",
+    "Chat system prompt correctly embeds the user's goals and today's diary (build_chat_context) — personalization verified in UI reply."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_new_features.py (new)"
+  ],
+  "success_rate": {"backend": "100% (10/10 new + previous suite still green)", "frontend": "3/4 flows fully pass; onboarding Conclude blocked by backend 500 (DuplicateKeyError)"},
+  "seed_data_creation": "Reseeded via /app/backend/seed_test.py (test-token-nutrify-123 onboarded + test-token-new-456 non-onboarded). Pytest TestOnboardingBirthDate temporarily onboards user_testnew1 — after the fix for the weights upsert, the browser onboarding will still succeed even without re-seeding.",
+  "retest_needed": true,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Run `cd /app/backend && python seed_test.py` before testing onboarding, and also delete lingering weight entries for user_testnew1 (or fix PUT /profile to upsert). All chat SSE and TACO behavior confirmed. Dashboard open-assistant navigates to /assistant; suggestion-0..3 chips work; use msg-assistant selector to wait for streamed content (len>20). AI responds in Portuguese within ~3-6 seconds.",
+  "rca_of_issue": "PUT /api/profile DuplicateKeyError: when the profile for user_id does not exist, server.py takes the 'insert' branch and unconditionally inserts into db.weights with {user_id, date=today}. db.weights has a unique index on (user_id, date) (startup). If a previous flow (test onboarding, prior-day seeding bug, etc.) already left a weight doc for today, the second insert raises pymongo.errors.DuplicateKeyError and returns 500. Reproduction: 1) run `python seed_test.py` so user_testnew1 has no profile. 2) call PUT /api/profile with weight_kg=82 (succeeds, inserts weight). 3) delete only the profile row from mongo. 4) call PUT /api/profile again → 500. Mitigation (code): change the insert to an upsert on (user_id, date). Mitigation (ops/testing): seed_test.py should also db.weights.delete_many({'user_id': NEW_ID})."
+}

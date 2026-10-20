@@ -75,6 +75,12 @@ export default function Onboarding() {
   });
 
   const current = STEPS[step];
+  const birthText = [form.day, form.month, form.year].filter(Boolean).join("/");
+  const birthError = useMemo(() => validateBirth(form.day, form.month, form.year), [form.day, form.month, form.year]);
+  const onBirthChange = (t: string) => {
+    const digits = t.replace(/[^0-9]/g, "").slice(0, 8);
+    setForm((f) => ({ ...f, day: digits.slice(0, 2), month: digits.slice(2, 4), year: digits.slice(4, 8) }));
+  };
   const canContinue = useMemo(() => {
     switch (current) {
       case "name":
@@ -82,11 +88,7 @@ export default function Onboarding() {
       case "sex":
         return form.sex !== "";
       case "birth":
-        return (
-          Number(form.day) >= 1 && Number(form.day) <= 31 &&
-          Number(form.month) >= 1 && Number(form.month) <= 12 &&
-          form.year.length === 4 && Number(form.year) > 1920
-        );
+        return birthError === null && form.day !== "";
       case "height":
         return Number(form.height_cm) >= 100 && Number(form.height_cm) <= 250;
       case "weight":
@@ -98,7 +100,7 @@ export default function Onboarding() {
       case "goal":
         return form.goal !== "";
     }
-  }, [current, form]);
+  }, [current, form, birthError]);
 
   const onNext = () => {
     if (step < STEPS.length - 1) setStep((s) => s + 1);
@@ -147,12 +149,24 @@ export default function Onboarding() {
           )}
           {current === "birth" && (
             <View style={{ gap: spacing.lg }}>
-              <StepTitle title="Qual é a sua data de nascimento?" />
-              <View style={styles.dateRow}>
-                <SmallInput value={form.day} onChange={(v) => set("day", v)} placeholder="Dia" max={2} testID="input-day" />
-                <SmallInput value={form.month} onChange={(v) => set("month", v)} placeholder="Mês" max={2} testID="input-month" />
-                <SmallInput value={form.year} onChange={(v) => set("year", v)} placeholder="Ano" max={4} testID="input-year" />
+              <StepTitle title="Qual é a sua data de nascimento?" subtitle="Usada para calcular sua idade e metabolismo." />
+              <View style={styles.inputWrap}>
+                <TextInput
+                  testID="input-birth"
+                  value={birthText}
+                  onChangeText={onBirthChange}
+                  placeholder="DD/MM/AAAA"
+                  placeholderTextColor={colors.muted}
+                  keyboardType="number-pad"
+                  maxLength={10}
+                  style={styles.input}
+                  autoFocus
+                />
+                <Ionicons name="calendar-outline" size={20} color={colors.muted} />
               </View>
+              {birthError && form.year.length === 4 ? (
+                <Text testID="birth-error" style={styles.errorText}>{birthError}</Text>
+              ) : null}
             </View>
           )}
           {current === "height" && (
@@ -247,22 +261,17 @@ function StepText({
   );
 }
 
-function SmallInput({ value, onChange, placeholder, max, testID }: { value: string; onChange: (v: string) => void; placeholder: string; max: number; testID?: string }) {
-  const styles = useStyles();
-  const { colors } = useTheme();
-  return (
-    <View style={[styles.inputWrap, { flex: 1 }]}>
-      <TextInput
-        testID={testID}
-        value={value}
-        onChangeText={(t) => onChange(t.replace(/[^0-9]/g, "").slice(0, max))}
-        placeholder={placeholder}
-        placeholderTextColor={colors.muted}
-        keyboardType="number-pad"
-        style={[styles.input, { textAlign: "center" }]}
-      />
-    </View>
-  );
+/** Returns an error message, or null when the date is a real past date with age 10–110. */
+function validateBirth(day: string, month: string, year: string): string | null {
+  if (day.length !== 2 || month.length !== 2 || year.length !== 4) return "Digite a data completa (DD/MM/AAAA).";
+  const d = Number(day), m = Number(month), y = Number(year);
+  const date = new Date(y, m - 1, d);
+  if (date.getFullYear() !== y || date.getMonth() !== m - 1 || date.getDate() !== d) return "Data inválida.";
+  const now = new Date();
+  let age = now.getFullYear() - y;
+  if (now.getMonth() < m - 1 || (now.getMonth() === m - 1 && now.getDate() < d)) age -= 1;
+  if (age < 10 || age > 110) return "Informe uma data de nascimento válida (idade entre 10 e 110 anos).";
+  return null;
 }
 
 function Choice({ label, desc, active, onPress, icon, testID }: { label: string; desc?: string; active: boolean; onPress: () => void; icon?: any; testID?: string }) {
@@ -301,7 +310,7 @@ const useStyles = makeStyles((colors) => ({
   },
   input: { flex: 1, color: colors.onSurface, fontSize: 20, fontWeight: "600", paddingVertical: spacing.lg },
   suffix: { color: colors.muted, fontSize: 16, fontWeight: "600" },
-  dateRow: { flexDirection: "row", gap: spacing.md },
+  errorText: { color: colors.error, fontSize: 14, fontWeight: "500" },
   choice: {
     flexDirection: "row",
     alignItems: "center",

@@ -92,6 +92,17 @@ export default function Dashboard() {
           <Ionicons name="chevron-forward" size={20} color={colors.muted} />
         </Pressable>
 
+        <Pressable testID="open-assistant" onPress={() => router.push("/assistant")} style={styles.addRow}>
+          <View style={[styles.addIcon, { backgroundColor: colors.brandTertiary }]}>
+            <Ionicons name="sparkles" size={20} color={colors.brandPrimary} />
+          </View>
+          <View style={{ flex: 1 }}>
+            <Text style={styles.addTitle}>Nutri IA</Text>
+            <Text style={styles.addSub}>Tire dúvidas e receba dicas com base nas suas metas</Text>
+          </View>
+          <Ionicons name="chevron-forward" size={20} color={colors.muted} />
+        </Pressable>
+
         <Card>
           <Text style={styles.sectionTitle}>Resumo de hoje</Text>
           <View style={styles.summaryGrid}>

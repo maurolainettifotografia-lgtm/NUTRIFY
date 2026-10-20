@@ -56,3 +56,21 @@ db.profiles.update_one(
 )
 
 print("Seeded test user, session token:", TOKEN)
+
+# Non-onboarded user (to test onboarding / birth date). Profile is removed on each run.
+NEW_ID, NEW_TOKEN = "user_testnew1", "test-token-new-456"
+db.users.update_one(
+    {"user_id": NEW_ID},
+    {"$set": {"user_id": NEW_ID, "email": "novo.nutrify@example.com", "name": "Novo Usuário",
+              "picture": None, "created_at": datetime.now(timezone.utc), "deleted_at": None}},
+    upsert=True,
+)
+db.user_sessions.update_one(
+    {"session_token": NEW_TOKEN},
+    {"$set": {"session_token": NEW_TOKEN, "user_id": NEW_ID, "created_at": datetime.now(timezone.utc),
+              "expires_at": datetime.now(timezone.utc) + timedelta(days=365)}},
+    upsert=True,
+)
+db.profiles.delete_one({"user_id": NEW_ID})
+db.weights.delete_many({"user_id": NEW_ID})
+print("Seeded non-onboarded user, session token:", NEW_TOKEN)

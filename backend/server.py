@@ -12,6 +12,9 @@ from typing import List, Optional, Dict, Any
 import uuid
 from datetime import datetime, timezone, timedelta, date as date_cls
 import httpx
+from fastapi.responses import StreamingResponse
+
+from taco_foods import search_taco
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
@@ -270,11 +273,12 @@ async def update_profile(data: ProfileInput, user: Dict[str, Any] = Depends(get_
         await db.profiles.insert_one(updates)
         # seed weight history with current weight
         if updates.get("weight_kg"):
-            await db.weights.insert_one({
-                "id": new_id(), "user_id": user["user_id"],
-                "weight_kg": float(updates["weight_kg"]),
-                "date": today_str(), "created_at": now_utc(),
-            })
+            await db.weights.update_one(
+                {"user_id": user["user_id"], "date": today_str()},
+                {"$set": {"weight_kg": float(updates["weight_kg"]), "updated_at": now_utc()},
+                 "$setOnInsert": {"id": new_id(), "created_at": now_utc()}},
+                upsert=True,
+            )
     profile = await db.profiles.find_one({"user_id": user["user_id"]}, {"_id": 0})
     profile["goals"] = compute_goals(profile)
     return profile
@@ -358,25 +362,39 @@ async def search_foods(q: str, user: Dict[str, Any] = Depends(get_current_user))
     for c in custom:
         c["source"] = "custom"
         results.append(c)
-    try:
+    # Brazilian reference foods (TACO) next
+    results.extend(search_taco(q))
+
+    async def off_search(query: str) -> List[Dict[str, Any]]:
         async with httpx.AsyncClient(timeout=20) as hc:
             resp = await hc.get(
                 "https://search.openfoodfacts.org/search",
                 params={
-                    "q": q,
+                    "q": query,
                     "page_size": 30,
                     "fields": "code,product_name,product_name_pt,brands,nutriments,image_url",
                 },
                 headers={"User-Agent": "Nutrify/1.0 (contact@nutrify.app)"},
             )
-        if resp.status_code == 200:
-            for p in resp.json().get("hits", []):
-                item = normalize_off_product(p)
-                if item and item["calories"] > 0:
-                    results.append(item)
+        if resp.status_code != 200:
+            return []
+        out = []
+        for p in resp.json().get("hits", []):
+            item = normalize_off_product(p)
+            if item and item["calories"] > 0:
+                out.append(item)
+        return out
+
+    try:
+        # Prefer products sold in Brazil; fall back to worldwide if few results
+        off = await off_search(f'{q} countries_tags:"en:brazil"')
+        if len(off) < 5:
+            seen = {o["code"] for o in off}
+            off += [o for o in await off_search(q) if o["code"] not in seen]
+        results.extend(off)
     except Exception as e:
         logger.warning(f"OFF search failed: {e}")
-    return {"results": results[:40]}
+    return {"results": results[:50]}
 
 
 @api_router.get("/foods/barcode/{code}")
@@ -763,6 +781,106 @@ async def recognize_food(data: RecognizeInput, user: Dict[str, Any] = Depends(ge
 
 
 # ---------------------------------------------------------------------------
+# AI nutrition assistant (chat, GPT-5.5)
+# ---------------------------------------------------------------------------
+CHAT_MODEL = ("openai", "gpt-5.5")
+CHAT_HISTORY_LIMIT = 20
+
+
+class ChatInput(BaseModel):
+    message: str
+    date: Optional[str] = None  # client local date YYYY-MM-DD
+
+
+async def build_chat_context(user: Dict[str, Any], d: str) -> str:
+    profile = await db.profiles.find_one({"user_id": user["user_id"]}, {"_id": 0}) or {}
+    goals = compute_goals(profile) if profile else {}
+    entries = await db.diary.find({"user_id": user["user_id"], "date": d, "deleted_at": None}, {"_id": 0}).to_list(200)
+    totals = {"calories": 0.0, "protein": 0.0, "carbs": 0.0, "fat": 0.0}
+    lines = []
+    for e in entries:
+        t = entry_totals(e)
+        for k in totals:
+            totals[k] += t[k]
+        lines.append(f"- {e.get('meal')}: {e.get('name')} {round(e['grams'])}g ({round(t['calories'])} kcal)")
+    water = await db.water.find_one({"user_id": user["user_id"], "date": d}, {"_id": 0}) or {}
+    workout_kcal = await day_workout_calories(user["user_id"], d)
+    age = compute_age(profile["birth_date"]) if profile.get("birth_date") else None
+    return (
+        f"Nome: {profile.get('name') or user.get('name')}\n"
+        f"Sexo: {profile.get('sex')}, idade: {age}, altura: {profile.get('height_cm')} cm, "
+        f"peso: {profile.get('weight_kg')} kg, peso desejado: {profile.get('goal_weight_kg')} kg\n"
+        f"Objetivo: {profile.get('goal')}, atividade: {profile.get('activity_level')}, "
+        f"modo atleta: {bool(profile.get('athlete_mode'))}\n"
+        f"Metas diárias: {goals.get('calories')} kcal, P {goals.get('protein')} g, "
+        f"C {goals.get('carbs')} g, G {goals.get('fat')} g, água {goals.get('water_goal_ml')} ml\n"
+        f"Hoje ({d}) consumido: {round(totals['calories'])} kcal, P {round(totals['protein'])} g, "
+        f"C {round(totals['carbs'])} g, G {round(totals['fat'])} g; água {water.get('total_ml', 0)} ml; "
+        f"treino {workout_kcal} kcal\n"
+        f"Alimentos de hoje:\n" + ("\n".join(lines) if lines else "- nenhum registrado")
+    )
+
+
+@api_router.get("/chat/messages")
+async def get_chat_messages(user: Dict[str, Any] = Depends(get_current_user)):
+    msgs = await db.chat_messages.find({"user_id": user["user_id"]}, {"_id": 0, "user_id": 0}).sort("created_at", -1).to_list(100)
+    msgs.reverse()
+    return {"messages": msgs}
+
+
+@api_router.delete("/chat/messages")
+async def clear_chat_messages(user: Dict[str, Any] = Depends(get_current_user)):
+    await db.chat_messages.delete_many({"user_id": user["user_id"]})
+    return {"ok": True}
+
+
+@api_router.post("/chat/stream")
+async def chat_stream(data: ChatInput, user: Dict[str, Any] = Depends(get_current_user)):
+    from emergentintegrations.llm.chat import LlmChat, UserMessage, TextDelta, StreamDone
+
+    text = data.message.strip()
+    if not text:
+        raise HTTPException(status_code=400, detail="Mensagem vazia")
+    d = data.date or today_str()
+    context = await build_chat_context(user, d)
+    system = (
+        "Você é a Nutri, assistente nutricional do app Nutrify. Responda sempre em português do Brasil, "
+        "de forma clara, acolhedora e objetiva (respostas curtas). Não use markdown (sem **, # ou tabelas); "
+        "para listas use linhas iniciadas com •. "
+        "Use os dados do usuário abaixo para personalizar as respostas (metas, o que já comeu hoje, o que falta). "
+        "Priorize alimentos brasileiros do dia a dia. Não faça diagnósticos médicos; para condições de saúde, "
+        "recomende procurar um nutricionista ou médico.\n\nDADOS DO USUÁRIO:\n" + context
+    )
+    history = await db.chat_messages.find({"user_id": user["user_id"]}, {"_id": 0}).sort("created_at", -1).to_list(CHAT_HISTORY_LIMIT)
+    history.reverse()
+    initial = [{"role": "system", "content": system}] + [{"role": m["role"], "content": m["content"]} for m in history]
+
+    await db.chat_messages.insert_one({"id": new_id(), "user_id": user["user_id"], "role": "user", "content": text, "created_at": now_utc()})
+
+    chat = LlmChat(api_key=EMERGENT_LLM_KEY, session_id=f"chat_{user['user_id']}_{new_id()}", system_message=system, initial_messages=initial).with_model(*CHAT_MODEL)
+
+    async def gen():
+        parts: List[str] = []
+        try:
+            async for ev in chat.stream_message(UserMessage(text=text)):
+                if isinstance(ev, TextDelta):
+                    parts.append(ev.content)
+                    yield f"data: {json.dumps({'delta': ev.content})}\n\n"
+                elif isinstance(ev, StreamDone):
+                    break
+        except Exception as e:
+            logger.error(f"chat stream failed: {e}")
+            yield f"data: {json.dumps({'error': 'Não foi possível responder agora. Tente novamente.'})}\n\n"
+        full = "".join(parts).strip()
+        msg_id = new_id()
+        if full:
+            await db.chat_messages.insert_one({"id": msg_id, "user_id": user["user_id"], "role": "assistant", "content": full, "created_at": now_utc()})
+        yield f"data: {json.dumps({'done': True, 'id': msg_id})}\n\n"
+
+    return StreamingResponse(gen(), media_type="text/event-stream", headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
+
+
+# ---------------------------------------------------------------------------
 app.include_router(api_router)
 
 app.add_middleware(
@@ -785,6 +903,7 @@ async def startup():
     await db.workouts.create_index([("user_id", 1), ("date", 1)])
     await db.weights.create_index([("user_id", 1), ("date", 1)], unique=True)
     await db.water.create_index([("user_id", 1), ("date", 1)], unique=True)
+    await db.chat_messages.create_index([("user_id", 1), ("created_at", -1)])
     logger.info("Nutrify backend started")
 
 

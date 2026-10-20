@@ -37,12 +37,15 @@ export default function Profile() {
     },
   });
 
+  const [confirmDelete, setConfirmDelete] = useState(false);
   const delAccount = useMutation({
     mutationFn: () => apiFetch("/account", { method: "DELETE" }),
     onSuccess: async () => {
-      toast.show("Conta excluída");
+      toast.show("Conta e dados excluídos");
+      qc.clear();
       await signOut();
     },
+    onError: () => toast.show("Erro ao excluir conta. Tente novamente.", "error"),
   });
 
   const g = profile?.goals;
@@ -184,10 +187,23 @@ export default function Profile() {
           <Text style={styles.logoutText}>Sair da conta</Text>
         </Pressable>
 
-        <Pressable testID="delete-account-btn" onPress={() => delAccount.mutate()} style={styles.deleteRow}>
-          <Ionicons name="trash-outline" size={18} color={colors.error} />
-          <Text style={styles.deleteText}>Excluir minha conta e dados</Text>
-        </Pressable>
+        {confirmDelete ? (
+          <Card>
+            <Text style={styles.deleteWarnTitle}>Excluir conta definitivamente?</Text>
+            <Text style={styles.deleteWarnText}>
+              Seu perfil, diário, pesos, água, treinos, receitas, favoritos, alimentos próprios e conversas com a Nutri serão apagados para sempre. Esta ação não pode ser desfeita.
+            </Text>
+            <View style={{ gap: spacing.sm, marginTop: spacing.md }}>
+              <Button testID="confirm-delete-account" label="Sim, excluir tudo" onPress={() => delAccount.mutate()} loading={delAccount.isPending} />
+              <Button testID="cancel-delete-account" label="Cancelar" variant="secondary" onPress={() => setConfirmDelete(false)} />
+            </View>
+          </Card>
+        ) : (
+          <Pressable testID="delete-account-btn" onPress={() => setConfirmDelete(true)} style={styles.deleteRow}>
+            <Ionicons name="trash-outline" size={18} color={colors.error} />
+            <Text style={styles.deleteText}>Excluir minha conta e dados</Text>
+          </Pressable>
+        )}
 
         <Text style={styles.copyright}>{COPYRIGHT}</Text>
       </ScrollView>
@@ -383,6 +399,8 @@ const useStyles = makeStyles((colors) => ({
   logoutText: { color: colors.onSurfaceSecondary, fontSize: 15, fontWeight: "600" },
   deleteRow: { flexDirection: "row", alignItems: "center", gap: spacing.sm, justifyContent: "center", paddingVertical: spacing.md },
   deleteText: { color: colors.error, fontSize: 13, fontWeight: "600" },
+  deleteWarnTitle: { color: colors.error, fontSize: 16, fontWeight: "800" },
+  deleteWarnText: { color: colors.onSurfaceSecondary, fontSize: 13, lineHeight: 19, marginTop: spacing.sm },
   copyright: { color: colors.muted, fontSize: 10, textAlign: "center", opacity: 0.7, marginTop: spacing.sm },
   sheet: { paddingHorizontal: spacing.lg, paddingTop: spacing.md },
   sheetTitle: { color: colors.onSurface, fontSize: 18, fontWeight: "800", marginBottom: spacing.lg },

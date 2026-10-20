@@ -1,15 +1,15 @@
 {
   "expo": {
     "name": "Nutrify",
-    "slug": "frontend",
+    "slug": "nutrify",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "frontend",
+    "scheme": "nutrify",
     "userInterfaceStyle": "automatic",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.emergent.nutrifyapp.h28j79",
+      "bundleIdentifier": "com.maurolainetti.nutrify",
       "infoPlist": {
         "NSCameraUsageDescription": "Fotografar alimentos para análise nutricional",
         "NSPhotoLibraryUsageDescription": "Selecionar fotos de alimentos da galeria"
@@ -20,7 +20,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#000000"
       },
-      "package": "com.emergent.nutrifyapp.h28j79",
+      "package": "com.maurolainetti.nutrify",
       "permissions": ["android.permission.CAMERA"]
     },
     "web": {

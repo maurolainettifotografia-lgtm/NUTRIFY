@@ -48,6 +48,12 @@ Build "Nutrify" (by Mauro Lainetti), a premium, dark-mode-first mobile nutrition
 - Homemade recipes: CRUD /api/recipes (name, servings, ingredients per-100g + grams; view adds per-100g, serving_grams, totals). Add-food tab "Receitas" (list, create, edit pencil) + /recipe-editor screen (search ingredients, grams, per-serving summary, delete). Logging prefills 1 serving; quick buttons 0.5/1/1.5/2 porções.
 
 
+## Iteration 5 (pre-launch)
+- Account deletion is permanent (LGPD): DELETE /api/account removes users + all per-user collections (USER_DATA_COLLECTIONS); re-login creates a fresh account. Profile screen has an inline confirmation card (confirm-delete-account / cancel-delete-account).
+- OFF resilience: barcode tries br.openfoodfacts.org then world; 400 invalid code, 404 not found, 503 when OFF is down. Search returns `external_available` flag; add-food shows a notice when brand products are unavailable (TACO still works).
+- app.json: android.package & ios.bundleIdentifier = com.maurolainetti.nutrify; slug/scheme = nutrify.
+
+
 
 ## Backlog
 - P1: Recipes (multi-ingredient), food comparison tool, meal suggestions by goals.

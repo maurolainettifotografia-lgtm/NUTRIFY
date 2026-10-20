@@ -64,7 +64,7 @@ export default function AddFood() {
 
   const search = useQuery({
     queryKey: ["foods-search", debounced],
-    queryFn: () => apiFetch<{ results: Food[] }>("/foods/search", { params: { q: debounced } }),
+    queryFn: () => apiFetch<{ results: Food[]; external_available?: boolean }>("/foods/search", { params: { q: debounced } }),
     enabled: tab === "search" && debounced.trim().length >= 2,
   });
 
@@ -203,6 +203,12 @@ export default function AddFood() {
             </Pressable>
           ) : null}
         </View>
+      ) : null}
+
+      {tab === "search" && search.data?.external_available === false ? (
+        <Text testID="external-unavailable" style={styles.externalNote}>
+          Produtos de marca indisponíveis no momento. Mostrando alimentos da tabela TACO.
+        </Text>
       ) : null}
 
       {tab === "custom" ? (
@@ -445,6 +451,7 @@ const useStyles = makeStyles((colors) => ({
   foodName: { color: colors.onSurface, fontSize: 14, fontWeight: "600" },
   foodSub: { color: colors.muted, fontSize: 12, marginTop: 2 },
   editBtn: { width: 36, height: 36, alignItems: "center", justifyContent: "center" },
+  externalNote: { color: colors.warning, fontSize: 12, paddingHorizontal: spacing.lg, marginBottom: spacing.sm },
   empty: { color: colors.muted, fontSize: 14, textAlign: "center", marginTop: spacing["2xl"] },
   sheet: { paddingHorizontal: spacing.lg, paddingTop: spacing.md, gap: spacing.lg },
   sheetHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start", gap: spacing.md },

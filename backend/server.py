@@ -99,11 +99,10 @@ async def create_session(req: SessionRequest):
     if not email or not session_token:
         raise HTTPException(status_code=401, detail="Invalid session data")
 
-    existing = await db.users.find_one({"email": email})
+    # Deleted accounts are removed entirely, so a returning email always starts fresh.
+    existing = await db.users.find_one({"email": email, "deleted_at": None})
     if existing:
         user_id = existing["user_id"]
-        if existing.get("deleted_at"):
-            await db.users.update_one({"user_id": user_id}, {"$set": {"deleted_at": None}})
     else:
         user_id = new_id("user_")
         await db.users.insert_one({
@@ -294,10 +293,18 @@ async def get_goals(user: Dict[str, Any] = Depends(get_current_user)):
 
 @api_router.delete("/account")
 async def delete_account(user: Dict[str, Any] = Depends(get_current_user)):
+    """Permanent deletion (LGPD): removes the account and every piece of user data."""
     uid = user["user_id"]
-    await db.users.update_one({"user_id": uid}, {"$set": {"deleted_at": now_utc()}})
-    await db.user_sessions.delete_many({"user_id": uid})
+    for coll in USER_DATA_COLLECTIONS:
+        await db[coll].delete_many({"user_id": uid})
+    await db.users.delete_one({"user_id": uid})
     return {"ok": True}
+
+
+USER_DATA_COLLECTIONS = [
+    "user_sessions", "profiles", "diary", "weights", "water", "workouts",
+    "recipes", "favorites", "custom_foods", "chat_messages",
+]
 
 
 # ---------------------------------------------------------------------------
@@ -377,7 +384,7 @@ async def search_foods(q: str, user: Dict[str, Any] = Depends(get_current_user))
                 headers={"User-Agent": "Nutrify/1.0 (contact@nutrify.app)"},
             )
         if resp.status_code != 200:
-            return []
+            raise RuntimeError(f"OFF search HTTP {resp.status_code}")
         out = []
         for p in resp.json().get("hits", []):
             item = normalize_off_product(p)
@@ -385,6 +392,7 @@ async def search_foods(q: str, user: Dict[str, Any] = Depends(get_current_user))
                 out.append(item)
         return out
 
+    external_available = True
     try:
         # Prefer products sold in Brazil; fall back to worldwide if few results
         off = await off_search(f'{q} countries_tags:"en:brazil"')
@@ -393,27 +401,36 @@ async def search_foods(q: str, user: Dict[str, Any] = Depends(get_current_user))
             off += [o for o in await off_search(q) if o["code"] not in seen]
         results.extend(off)
     except Exception as e:
+        external_available = False
         logger.warning(f"OFF search failed: {e}")
-    return {"results": results[:50]}
+    return {"results": results[:50], "external_available": external_available}
 
 
 @api_router.get("/foods/barcode/{code}")
 async def food_by_barcode(code: str, user: Dict[str, Any] = Depends(get_current_user)):
-    try:
-        async with httpx.AsyncClient(timeout=15) as hc:
-            resp = await hc.get(
-                f"https://world.openfoodfacts.org/api/v2/product/{code}.json",
-                params={"fields": "code,product_name,product_name_pt,generic_name,generic_name_pt,brands,nutriments,serving_size,image_front_small_url,image_small_url"},
-                headers={"User-Agent": "Nutrify/1.0 (contact@nutrify.app)"},
-            )
-        data = resp.json()
-        if data.get("status") == 1:
-            item = normalize_off_product(data["product"])
-            if item:
-                return item
-    except Exception as e:
-        logger.warning(f"OFF barcode failed: {e}")
-    raise HTTPException(status_code=404, detail="Produto não encontrado")
+    if not code.isdigit() or not 8 <= len(code) <= 14:
+        raise HTTPException(status_code=400, detail="Código de barras inválido")
+    fields = "code,product_name,product_name_pt,generic_name,generic_name_pt,brands,nutriments,serving_size,image_front_small_url,image_small_url"
+    # Brazilian mirror first, then the world database (same data, different hosts for resilience)
+    for host in ("br.openfoodfacts.org", "world.openfoodfacts.org"):
+        try:
+            async with httpx.AsyncClient(timeout=12) as hc:
+                resp = await hc.get(
+                    f"https://{host}/api/v2/product/{code}.json",
+                    params={"fields": fields},
+                    headers={"User-Agent": "Nutrify/1.0 (contact@nutrify.app)"},
+                )
+            if resp.status_code >= 500 or "json" not in resp.headers.get("content-type", ""):
+                continue
+            data = resp.json()
+        except Exception as e:
+            logger.warning(f"OFF barcode failed on {host}: {e}")
+            continue
+        item = normalize_off_product(data["product"]) if data.get("status") == 1 else None
+        if item:
+            return item
+        raise HTTPException(status_code=404, detail="Produto não encontrado")
+    raise HTTPException(status_code=503, detail="Base de produtos indisponível no momento. Tente novamente.")
 
 
 class CustomFoodInput(BaseModel):

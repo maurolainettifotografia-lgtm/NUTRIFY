@@ -25,13 +25,15 @@ type Food = {
   source?: string;
   code?: string;
   serving?: string;
+  serving_grams?: number;
   id?: string;
 };
 
 const TABS = [
   { key: "search", label: "Buscar" },
   { key: "favorites", label: "Favoritos" },
-  { key: "custom", label: "Meus alimentos" },
+  { key: "custom", label: "Meus" },
+  { key: "recipes", label: "Receitas" },
 ] as const;
 
 export default function AddFood() {
@@ -78,9 +80,15 @@ export default function AddFood() {
     enabled: tab === "custom",
   });
 
+  const recipes = useQuery({
+    queryKey: ["recipes"],
+    queryFn: () => apiFetch<{ results: Food[] }>("/recipes"),
+    enabled: tab === "recipes",
+  });
+
   const openPortion = (f: Food) => {
     setSelected(f);
-    setGrams("100");
+    setGrams(String(f.serving_grams ?? 100));
     sheetRef.current?.expand();
   };
 
@@ -125,8 +133,13 @@ export default function AddFood() {
   });
 
   const factor = (Number(grams) || 0) / 100;
-  const list = tab === "search" ? search.data?.results : tab === "favorites" ? favorites.data?.results : custom.data?.results;
-  const loading = tab === "search" ? search.isFetching : tab === "favorites" ? favorites.isLoading : custom.isLoading;
+  const byTab = { search, favorites, custom, recipes }[tab];
+  const list = byTab.data?.results;
+  const loading = tab === "search" ? search.isFetching : byTab.isLoading;
+  const isRecipe = selected?.source === "recipe";
+  const quickOptions = isRecipe && selected?.serving_grams
+    ? [0.5, 1, 1.5, 2].map((p) => ({ label: `${p} porç.`, grams: Math.round(p * selected.serving_grams!) }))
+    : [50, 100, 150, 200].map((g) => ({ label: `${g}g`, grams: g }));
 
   return (
     <View style={[styles.container, { paddingTop: insets.top + spacing.sm }]}>
@@ -199,6 +212,13 @@ export default function AddFood() {
         </Pressable>
       ) : null}
 
+      {tab === "recipes" ? (
+        <Pressable testID="create-recipe" onPress={() => router.push("/recipe-editor")} style={styles.createRow}>
+          <Ionicons name="add-circle" size={20} color={colors.brandPrimary} />
+          <Text style={styles.createText}>Criar receita caseira</Text>
+        </Pressable>
+      ) : null}
+
       {loading ? (
         <ActivityIndicator color={colors.brandPrimary} style={{ marginTop: spacing.xl }} />
       ) : (
@@ -210,14 +230,25 @@ export default function AddFood() {
           renderItem={({ item }) => (
             <Pressable testID={`food-result-${item.name}`} onPress={() => openPortion(item)} style={styles.foodRow}>
               <View style={styles.foodIcon}>
-                <Ionicons name={item.source === "custom" ? "create-outline" : "fast-food-outline"} size={18} color={colors.brandPrimary} />
+                <Ionicons
+                  name={item.source === "recipe" ? "book-outline" : item.source === "custom" ? "create-outline" : "fast-food-outline"}
+                  size={18}
+                  color={colors.brandPrimary}
+                />
               </View>
               <View style={{ flex: 1 }}>
                 <Text style={styles.foodName} numberOfLines={1}>{item.name}</Text>
                 <Text style={styles.foodSub} numberOfLines={1}>
-                  {item.brand ? `${item.brand} · ` : ""}{Math.round(item.calories)} kcal / 100g
+                  {item.source === "recipe" && item.serving_grams
+                    ? `${item.serving} · ${Math.round((item.calories * item.serving_grams) / 100)} kcal/porção`
+                    : `${item.brand ? `${item.brand} · ` : ""}${Math.round(item.calories)} kcal / 100g`}
                 </Text>
               </View>
+              {item.source === "recipe" ? (
+                <Pressable testID={`edit-recipe-${item.name}`} onPress={() => router.push(`/recipe-editor?id=${item.id}`)} hitSlop={8} style={styles.editBtn}>
+                  <Ionicons name="pencil" size={18} color={colors.muted} />
+                </Pressable>
+              ) : null}
               <Ionicons name="add" size={22} color={colors.brandPrimary} />
             </Pressable>
           )}
@@ -229,7 +260,9 @@ export default function AddFood() {
                   : "Nenhum resultado encontrado."
                 : tab === "favorites"
                   ? "Nenhum favorito ainda."
-                  : "Nenhum alimento personalizado."}
+                  : tab === "recipes"
+                    ? "Nenhuma receita ainda. Crie sua primeira receita caseira."
+                    : "Nenhum alimento personalizado."}
             </Text>
           }
         />
@@ -272,9 +305,9 @@ export default function AddFood() {
               </View>
 
               <View style={styles.quickGrams}>
-                {[50, 100, 150, 200].map((g) => (
-                  <Pressable key={g} testID={`quick-grams-${g}`} onPress={() => setGrams(String(g))} style={styles.quickGramBtn}>
-                    <Text style={styles.quickGramText}>{g}g</Text>
+                {quickOptions.map((o, i) => (
+                  <Pressable key={o.label} testID={isRecipe ? `quick-portion-${i}` : `quick-grams-${o.grams}`} onPress={() => setGrams(String(o.grams))} style={styles.quickGramBtn}>
+                    <Text style={styles.quickGramText}>{o.label}</Text>
                   </Pressable>
                 ))}
               </View>
@@ -411,6 +444,7 @@ const useStyles = makeStyles((colors) => ({
   foodIcon: { width: 38, height: 38, borderRadius: radius.sm, backgroundColor: colors.brandTertiary, alignItems: "center", justifyContent: "center" },
   foodName: { color: colors.onSurface, fontSize: 14, fontWeight: "600" },
   foodSub: { color: colors.muted, fontSize: 12, marginTop: 2 },
+  editBtn: { width: 36, height: 36, alignItems: "center", justifyContent: "center" },
   empty: { color: colors.muted, fontSize: 14, textAlign: "center", marginTop: spacing["2xl"] },
   sheet: { paddingHorizontal: spacing.lg, paddingTop: spacing.md, gap: spacing.lg },
   sheetHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start", gap: spacing.md },

@@ -1,0 +1,26 @@
+{
+  "summary": "Receitas Caseiras feature: backend CRUD + validation + user isolation + diary integration all pass (16/16 pytest). Frontend end-to-end flow verified on mobile viewport: create recipe (arroz 300g + feijao 100g, 4 servings), summary updates live, remove-ingredient works, save navigates back to Receitas tab with the recipe listed, portion sheet prefills serving_grams (100g), quick-portion-0/1/3 correctly set 50/100/200g, confirm-add-food logs it to the diary with source='recipe' and correct kcal (115 kcal for 100g at 115 kcal/100g). edit-recipe pencil opens editor with existing data, servings update persists; delete-recipe removes it immediately on web (no confirm) and the row disappears from the list. Regression tabs (tab-search, tab-favorites, tab-custom) still mount their respective inputs/CTAs. Only known warning: 'props.pointerEvents is deprecated' (ignored per request).",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [],
+    "react_native_issues": []
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_recipes.py",
+    "/app/test_reports/pytest/pytest_recipes.xml"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "server.py recipe_view mutates the input dict (r.update) and is called on documents returned from Mongo; because fields are overwritten with computed per-100g values on every call, the original per-ingredient data is still safely nested inside r['ingredients']. No bug today, but a defensive copy would be safer if the function is ever used server-side on data that is re-persisted.",
+    "DELETE /api/recipes/{id} always returns {ok:true} even when the id does not exist or belongs to another user. Not critical (prevents enumeration) but inconsistent with other endpoints that 404."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "100% (16/16)", "frontend": "100%"},
+  "seed_data_creation": "Tests create and clean up their own TEST_-prefixed recipes/diary entries. Pre-seeded users (test-token-nutrify-123, test-token-new-456) used as-is from seed_test.py.",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Recipes feature fully covered by /app/backend/tests/test_recipes.py (CRUD, validation, isolation, diary integration). UI test flow in iteration_4 covers: dashboard quick-add-food → tab-recipes → create-recipe → recipe-editor (recipe-name/servings/ingredient-search/ingredient-result-<name>/ingredient-grams-N/remove-ingredient-N/recipe-summary/save-recipe) → list → food-result-<name> → portion sheet (grams-input, quick-portion-0..3, confirm-add-food) → edit-recipe-<name>/delete-recipe. Note: on web delete-recipe is immediate without confirm (confirmed intentional). The prefilled grams in portion sheet equals serving_grams (not necessarily 1 porção worth when servings != total/100).",
+  "rca_of_issue": "N/A — no issues found."
+}

@@ -44,6 +44,10 @@ Build "Nutrify" (by Mauro Lainetti), a premium, dark-mode-first mobile nutrition
 - Meal suggestions: POST /api/ai/meal-suggestions {meal,date} (gpt-5.5) → 3 Brazilian meals using only TACO foods; macros computed server-side; screen /suggestions with "Adicionar" per suggestion.
 - Barcode: /barcode screen (expo-camera scanner EAN13/EAN8/UPC on native; manual code entry everywhere incl. web) → GET /api/foods/barcode/{code} → portion + meal → add to diary. Entry points: dashboard quick cards + add-food header icon.
 
+## Iteration 4
+- Homemade recipes: CRUD /api/recipes (name, servings, ingredients per-100g + grams; view adds per-100g, serving_grams, totals). Add-food tab "Receitas" (list, create, edit pencil) + /recipe-editor screen (search ingredients, grams, per-serving summary, delete). Logging prefills 1 serving; quick buttons 0.5/1/1.5/2 porções.
+
+
 
 ## Backlog
 - P1: Recipes (multi-ingredient), food comparison tool, meal suggestions by goals.

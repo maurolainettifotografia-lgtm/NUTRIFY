@@ -52,6 +52,7 @@ function RootNavigator() {
       <Stack.Screen name="scan" options={{ presentation: "modal" }} />
       <Stack.Screen name="assistant" />
       <Stack.Screen name="suggestions" />
+      <Stack.Screen name="recipe-editor" />
       <Stack.Screen name="barcode" options={{ presentation: "modal" }} />
     </Stack>
   );

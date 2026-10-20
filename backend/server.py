@@ -446,6 +446,91 @@ async def list_custom_foods(user: Dict[str, Any] = Depends(get_current_user)):
     return {"results": items}
 
 
+# Recipes (multi-ingredient). Ingredients store per-100g values + grams.
+class RecipeIngredient(BaseModel):
+    name: str
+    brand: Optional[str] = None
+    code: Optional[str] = None
+    source: Optional[str] = None
+    grams: float
+    calories: float
+    protein: float = 0
+    carbs: float = 0
+    fat: float = 0
+    fiber: float = 0
+
+
+class RecipeInput(BaseModel):
+    name: str
+    servings: float = 1
+    ingredients: List[RecipeIngredient]
+
+
+def recipe_view(r: Dict[str, Any]) -> Dict[str, Any]:
+    """Expose a recipe as a food (per-100g values) so it can be logged like any food."""
+    total_g = sum(i["grams"] for i in r["ingredients"]) or 1
+    totals = {k: sum(i.get(k, 0) * i["grams"] / 100 for i in r["ingredients"]) for k in ["calories", "protein", "carbs", "fat", "fiber"]}
+    servings = r.get("servings") or 1
+    serving_g = round(total_g / servings)
+    r.update({
+        "source": "recipe",
+        "total_grams": round(total_g),
+        "serving_grams": serving_g,
+        "serving": f"1 porção ({serving_g} g)",
+        "totals": {k: round(v, 1) for k, v in totals.items()},
+        **{k: round(v / total_g * 100, 1) for k, v in totals.items()},
+    })
+    return r
+
+
+async def _validated_recipe(data: RecipeInput) -> Dict[str, Any]:
+    if len(data.name.strip()) < 2 or not data.ingredients or data.servings <= 0:
+        raise HTTPException(status_code=400, detail="Informe nome, porções e ao menos um ingrediente")
+    ings = [i.dict() for i in data.ingredients if i.grams > 0]
+    if not ings:
+        raise HTTPException(status_code=400, detail="Ingredientes precisam ter quantidade")
+    return {"name": data.name.strip(), "servings": data.servings, "ingredients": ings}
+
+
+@api_router.get("/recipes")
+async def list_recipes(user: Dict[str, Any] = Depends(get_current_user)):
+    items = await db.recipes.find({"user_id": user["user_id"], "deleted_at": None}, {"_id": 0}).sort("created_at", -1).to_list(200)
+    return {"results": [recipe_view(r) for r in items]}
+
+
+@api_router.get("/recipes/{recipe_id}")
+async def get_recipe(recipe_id: str, user: Dict[str, Any] = Depends(get_current_user)):
+    r = await db.recipes.find_one({"id": recipe_id, "user_id": user["user_id"], "deleted_at": None}, {"_id": 0})
+    if not r:
+        raise HTTPException(status_code=404, detail="Receita não encontrada")
+    return recipe_view(r)
+
+
+@api_router.post("/recipes")
+async def create_recipe(data: RecipeInput, user: Dict[str, Any] = Depends(get_current_user)):
+    doc = await _validated_recipe(data)
+    doc.update({"id": new_id(), "user_id": user["user_id"], "created_at": now_utc(), "deleted_at": None})
+    await db.recipes.insert_one(doc)
+    doc.pop("_id", None)
+    return recipe_view(doc)
+
+
+@api_router.put("/recipes/{recipe_id}")
+async def update_recipe(recipe_id: str, data: RecipeInput, user: Dict[str, Any] = Depends(get_current_user)):
+    doc = await _validated_recipe(data)
+    res = await db.recipes.update_one({"id": recipe_id, "user_id": user["user_id"], "deleted_at": None}, {"$set": {**doc, "updated_at": now_utc()}})
+    if res.matched_count == 0:
+        raise HTTPException(status_code=404, detail="Receita não encontrada")
+    r = await db.recipes.find_one({"id": recipe_id}, {"_id": 0})
+    return recipe_view(r)
+
+
+@api_router.delete("/recipes/{recipe_id}")
+async def delete_recipe(recipe_id: str, user: Dict[str, Any] = Depends(get_current_user)):
+    await db.recipes.update_one({"id": recipe_id, "user_id": user["user_id"]}, {"$set": {"deleted_at": now_utc()}})
+    return {"ok": True}
+
+
 # Favorites
 class FavoriteInput(BaseModel):
     food: Dict[str, Any]

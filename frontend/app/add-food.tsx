@@ -135,9 +135,14 @@ export default function AddFood() {
           <Ionicons name="close" size={26} color={colors.onSurface} />
         </Pressable>
         <Text style={styles.headerTitle}>Adicionar alimento</Text>
-        <Pressable testID="open-scan" onPress={() => router.replace("/scan")} hitSlop={10}>
-          <Ionicons name="camera-outline" size={24} color={colors.brandPrimary} />
-        </Pressable>
+        <View style={styles.headerActions}>
+          <Pressable testID="open-barcode" onPress={() => router.replace(`/barcode?meal=${meal}&date=${date}`)} hitSlop={10}>
+            <Ionicons name="barcode-outline" size={24} color={colors.brandPrimary} />
+          </Pressable>
+          <Pressable testID="open-scan" onPress={() => router.replace("/scan")} hitSlop={10}>
+            <Ionicons name="camera-outline" size={24} color={colors.brandPrimary} />
+          </Pressable>
+        </View>
       </View>
 
       {/* meal chips */}
@@ -386,6 +391,7 @@ const useStyles = makeStyles((colors) => ({
   header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: spacing.lg, paddingBottom: spacing.md },
   headerTitle: { color: colors.onSurface, fontSize: 17, fontWeight: "700" },
   chipScroller: { height: 52, minHeight: 52, flexGrow: 0, flexShrink: 0 },
+  headerActions: { flexDirection: "row", alignItems: "center", gap: spacing.lg },
   chipRow: { gap: spacing.sm, paddingHorizontal: spacing.lg, paddingVertical: spacing.sm },
   chip: { flexShrink: 0, height: 36, paddingHorizontal: spacing.md, borderRadius: radius.pill, backgroundColor: colors.surfaceSecondary, alignItems: "center", justifyContent: "center", borderWidth: 1, borderColor: colors.border },
   chipActive: { backgroundColor: colors.brandTertiary, borderColor: colors.brandPrimary },

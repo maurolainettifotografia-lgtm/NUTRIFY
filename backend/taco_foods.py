@@ -141,6 +141,15 @@ TACO_FOODS = [
 ]
 
 
+TACO_BY_NORM = {f["_n"]: f for f in TACO_FOODS}
+TACO_NAMES = [f["name"] for f in TACO_FOODS]
+
+
+def find_taco(name: str):
+    f = TACO_BY_NORM.get(_norm(name.strip()))
+    return {k: v for k, v in f.items() if k != "_n"} if f else None
+
+
 def search_taco(q: str, limit: int = 15):
     tokens = _norm(q).split()
     if not tokens:

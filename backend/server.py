@@ -14,7 +14,7 @@ from datetime import datetime, timezone, timedelta, date as date_cls
 import httpx
 from fastapi.responses import StreamingResponse
 
-from taco_foods import search_taco
+from taco_foods import search_taco, find_taco, TACO_NAMES
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
@@ -819,6 +819,84 @@ async def build_chat_context(user: Dict[str, Any], d: str) -> str:
         f"treino {workout_kcal} kcal\n"
         f"Alimentos de hoje:\n" + ("\n".join(lines) if lines else "- nenhum registrado")
     )
+
+
+class SuggestInput(BaseModel):
+    meal: str = "almoco"
+    date: Optional[str] = None
+
+
+MEAL_NAMES_PT = {
+    "cafe_manha": "café da manhã", "lanche_manha": "lanche da manhã", "almoco": "almoço",
+    "lanche_tarde": "lanche da tarde", "jantar": "jantar", "ceia": "ceia",
+}
+
+
+@api_router.post("/ai/meal-suggestions")
+async def meal_suggestions(data: SuggestInput, user: Dict[str, Any] = Depends(get_current_user)):
+    from emergentintegrations.llm.chat import LlmChat, UserMessage
+
+    d = data.date or today_str()
+    profile = await db.profiles.find_one({"user_id": user["user_id"]}, {"_id": 0}) or {}
+    goals = compute_goals(profile)
+    entries = await db.diary.find({"user_id": user["user_id"], "date": d, "deleted_at": None}, {"_id": 0}).to_list(200)
+    consumed = {"calories": 0.0, "protein": 0.0, "carbs": 0.0, "fat": 0.0}
+    for e in entries:
+        t = entry_totals(e)
+        for k in consumed:
+            consumed[k] += t[k]
+    target_cal = goals["calories"] + (await day_workout_calories(user["user_id"], d) if goals["athlete_mode"] else 0)
+    remaining = {
+        "calories": max(0, round(target_cal - consumed["calories"])),
+        "protein": max(0, round(goals["protein"] - consumed["protein"])),
+        "carbs": max(0, round(goals["carbs"] - consumed["carbs"])),
+        "fat": max(0, round(goals["fat"] - consumed["fat"])),
+    }
+    meal_pt = MEAL_NAMES_PT.get(data.meal, data.meal)
+    system = (
+        "Você é um nutricionista brasileiro. Monte refeições típicas brasileiras usando SOMENTE alimentos desta lista "
+        "(use o nome EXATAMENTE como escrito): " + "; ".join(TACO_NAMES) + ". "
+        'Responda SOMENTE com JSON válido: {"suggestions":[{"title":"...","description":"frase curta","items":[{"name":"<nome da lista>","grams":<número>}]}]}. '
+        "Gere 3 opções diferentes, com 2 a 5 itens cada, porções realistas."
+    )
+    prompt = (
+        f"Refeição: {meal_pt}. Objetivo do usuário: {profile.get('goal', 'manutencao')}. "
+        f"Ainda faltam hoje: {remaining['calories']} kcal, {remaining['protein']} g proteína, "
+        f"{remaining['carbs']} g carboidratos, {remaining['fat']} g gordura. "
+        "Monte cada opção para cobrir uma parte adequada do que falta para esta refeição "
+        "(sem ultrapassar as calorias restantes; se faltar pouco, sugira algo leve), priorizando proteína."
+    )
+    chat = LlmChat(api_key=EMERGENT_LLM_KEY, session_id=f"suggest_{new_id()}", system_message=system).with_model(*CHAT_MODEL)
+    try:
+        resp = await chat.send_message(UserMessage(text=prompt))
+    except Exception as e:
+        logger.error(f"meal suggestions failed: {e}")
+        raise HTTPException(status_code=502, detail="Não foi possível gerar sugestões agora")
+    m = re.search(r"\{.*\}", str(resp), re.DOTALL)
+    try:
+        parsed = json.loads(m.group(0)) if m else {}
+    except Exception:
+        parsed = {}
+
+    suggestions = []
+    for s in parsed.get("suggestions", []):
+        items = []
+        for it in s.get("items", []):
+            food = find_taco(str(it.get("name", "")))
+            try:
+                grams = float(it.get("grams", 100))
+            except Exception:
+                grams = 100.0
+            if not food or grams <= 0:
+                continue
+            f = grams / 100
+            items.append({**food, "grams": round(grams), "computed": {
+                "calories": round(food["calories"] * f), "protein": round(food["protein"] * f, 1),
+                "carbs": round(food["carbs"] * f, 1), "fat": round(food["fat"] * f, 1)}})
+        if items:
+            totals = {k: round(sum(i["computed"][k] for i in items), 1) for k in ["calories", "protein", "carbs", "fat"]}
+            suggestions.append({"id": new_id(), "title": str(s.get("title", "Sugestão")), "description": str(s.get("description", "")), "items": items, "totals": totals})
+    return {"meal": data.meal, "remaining": remaining, "suggestions": suggestions}
 
 
 @api_router.get("/chat/messages")

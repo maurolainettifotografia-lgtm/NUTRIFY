@@ -40,6 +40,11 @@ Build "Nutrify" (by Mauro Lainetti), a premium, dark-mode-first mobile nutrition
 - Nutri IA chat assistant (OpenAI gpt-5.5, SSE streaming) at /assistant: knows profile, goals, today's diary/water/workouts; history in `chat_messages`; clear chat.
 
 
+## Iteration 3
+- Meal suggestions: POST /api/ai/meal-suggestions {meal,date} (gpt-5.5) → 3 Brazilian meals using only TACO foods; macros computed server-side; screen /suggestions with "Adicionar" per suggestion.
+- Barcode: /barcode screen (expo-camera scanner EAN13/EAN8/UPC on native; manual code entry everywhere incl. web) → GET /api/foods/barcode/{code} → portion + meal → add to diary. Entry points: dashboard quick cards + add-food header icon.
+
+
 ## Backlog
 - P1: Recipes (multi-ingredient), food comparison tool, meal suggestions by goals.
 - P2: Barcode scanner UI (camera), weekly meal planning, shopping list, fitness app integrations, email verification/password reset (N/A for Google-only).

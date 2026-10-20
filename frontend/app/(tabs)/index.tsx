@@ -92,6 +92,19 @@ export default function Dashboard() {
           <Ionicons name="chevron-forward" size={20} color={colors.muted} />
         </Pressable>
 
+        <View style={styles.quickRow}>
+          <Pressable testID="open-suggestions" onPress={() => router.push("/suggestions")} style={styles.quickCard}>
+            <Ionicons name="restaurant" size={22} color={colors.brandPrimary} />
+            <Text style={styles.quickTitle}>Sugestões de refeições</Text>
+            <Text style={styles.quickSub}>Para bater suas metas</Text>
+          </Pressable>
+          <Pressable testID="open-barcode-dashboard" onPress={() => router.push(`/barcode?date=${date}`)} style={styles.quickCard}>
+            <Ionicons name="barcode-outline" size={22} color={colors.brandPrimary} />
+            <Text style={styles.quickTitle}>Código de barras</Text>
+            <Text style={styles.quickSub}>Produtos embalados</Text>
+          </Pressable>
+        </View>
+
         <Pressable testID="open-assistant" onPress={() => router.push("/assistant")} style={styles.addRow}>
           <View style={[styles.addIcon, { backgroundColor: colors.brandTertiary }]}>
             <Ionicons name="sparkles" size={20} color={colors.brandPrimary} />
@@ -190,6 +203,10 @@ const useStyles = makeStyles((colors) => ({
   addIcon: { width: 40, height: 40, borderRadius: radius.md, backgroundColor: colors.brandPrimary, alignItems: "center", justifyContent: "center" },
   addTitle: { color: colors.onSurface, fontSize: 15, fontWeight: "700" },
   addSub: { color: colors.muted, fontSize: 12, marginTop: 2 },
+  quickRow: { flexDirection: "row", gap: spacing.md },
+  quickCard: { flex: 1, gap: 6, backgroundColor: colors.surfaceSecondary, borderRadius: radius.lg, padding: spacing.lg, borderWidth: 1, borderColor: colors.border, minHeight: 44 },
+  quickTitle: { color: colors.onSurface, fontSize: 14, fontWeight: "700", marginTop: spacing.xs },
+  quickSub: { color: colors.muted, fontSize: 12 },
   sectionTitle: { color: colors.onSurface, fontSize: 16, fontWeight: "700", marginBottom: spacing.md },
   summaryGrid: { flexDirection: "row", gap: spacing.md },
   summaryCell: { flex: 1, alignItems: "center", gap: 6, backgroundColor: colors.surfaceTertiary, borderRadius: radius.md, paddingVertical: spacing.lg },

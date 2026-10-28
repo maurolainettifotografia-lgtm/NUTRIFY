@@ -15,6 +15,7 @@ from zoneinfo import ZoneInfo
 from pymongo import ReturnDocument
 from pymongo.errors import DuplicateKeyError
 import uuid
+import hashlib
 from datetime import datetime, timezone, timedelta, date as date_cls
 import httpx
 from fastapi.responses import StreamingResponse, FileResponse
@@ -64,7 +65,7 @@ app = FastAPI(lifespan=lifespan)
 @app.get("/health", include_in_schema=False)
 @app.head("/health", include_in_schema=False)
 async def health():
-    return {"status": "ok", "version": "1.2.3-api"}
+    return {"status": "ok", "version": "1.3.0-api"}
 
 
 @app.get("/ready", include_in_schema=False)
@@ -1142,8 +1143,11 @@ async def copy_diary(data: CopyInput, user: Dict[str, Any] = Depends(get_current
 
 
 async def day_workout_calories(user_id: str, d: str) -> int:
-    ws = await db.workouts.find({"user_id": user_id, "date": d, "deleted_at": None}, {"_id": 0}).to_list(100)
-    return int(sum(w.get("calories", 0) for w in ws))
+    totals = await db.workouts.aggregate([
+        {"$match": {"user_id": user_id, "date": d, "deleted_at": None}},
+        {"$group": {"_id": None, "calories": {"$sum": "$calories"}}},
+    ]).to_list(1)
+    return int(totals[0]["calories"]) if totals else 0
 
 
 @api_router.get("/diary")
@@ -1268,7 +1272,7 @@ class WorkoutInput(BaseModel):
 @api_router.post("/workouts")
 async def add_workout(data: WorkoutInput, user: Dict[str, Any] = Depends(get_current_user)):
     doc = data.model_dump()
-    doc.update({"id": new_id(), "user_id": user["user_id"], "created_at": now_utc(), "deleted_at": None})
+    doc.update({"id": new_id(), "user_id": user["user_id"], "source": "manual_estimate", "created_at": now_utc(), "deleted_at": None})
     await db.workouts.insert_one(doc)
     doc.pop("_id", None)
     return doc
@@ -1634,6 +1638,7 @@ class SessionExerciseInput(BaseModel):
 
 
 class SessionInput(BaseModel):
+    request_id: Optional[str] = Field(None, min_length=16, max_length=80, pattern=r"^[A-Za-z0-9_-]+$")
     routine_id: Optional[str] = Field(None, max_length=64)
     routine_name: str = Field(max_length=80)
     date: Optional[DateStr] = None
@@ -1735,12 +1740,20 @@ async def routine_last_performance(routine_id: str, user: Dict[str, Any] = Depen
 
 
 def _session_view(s_: Dict[str, Any]) -> Dict[str, Any]:
-    return {k: v for k, v in s_.items() if k not in ("_id", "user_id", "deleted_at")}
+    return {k: v for k, v in s_.items() if k not in ("_id", "user_id", "deleted_at", "request_fingerprint")}
 
 
 @api_router.post("/sessions")
 async def create_session(data: SessionInput, user: Dict[str, Any] = Depends(get_current_user)):
     uid = user["user_id"]
+    fingerprint = hashlib.sha256(json.dumps(data.model_dump(exclude={"request_id"}), sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+    session_id = "session_" + hashlib.sha256(f"{uid}:{data.request_id}".encode()).hexdigest() if data.request_id else new_id()
+    existing = await db.workout_sessions.find_one({"id": session_id, "user_id": uid})
+    if existing:
+        if existing.get("deleted_at") or existing.get("request_fingerprint") != fingerprint:
+            raise HTTPException(409, "Este envio já foi utilizado. Reabra o treino para iniciar outro registro.")
+        await _ensure_session_calories(existing)
+        return _session_view(existing)
     d = data.date or today_str()
     if d > today_str():
         raise HTTPException(status_code=400, detail="A data do treino não pode ser no futuro")
@@ -1764,10 +1777,12 @@ async def create_session(data: SessionInput, user: Dict[str, Any] = Depends(get_
         profile = await db.profiles.find_one({"user_id": uid}, {"_id": 0, "weight_kg": 1}) or {}
         kcal = workouts_lib.estimate_calories(data.duration_min, float(profile.get("weight_kg") or 70))
         if kcal > 0:
-            workout_id = new_id()
+            workout_id = "workout_" + session_id
 
     doc = {
-        "id": new_id(),
+        "_id": session_id,
+        "id": session_id,
+        "request_fingerprint": fingerprint,
         "user_id": uid,
         "routine_id": data.routine_id,
         "routine_name": data.routine_name,
@@ -1781,14 +1796,28 @@ async def create_session(data: SessionInput, user: Dict[str, Any] = Depends(get_
         "created_at": now_utc(),
         "deleted_at": None,
     }
-    await db.workout_sessions.insert_one(doc)
-    if workout_id:
-        await db.workouts.insert_one({
-            "id": workout_id, "user_id": uid, "date": d, "type": "musculacao",
-            "duration_min": data.duration_min, "calories": kcal, "title": data.routine_name,
-            "session_id": doc["id"], "created_at": now_utc(), "deleted_at": None,
-        })
+    try:
+        await db.workout_sessions.insert_one(doc)
+    except DuplicateKeyError:
+        doc = await db.workout_sessions.find_one({"_id": session_id, "user_id": uid})
+        if not doc or doc.get("deleted_at") or doc.get("request_fingerprint") != fingerprint:
+            raise HTTPException(409, "Este envio já foi utilizado com outros dados.")
+    await _ensure_session_calories(doc)
     return _session_view(doc)
+
+
+async def _ensure_session_calories(doc):
+    """Idempotent repair: a failed secondary write can safely be retried."""
+    if doc.get("workout_id") and not doc.get("deleted_at"):
+        await db.workouts.update_one({"_id": doc["workout_id"]}, {"$setOnInsert": {
+            "id": doc["workout_id"], "user_id": doc["user_id"], "date": doc["date"], "type": "musculacao",
+            "duration_min": doc["duration_min"], "calories": doc["calories_burned"], "title": doc["routine_name"],
+            "session_id": doc["id"], "source": "nutrify_met", "created_at": doc["created_at"], "deleted_at": None,
+        }}, upsert=True)
+        active = await db.workout_sessions.find_one({"id": doc["id"], "user_id": doc["user_id"], "deleted_at": None}, {"_id": 1})
+        if not active:
+            await db.workouts.update_one({"_id": doc["workout_id"]}, {"$set": {"deleted_at": now_utc()}})
+            raise HTTPException(409, "Este treino foi removido em outra ação. O gasto não será somado.")
 
 
 @api_router.get("/sessions")

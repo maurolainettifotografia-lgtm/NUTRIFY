@@ -7,7 +7,7 @@ import { KeyboardAwareScrollView } from "react-native-keyboard-controller";
 import Ionicons from "@react-native-vector-icons/ionicons";
 
 import { ExerciseGuide, MuscleSummary } from "@/src/components/exercise-visuals";
-import { apiFetch } from "@/src/api";
+import { apiFetch, ApiError } from "@/src/api";
 import { Button } from "@/src/components/primitives";
 import { useToast } from "@/src/components/toast";
 import { LastPerformance, Routine, Session } from "@/src/hooks";
@@ -37,6 +37,9 @@ export default function WorkoutSession() {
     enabled: !!id,
   });
 
+  const [requestId] = useState(() => `session_${Date.now()}_${Math.random().toString(36).slice(2)}_${Math.random().toString(36).slice(2)}`);
+  const pendingPayload = useRef<Record<string, unknown> | null>(null);
+  const saving = useRef(false);
   const [sets, setSets] = useState<SetState[][]>([]);
   const initialised = useRef(false);
   const [ready, setReady] = useState(false);
@@ -101,10 +104,9 @@ export default function WorkoutSession() {
   const totalCount = sets.reduce((n, list) => n + list.length, 0);
 
   const finish = useMutation({
-    mutationFn: () =>
-      apiFetch<Session>("/sessions", {
-        method: "POST",
-        body: {
+    mutationFn: () => {
+      pendingPayload.current ??= {
+          request_id: requestId,
           routine_id: id,
           routine_name: routine.data?.name ?? "Treino",
           duration_min: Math.min(600, Math.max(1, Math.round((Date.now() - startedAt) / 60000))),
@@ -118,8 +120,10 @@ export default function WorkoutSession() {
               done: s.done,
             })),
           })),
-        },
-      }),
+      };
+      return apiFetch<Session>("/sessions", { method: "POST", body: pendingPayload.current });
+    },
+    onSettled: () => { saving.current = false; },
     onSuccess: (s) => {
       qc.invalidateQueries({ queryKey: ["sessions"] });
       qc.invalidateQueries({ queryKey: ["routines"] });
@@ -136,7 +140,11 @@ export default function WorkoutSession() {
       }
       router.back();
     },
-    onError: (e: any) => toast.show(e?.message ?? "Erro ao salvar o treino", "error"),
+    onError: (e: Error) => {
+      // Validation failures happen before insertion, so the user may correct the fields.
+      if (e instanceof ApiError && (e.status === 400 || e.status === 422)) pendingPayload.current = null;
+      toast.show(e.message ?? "Erro ao salvar o treino", "error");
+    },
   });
 
   const tryFinish = () => {
@@ -144,12 +152,16 @@ export default function WorkoutSession() {
       toast.show("Marque pelo menos uma série como feita", "error");
       return;
     }
+    if (saving.current) return;
+    saving.current = true;
     finish.mutate();
   };
 
   const leave = () => {
-    if (doneCount === 0 || Platform.OS === "web") {
-      router.back();
+    if (saving.current) return;
+    if (doneCount === 0) { router.back(); return; }
+    if (Platform.OS === "web") {
+      if (globalThis.confirm("Sair sem salvar? As séries deste treino serão perdidas.")) router.back();
       return;
     }
     Alert.alert("Sair sem salvar?", "As séries que você marcou neste treino serão perdidas.", [
@@ -174,6 +186,7 @@ export default function WorkoutSession() {
         <View style={styles.iconBtn} />
       </View>
 
+      {finish.isError && <Text style={{ color: colors.error, padding: 12 }}>Envio sem confirmação. Tente finalizar novamente: os mesmos dados serão reenviados. Não feche esta tela antes de confirmar.</Text>}
       {rest !== null ? (
         <View style={styles.restBar} testID="rest-bar">
           <Ionicons name="timer-outline" size={18} color={colors.onBrandPrimary} />
@@ -252,7 +265,7 @@ export default function WorkoutSession() {
             thumbColor={colors.onBrandPrimary}
           />
         </View>
-        <Button testID="finish-session" label={`Finalizar treino (${doneCount}/${totalCount})`} icon="flag" onPress={tryFinish} loading={finish.isPending} disabled={loading} />
+        <Button testID="finish-session" label={`Finalizar treino (${doneCount}/${totalCount})`} icon="flag" onPress={tryFinish} loading={finish.isPending} disabled={loading || finish.isPending} />
       </View>
     </View>
   );

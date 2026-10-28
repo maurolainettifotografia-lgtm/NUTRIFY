@@ -1,7 +1,7 @@
 {
   "Supino reto com barra": {
     "wger_id": 73,
-    "instructions": "Deite-se em um banco com a barra diretamente acima dos olhos, os joelhos levemente angulados e os pés firmes no chão. Concentre-se, respire fundo e segure a barra com as mãos um pouco além da largura dos ombros. Desça a barra lentamente até que ela toque de leve o peito, na altura dos mamilos. Empurre a barra para cima. Se você treina com carga alta, é recomendável ter um ajudante que possa auxiliar caso não consiga levantar o peso sozinho. A largura da pegada também controla qual parte do peito é mais trabalhada: Pegada aberta enfatiza a parte externa dos músculos peitorais Pegada fechada enfatiza a parte interna e o tríceps",
+    "instructions": "Posição inicial: Deite no banco reto, com os pés apoiados e os ombros estáveis. Segure a barra acima do peito.\nMovimento: Desça a barra em direção ao peito com controle e empurre para cima, mantendo os punhos alinhados.\nRespiração: Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.\nCuidados: Não quique o peso no peito. Use suportes de segurança ou ajuda para retirar e recolocar a barra.",
     "language": "pt",
     "equipment": "Barbell, Bench",
     "muscles": [
@@ -27,7 +27,7 @@
   },
   "Supino inclinado com barra": {
     "wger_id": 538,
-    "instructions": "Para uma execução lenta, use a cadência 4010.",
+    "instructions": "Posição inicial: Deite no banco inclinado a cerca de 30–45°, com os pés apoiados e os ombros estáveis. Segure a barra acima do peito.\nMovimento: Desça a barra em direção ao peito com controle e empurre para cima, mantendo os punhos alinhados.\nRespiração: Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.\nCuidados: Não quique o peso no peito. Use suportes de segurança ou ajuda para retirar e recolocar a barra.",
     "language": "pt",
     "equipment": "Barbell, Incline bench",
     "muscles": [
@@ -53,7 +53,7 @@
   },
   "Supino declinado com barra": {
     "wger_id": 185,
-    "instructions": "Deite-se em um banco declinado; a barra deve ficar diretamente acima dos olhos, os joelhos levemente angulados e os pés firmes no chão. Concentre-se, respire fundo e pegue a barra com as mãos mais afastadas que a largura dos ombros. Desça lentamente até que ela toque rapidamente o peito na altura dos mamilos. Empurre a barra para cima.",
+    "instructions": "Posição inicial: Deite no banco declinado, com as pernas presas no suporte, com os pés apoiados e os ombros estáveis. Segure a barra acima do peito.\nMovimento: Desça a barra em direção ao peito com controle e empurre para cima, mantendo os punhos alinhados.\nRespiração: Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.\nCuidados: Não quique o peso no peito. Use suportes de segurança ou ajuda para retirar e recolocar a barra.",
     "language": "pt",
     "equipment": "Barbell, Bench",
     "muscles": [
@@ -79,7 +79,7 @@
   },
   "Supino reto com halteres": {
     "wger_id": 75,
-    "instructions": "O movimento é muito semelhante ao supino com barra; no entanto, o peso é abaixado até o peito em um ponto mais baixo. Segure dois halteres e deite-se em um banco. Mantenha os pesos próximos ao peito, na altura dos mamilos, e empurre-os para cima até que os braços fiquem estendidos. Abaixe o peso de forma lenta e controlada.",
+    "instructions": "Posição inicial: Deite no banco reto, com os pés apoiados e os ombros estáveis. Segure os halteres ao lado do peito.\nMovimento: Desça os halteres ao lado do peito com controle e empurre para cima, mantendo os punhos alinhados.\nRespiração: Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.\nCuidados: Não bata os halteres entre si nem aumente a curvatura da lombar.",
     "language": "pt",
     "equipment": "Bench, Dumbbell",
     "muscles": [
@@ -105,7 +105,7 @@
   },
   "Supino inclinado com halteres": {
     "wger_id": 537,
-    "instructions": "O banco deve estar inclinado entre 30 e 45 graus. Certifique-se de empurrar os halteres diretamente para cima (perpendiculares ao chão).",
+    "instructions": "Posição inicial: Deite no banco inclinado a cerca de 30–45°, com os pés apoiados e os ombros estáveis. Segure os halteres ao lado do peito.\nMovimento: Desça os halteres ao lado do peito com controle e empurre para cima, mantendo os punhos alinhados.\nRespiração: Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.\nCuidados: Não bata os halteres entre si nem aumente a curvatura da lombar.",
     "language": "pt",
     "equipment": "Dumbbell, Incline bench",
     "muscles": [
@@ -131,8 +131,8 @@
   },
   "Supino na máquina": {
     "wger_id": 129,
-    "instructions": "Adjust the seat height so that the grips are parallel to your chest. Use your legs to push the foot forward pedal. Bring the handles to the start position. Keep your back in contact with the back pad, press outwards. Press the handles away from your chest and exhale. Allow the handles to come in gently until they reach your chest. Allow the handles to return to your chest as you inhale.",
-    "language": "en",
+    "instructions": "Posição inicial: Ajuste o banco para deixar as alças na altura do peito. Apoie costas e pés.\nMovimento: Empurre as alças à frente e retorne devagar, sem deixar os pesos baterem.\nRespiração: Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.\nCuidados: Mantenha as costas no encosto e respeite a amplitude confortável dos ombros.",
+    "language": "pt",
     "equipment": "",
     "muscles": [
       "chest"
@@ -151,7 +151,7 @@
   },
   "Crucifixo com halteres": {
     "wger_id": 238,
-    "instructions": "Pegue dois halteres e deite-se no banco, certificando-se de que os pés estão firmes no chão e que as costas não estão arqueadas, mas bem apoiadas no banco. Os braços ficam estendidos à frente, na largura dos ombros. Flexione então um pouco os braços e desça-os com um movimento de semicírculo para as laterais. Sem alterar o ângulo do cotovelo, traga-os de volta para cima em um movimento fluido.",
+    "instructions": "Posição inicial: Deite no banco reto, com pés apoiados e halteres acima do peito; cotovelos levemente flexionados.\nMovimento: Abra os braços em arco para os lados e feche pelo mesmo caminho.\nRespiração: Solte o ar ao aproximar os braços e inspire ao abri-los.\nCuidados: Mantenha o ângulo dos cotovelos e não force os braços abaixo da amplitude confortável.",
     "language": "pt",
     "equipment": "Dumbbell",
     "muscles": [
@@ -177,8 +177,8 @@
   },
   "Crucifixo na máquina (peck deck)": {
     "wger_id": 135,
-    "instructions": "Sit on the butterfly machine, the feet have a good contact with the floor, the upper arms are parallel to the floor. Press your arms together till the handles are practically together (but aren't!). Go slowly back. The weights should stay all the time in the air.",
-    "language": "en",
+    "instructions": "Posição inicial: Sente com as costas apoiadas e ajuste o banco para alinhar braços e alças à altura do peito.\nMovimento: Aproxime os braços à frente e abra novamente de forma controlada.\nRespiração: Solte o ar ao aproximar os braços e inspire ao abri-los.\nCuidados: Não projete os ombros para frente nem deixe os pesos baterem.",
+    "language": "pt",
     "equipment": "",
     "muscles": [
       "chest"
@@ -203,7 +203,7 @@
   },
   "Crossover na polia": {
     "wger_id": 323,
-    "instructions": "Comece com as polias na altura dos ombros, uma em cada mão. Dê um passo à frente, deixando um pé na frente do outro, para dar estabilidade e manter a tensão nos cabos. Junte as mãos à frente do corpo e tente sobrepô-las alguns centímetros, de modo que os cabos se cruzem.",
+    "instructions": "Posição inicial: Segure as alças das polias, com um pé à frente e cotovelos levemente dobrados.\nMovimento: Traga as mãos em arco à frente do peito e retorne com controle.\nRespiração: Solte o ar ao aproximar os braços e inspire ao abri-los.\nCuidados: Estabilize o tronco e mantenha o ângulo dos cotovelos; não force o alongamento dos ombros.",
     "language": "pt",
     "equipment": "Cable machine",
     "muscles": [
@@ -229,8 +229,8 @@
   },
   "Flexão de braço": {
     "wger_id": 1551,
-    "instructions": "The push-up is a fundamental bodyweight exercise that targets the chest, arms, and shoulders while engaging the core for stability. It requires no equipment and is excellent for building upper body strength. Instructions: Start in a plank position with hands placed slightly wider than shoulder-width, feet together, and body in a straight line from head to heels. Engage your core and lower your body by bending your elbows, keeping them close to your body or flared slightly outward. Lower until your chest nearly touches the ground while maintaining a neutral spine. Push through your palms to return to the starting position, fully extending your arms.",
-    "language": "en",
+    "instructions": "Posição inicial: Apoie as mãos um pouco além dos ombros e as pontas dos pés no chão, com o corpo alinhado.\nMovimento: Flexione os cotovelos para aproximar o peito do chão; empurre o chão para voltar.\nRespiração: Inspire ao descer o corpo e solte o ar ao empurrar o chão para subir.\nCuidados: Evite deixar o quadril cair ou levar a cabeça à frente. Reduza a dificuldade apoiando os joelhos.",
+    "language": "pt",
     "equipment": "none (bodyweight exercise)",
     "muscles": [
       "chest"
@@ -250,7 +250,7 @@
   },
   "Mergulho nas paralelas": {
     "wger_id": 194,
-    "instructions": "Levante-se em barras paralelas mantenha pressionado por 1 segundo, abaixe lentamente e controle por 4 segundos, depois volte sem descanso",
+    "instructions": "Posição inicial: Segure as barras paralelas e sustente o corpo com os braços estendidos, sem travar os cotovelos.\nMovimento: Flexione os cotovelos para descer até uma amplitude confortável e empurre as barras para subir.\nRespiração: Inspire ao descer o corpo e solte o ar na subida.\nCuidados: Não afunde os ombros, balance as pernas ou force uma descida profunda.",
     "language": "pt",
     "equipment": "none (bodyweight exercise)",
     "muscles": [
@@ -271,7 +271,7 @@
   },
   "Puxada com pegada supinada": {
     "wger_id": 1127,
-    "instructions": "Movimento descendente: Puxe a barra para baixo para que ela passe perto do queixo e toque a parte superior do peito. Mantenha o resto do corpo imóvel.",
+    "instructions": "Posição inicial: Sente na polia alta com coxas presas ao apoio e palmas voltadas para você.\nMovimento: Puxe a barra à frente até a parte superior do peito e estenda os braços lentamente.\nRespiração: Solte o ar durante a puxada e inspire ao retornar de forma controlada.\nCuidados: Não puxe atrás da nuca, balance o tronco ou solte a carga no retorno.",
     "language": "pt",
     "equipment": "Cable machine",
     "muscles": [
@@ -291,7 +291,7 @@
   },
   "Remada curvada com barra": {
     "wger_id": 83,
-    "instructions": "Segurando uma barra com pegada pronada (palmas das mãos voltadas para baixo), dobre ligeiramente os joelhos e incline o tronco para a frente, flexionando a cintura, mantendo as costas retas até que fiquem quase paralelas ao chão. Dica: Certifique-se de manter a cabeça erguida. A barra deve ficar pendurada diretamente à sua frente, com os braços perpendiculares ao chão e ao tronco. Esta é a sua posição inicial. Agora, mantendo o tronco imóvel, expire e levante a barra em sua direção. Mantenha os cotovelos próximos ao corpo e use apenas os antebraços para sustentar o peso. Na posição de contração máxima, contraia os músculos das costas e mantenha a posição por uma breve pausa. Em seguida, inspire e abaixe lentamente a barra de volta à posição inicial. Repita o número de repetições recomendado.",
+    "instructions": "Posição inicial: Em pé, segure a barra com palmas para baixo. Flexione levemente os joelhos e incline o tronco pelo quadril.\nMovimento: Puxe a barra em direção ao abdômen, levando os cotovelos para trás; abaixe com controle.\nRespiração: Solte o ar durante a puxada e inspire ao retornar de forma controlada.\nCuidados: Mantenha coluna e pescoço alinhados, sem levantar o tronco a cada repetição.",
     "language": "pt",
     "equipment": "Barbell",
     "muscles": [
@@ -317,7 +317,7 @@
   },
   "Remada unilateral com halter (serrote)": {
     "wger_id": 81,
-    "instructions": "Com um halter em cada mão, incline o tronco pelo quadril até que as mãos fiquem penduradas logo abaixo dos joelhos, como na posição inicial do levantamento terra com pernas estendidas. Mantenha o ângulo do tronco constante enquanto contrai os dorsais para puxar os cotovelos para trás, aproximando as escápulas no topo. Procure não se levantar a cada repetição e confira se as mãos passam abaixo dos joelhos em todas as repetições.",
+    "instructions": "Posição inicial: Apoie uma mão e o joelho do mesmo lado no banco. Segure o halter com a outra mão, braço abaixo do ombro.\nMovimento: Puxe o halter em direção ao quadril e abaixe lentamente; repita do outro lado.\nRespiração: Solte o ar durante a puxada e inspire ao retornar de forma controlada.\nCuidados: Não gire o tronco nem eleve o ombro. O apoio deve permanecer firme.",
     "language": "pt",
     "equipment": "Bench, Dumbbell",
     "muscles": [
@@ -337,7 +337,7 @@
   },
   "Remada baixa na polia": {
     "wger_id": 394,
-    "instructions": "Sente-se, coloque os pés nos pontos de apoio e agarre a barra com uma pegada larga. Puxe o peso com um movimento rápido em direção ao umbigo, não para cima. Mantenha os braços e cotovelos durante o movimento próximos ao corpo. Seus ombros são puxados juntos. Deixe o peso cair lentamente até que seus braços estejam completamente esticados.",
+    "instructions": "Posição inicial: Sente com os pés nos apoios e joelhos levemente flexionados. Segure a alça com os braços à frente.\nMovimento: Puxe em direção ao abdômen, levando os cotovelos para trás, e retorne lentamente.\nRespiração: Solte o ar durante a puxada e inspire ao retornar de forma controlada.\nCuidados: Não arredonde a coluna nem use balanço do tronco para mover a carga.",
     "language": "pt",
     "equipment": "Cable machine",
     "muscles": [
@@ -363,8 +363,8 @@
   },
   "Remada cavalinho": {
     "wger_id": 513,
-    "instructions": "The execution of this exercise is very similar to the regular bent over rowing, only that the bar is fixed here. Grab the barbell with a wide grip (slightly more than shoulder wide) and lean forward. Your upper body is not quite parallel to the floor, but forms a slight angle. The chest's out during the whole exercise. Pull now the barbell with a fast movement towards your belly button, not further up. Go slowly down to the initial position. Don't swing with your body and keep your arms next to your body.",
-    "language": "en",
+    "instructions": "Posição inicial: Segure a alça da barra fixada na base, com joelhos levemente dobrados e tronco inclinado pelo quadril.\nMovimento: Puxe em direção ao abdômen, levando os cotovelos para trás, e retorne lentamente.\nRespiração: Solte o ar durante a puxada e inspire ao retornar de forma controlada.\nCuidados: Não arredonde a coluna nem use balanço do tronco para mover a carga.",
+    "language": "pt",
     "equipment": "",
     "muscles": [
       "upper-back"
@@ -389,8 +389,8 @@
   },
   "Remada na máquina": {
     "wger_id": 1725,
-    "instructions": "Keep your chest up and squeeze your shoulder blades at the end. Don’t hunch forward or round your back during the pull.",
-    "language": "en",
+    "instructions": "Posição inicial: Ajuste o banco, apoie o peito no suporte quando disponível e segure as alças com os braços à frente.\nMovimento: Puxe em direção ao abdômen, levando os cotovelos para trás, e retorne lentamente.\nRespiração: Solte o ar durante a puxada e inspire ao retornar de forma controlada.\nCuidados: Não arredonde a coluna nem use balanço do tronco para mover a carga.",
+    "language": "pt",
     "equipment": "",
     "muscles": [
       "upper-back"
@@ -410,7 +410,7 @@
   },
   "Pullover com halter": {
     "wger_id": 161,
-    "instructions": "Segure um halter de peso moderado com as palmas apoiadas na parte de baixo das anilhas superiores e os polegares envolvendo a barra. Deite-se de costas sobre um banco reto, de modo que apenas a parte superior das costas e os ombros fiquem em contato com o banco. Os pés devem ficar afastados na largura dos ombros e a cabeça deve pender levemente para baixo. Com o halter sustentado com os braços estendidos diretamente sobre o peito, flexione os cotovelos cerca de 15 graus e mantenha-os flexionados durante todo o movimento. Abaixe lentamente o halter para trás e para baixo num arco de semicírculo, até a posição mais baixa confortável. Eleve-o novamente devagar pelo mesmo arco até o ponto inicial e repita o número de repetições necessário.",
+    "instructions": "Posição inicial: Deite no banco com os pés firmes e segure um halter com as duas mãos acima do peito. Flexione um pouco os cotovelos.\nMovimento: Leve o halter em arco para trás da cabeça e retorne acima do peito.\nRespiração: Inspire ao levar o halter para trás e solte o ar ao trazê-lo acima do peito.\nCuidados: Use carga leve, não arqueie a lombar e limite a descida à mobilidade dos ombros.",
     "language": "pt",
     "equipment": "Dumbbell",
     "muscles": [
@@ -424,7 +424,7 @@
   },
   "Levantamento terra": {
     "wger_id": 184,
-    "instructions": "Fique firme, com os pés ligeiramente mais afastados do que os ombros. Fique diretamente atrás da barra, onde ela mal deve tocar sua canela, com os pés apontando um pouco para fora. Curve-se com as costas retas, os joelhos também apontando um pouco para fora. Agarre a barra com uma pegada na largura dos ombros, uma pegada por baixo e uma pegada reversa. Puxe o peso para cima. No ponto mais alto, faça uma leve depressão para trás e puxe a barra para trás. Segure 1 ou 2 segundos nessa posição. Desça, certificando-se de que as costas não estão dobradas. Depois de descer, você pode voltar assim que os pesos tocarem o chão ou fazer uma pausa, dependendo do peso.",
+    "instructions": "Posição inicial: Posicione a barra próxima às canelas, com os pés na largura do quadril. Flexione quadris e joelhos para segurá-la.\nMovimento: Empurre o chão e estenda quadris e joelhos juntos. Volte levando o quadril para trás e depois dobrando os joelhos.\nRespiração: Inspire e firme o abdômen antes de subir; solte o ar de forma controlada, mantendo o tronco estável.\nCuidados: Mantenha a barra perto do corpo e a coluna neutra; não se incline para trás no final.",
     "language": "pt",
     "equipment": "Barbell",
     "muscles": [
@@ -444,8 +444,8 @@
   },
   "Desenvolvimento com barra": {
     "wger_id": 566,
-    "instructions": "Sit on a bench, the back rest should be almost vertical. Take a barbell with a shoulder wide grip and bring it up to chest height. Press the weight up, but don't stretch the arms completely. Go slowly down and repeat.",
-    "language": "en",
+    "instructions": "Posição inicial: Sente com as costas apoiadas e pés no chão. Posicione a barra na altura dos ombros.\nMovimento: Empurre a barra para cima e retorne devagar à altura dos ombros.\nRespiração: Solte o ar ao empurrar o peso acima da cabeça e inspire ao baixá-lo.\nCuidados: Mantenha abdômen firme e não arqueie a lombar nem force o peso atrás da cabeça.",
+    "language": "pt",
     "equipment": "Barbell",
     "muscles": [
       "deltoids"
@@ -470,8 +470,8 @@
   },
   "Desenvolvimento com halteres": {
     "wger_id": 567,
-    "instructions": "Sit on a bench, the back rest should be almost vertical. Take two dumbbells and bring them up to shoulder height, the palms and the elbows point during the whole exercise to the front. Press the weights up, at the highest point they come very near but don't touch. Go slowly down and repeat.",
-    "language": "en",
+    "instructions": "Posição inicial: Sente com as costas apoiadas e pés no chão. Posicione os halteres na altura dos ombros.\nMovimento: Empurre os halteres para cima e retorne devagar à altura dos ombros.\nRespiração: Solte o ar ao empurrar o peso acima da cabeça e inspire ao baixá-lo.\nCuidados: Mantenha abdômen firme e não arqueie a lombar nem force o peso atrás da cabeça.",
+    "language": "pt",
     "equipment": "Dumbbell",
     "muscles": [
       "deltoids"
@@ -496,8 +496,8 @@
   },
   "Desenvolvimento na máquina": {
     "wger_id": 543,
-    "instructions": "",
-    "language": "en",
+    "instructions": "Posição inicial: Sente com as costas apoiadas e pés no chão. Posicione as alças na altura dos ombros.\nMovimento: Empurre as alças para cima e retorne devagar à altura dos ombros.\nRespiração: Solte o ar ao empurrar o peso acima da cabeça e inspire ao baixá-lo.\nCuidados: Mantenha abdômen firme e não arqueie a lombar nem force o peso atrás da cabeça.",
+    "language": "pt",
     "equipment": "",
     "muscles": [
       "deltoids"
@@ -522,8 +522,8 @@
   },
   "Elevação lateral com halteres": {
     "wger_id": 348,
-    "instructions": "This exercise works the deltoid muscle of the shoulder. The movement starts with the arms straight, and the hands holding weights at the sides or in front of the body. Body is in a slight forward-leaning position with hips and knees bent a little. Arms are kept straight or slightly bent, and raised through an arc of movement in the coronal plane that terminates when the hands are at approximately shoulder height. Weights are lowered to the starting position, completing one rep. When using a cable machine the individual stands with the coronal plane in line with the pulley, which is at or near the ground.[9] The exercise can be completed one shoulder at a time (with the other hand used to stabilize the body against the weight moved), or with both hands simultaneously if two parallel pulleys are available.",
-    "language": "en",
+    "instructions": "Posição inicial: Em pé, segure os halteres ao lado do corpo, com cotovelos levemente dobrados.\nMovimento: Eleve os braços para os lados até a altura dos ombros e desça lentamente.\nRespiração: Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.\nCuidados: Não balance o tronco, encolha os ombros ou force a amplitude.",
+    "language": "pt",
     "equipment": "Dumbbell",
     "muscles": [
       "deltoids"
@@ -548,8 +548,8 @@
   },
   "Elevação frontal com halteres": {
     "wger_id": 256,
-    "instructions": "To execute the exercise, the lifter stands with their feet shoulder width apart and weights or resistance handles held by their side with a pronated (overhand) grip. The movement is to bring the arms up in front of the body to eye level and with only a slight bend in the elbow. This isolates the anterior deltoid muscle (front of the shoulder) and uses the anterior deltoid to lift the weight. When lifting it is important to keep the body still so the anterior deltoid is fully utilised; if the weight cannot be lifted by standing still then it is too heavy and a lower weight is needed. It is important to keep a slight bend in the elbow when lifting as keeping the elbow locked will add stress to the elbow joint and could cause injury. A neutral grip, similar to that used in the hammer curl, can also be used. With this variation the weight is again raised to eye level, but out to a 45 degree angle from the front of the body. This may be beneficial for those with shoulder injuries, particularly those related to the rotator cuff.",
-    "language": "en",
+    "instructions": "Posição inicial: Em pé, segure os halteres à frente das coxas, com cotovelos levemente dobrados.\nMovimento: Eleve os braços à frente até a altura dos ombros e volte com controle.\nRespiração: Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.\nCuidados: Mantenha o tronco estável e reduza a carga se precisar se inclinar para trás.",
+    "language": "pt",
     "equipment": "Barbell, Dumbbell",
     "muscles": [
       "deltoids"
@@ -568,8 +568,8 @@
   },
   "Crucifixo inverso": {
     "wger_id": 487,
-    "instructions": "Seated on a bench with the dumbbells on the floor bend over at 45 Degrees and then slowly raise each dumbbell to shoulder height and hold for a couple seconds before lowering to the starting position.",
-    "language": "en",
+    "instructions": "Posição inicial: Sente na ponta do banco com pés apoiados e incline o tronco pelo quadril. Segure os halteres abaixo dos ombros.\nMovimento: Abra os braços para os lados, com cotovelos levemente flexionados, e desça devagar.\nRespiração: Solte o ar ao abrir os braços e inspire ao retornar.\nCuidados: Não arredonde a coluna nem transforme o movimento em balanço.",
+    "language": "pt",
     "equipment": "Dumbbell",
     "muscles": [],
     "source": "https://wger.de/en/exercise/487/view/",
@@ -592,7 +592,7 @@
   },
   "Encolhimento com halteres": {
     "wger_id": 572,
-    "instructions": "O exercício consiste em segurar um halter em cada mão e encolher os ombros na direção das orelhas, depois baixá-los novamente. Trabalha principalmente o trapézio, na parte superior das costas, e pode ajudar a melhorar a postura e a estabilidade dos ombros.",
+    "instructions": "Posição inicial: Fique em pé com um halter em cada mão, braços ao lado do corpo.\nMovimento: Eleve os ombros em direção às orelhas, faça uma breve pausa e abaixe devagar.\nRespiração: Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.\nCuidados: Não gire os ombros nem movimente o pescoço para impulsionar a carga.",
     "language": "pt",
     "equipment": "Dumbbell",
     "muscles": [
@@ -618,7 +618,7 @@
   },
   "Rosca direta com barra": {
     "wger_id": 91,
-    "instructions": "Segure a barra na largura dos ombros, pois as costas estão retas, os ombros ligamente para trás e os braços estão armazenados. Dobre os braços, levantando o peso, com um movimento rápido. Sem fazer uma pausa, baixar a barra com um movimento lento e controlado. Não dê seu corpo equilibrar durante o exercício, todo o trabalho é feito pelos bíceps, que são os humanos múltiplos que devem se mover (preste atenção aos cotovelos).",
+    "instructions": "Posição inicial: Em pé, segure a barra com palmas para cima e mãos na largura dos ombros.\nMovimento: Flexione os cotovelos para subir a barra e abaixe lentamente.\nRespiração: Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.\nCuidados: Mantenha os cotovelos próximos ao corpo e evite balanço.",
     "language": "pt",
     "equipment": "Barbell",
     "muscles": [
@@ -644,7 +644,7 @@
   },
   "Rosca alternada com halteres": {
     "wger_id": 1192,
-    "instructions": "Segure um halter em cada mão, com os braços estendidos e as mãos ao lado do corpo, palmas voltadas para dentro. Flexione um braço por vez e suba o peso com movimento rápido. No início do movimento, gire o antebraço 90 graus; no ponto mais alto, gire um pouco mais o peso para fora. Sem pausa, desça o braço lentamente e faça o mesmo com o outro lado. Não deixe o corpo balançar durante o exercício: todo o trabalho é do bíceps, o único músculo que deve se mover (atenção aos cotovelos).",
+    "instructions": "Posição inicial: Segure um halter em cada mão, com palmas voltadas para o corpo.\nMovimento: Suba um halter por vez, girando a palma para cima; abaixe devagar e alterne.\nRespiração: Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.\nCuidados: Não leve o cotovelo para frente nem gire o tronco.",
     "language": "pt",
     "equipment": "Dumbbell",
     "muscles": [
@@ -664,7 +664,7 @@
   },
   "Rosca martelo": {
     "wger_id": 272,
-    "instructions": "Segure dois halteres e sente-se em um banco com as costas retas, os ombros estão ligados rolados para trás. Seus amigos apostam para seu corpo. Dobre os braços e levante o peso com um movimento rápido. Não gire como homens, como acontece com os cachos. Sem nenhuma pausa, baixar o haltere com um movimento lento e controlado. Não balance o corpo durante o exercício, o bíceps deve fazer todo o trabalho aqui. Os cotovelos estão ao seu lado e não se movem.",
+    "instructions": "Posição inicial: Segure os halteres ao lado do corpo, com palmas voltadas uma para a outra.\nMovimento: Flexione os cotovelos sem girar as mãos; desça de forma controlada.\nRespiração: Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.\nCuidados: Mantenha punhos neutros e braços junto ao tronco.",
     "language": "pt",
     "equipment": "Dumbbell",
     "muscles": [
@@ -690,8 +690,8 @@
   },
   "Rosca Scott": {
     "wger_id": 465,
-    "instructions": "Place the EZ curl bar on the rest handles in front of the preacher bench. Lean over the bench and grab the EZ curl bar with palms up. Sit down on the preacher bench seat so your upper arms rest on top of the pad and your chest is pressed against the pad. Lower the weight until your elbows are extended and arms are straight. Bring the weights back up to the starting point by contracting biceps. Repeat",
-    "language": "en",
+    "instructions": "Posição inicial: Ajuste o banco para apoiar a parte posterior dos braços na almofada. Segure a barra EZ com palmas para cima.\nMovimento: Flexione os cotovelos e retorne lentamente, sem travá-los na parte baixa.\nRespiração: Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.\nCuidados: Não retire os braços do apoio nem use impulso na extensão.",
+    "language": "pt",
     "equipment": "SZ-Bar",
     "muscles": [],
     "source": "https://wger.de/en/exercise/465/view/",
@@ -714,7 +714,7 @@
   },
   "Rosca na polia": {
     "wger_id": 95,
-    "instructions": "Fique em pé a cerca de 30 a 40 cm da polia, com os pés firmes no chão. Segure a barra e levante o peso com movimentos rápidos. Desça o peso de forma lenta e controlada, como na rosca com halteres.",
+    "instructions": "Posição inicial: Em pé de frente para a polia baixa, segure a barra com palmas para cima.\nMovimento: Flexione os cotovelos levando a barra em direção ao peito e retorne devagar.\nRespiração: Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.\nCuidados: Mantenha cotovelos junto ao corpo e não puxe com os ombros.",
     "language": "pt",
     "equipment": "Cable machine",
     "muscles": [
@@ -740,7 +740,7 @@
   },
   "Rosca inversa": {
     "wger_id": 1290,
-    "instructions": "Posição inicial: Selecione o peso adequado em uma barra. Fique em pé com a barra, usando pegada pronada e as mãos afastadas na largura dos ombros. Contraia o assoalho pélvico e o core enquanto mantém o peito levantado. Execução: Contraindo os bíceps, flexione os cotovelos totalmente enquanto expira. Volte à posição inicial com um movimento suave enquanto inspira.",
+    "instructions": "Posição inicial: Em pé, segure a barra com palmas voltadas para baixo e mãos na largura dos ombros.\nMovimento: Flexione os cotovelos elevando a barra e abaixe com controle.\nRespiração: Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.\nCuidados: Não dobre os punhos nem use balanço do tronco.",
     "language": "pt",
     "equipment": "Barbell",
     "muscles": [
@@ -761,8 +761,8 @@
   },
   "Tríceps pulley com corda": {
     "wger_id": 1900,
-    "instructions": "Setup: Stand facing the cable, feet shoulder-width apart, with a slight forward lean. Grip: Hold the rope with palms facing each other and elbows tucked tight to your ribs. Execution: Push the rope down until arms are fully straight, pulling the ends apart at the bottom. Control: Keep upper arms still and return to the start with a slow, controlled motion.",
-    "language": "en",
+    "instructions": "Posição inicial: Em pé diante da polia alta, segure a corda com palmas voltadas uma para a outra e mantenha os cotovelos junto às costelas.\nMovimento: Estenda os cotovelos empurrando para baixo e retorne lentamente, mantendo os braços estáveis. Afaste levemente as pontas da corda ao final.\nRespiração: Solte o ar ao estender os cotovelos e inspire ao dobrá-los no retorno.\nCuidados: Não movimente os ombros nem incline o corpo para empurrar a carga.",
+    "language": "pt",
     "equipment": "Cable machine",
     "muscles": [
       "triceps"
@@ -782,8 +782,8 @@
   },
   "Tríceps pulley com barra reta": {
     "wger_id": 805,
-    "instructions": "The cable rope push-down is a popular exercise targeting the triceps muscles. It's easy to learn and perform, making it a favorite for everyone from beginners to advanced lifters. It is usually performed for moderate to high reps, such as 8-12 reps or more per set, as part of an upper-body or arm-focused workout.",
-    "language": "en",
+    "instructions": "Posição inicial: Em pé diante da polia alta, segure a barra reta com palmas para baixo e mantenha os cotovelos junto às costelas.\nMovimento: Estenda os cotovelos empurrando para baixo e retorne lentamente, mantendo os braços estáveis.\nRespiração: Solte o ar ao estender os cotovelos e inspire ao dobrá-los no retorno.\nCuidados: Não movimente os ombros nem incline o corpo para empurrar a carga.",
+    "language": "pt",
     "equipment": "Cable machine",
     "muscles": [
       "triceps"
@@ -803,7 +803,7 @@
   },
   "Tríceps testa": {
     "wger_id": 246,
-    "instructions": "Segure a barra EZ e deite-se em um banco reto de modo que cerca de 1/4 da cabeça fique para fora da borda. Estenda os braços com a barra e flexione-os para descer a barra. Pouco antes de tocar a testa, empurre-a de volta para cima. Preste atenção aos cotovelos e aos braços: só o tríceps faz o trabalho, o resto dos braços não deve se mover.",
+    "instructions": "Posição inicial: Deite no banco e segure a barra EZ acima do peito, com braços estáveis e cotovelos apontando para cima.\nMovimento: Flexione os cotovelos aproximando a barra da testa com cuidado e estenda para voltar.\nRespiração: Solte o ar ao estender os cotovelos e inspire ao dobrá-los no retorno.\nCuidados: Mantenha a cabeça apoiada e use carga controlável; não deixe a barra tocar o rosto.",
     "language": "pt",
     "equipment": "Bench, SZ-Bar",
     "muscles": [
@@ -829,8 +829,8 @@
   },
   "Tríceps francês": {
     "wger_id": 1336,
-    "instructions": "Keep the elbows fixed Engage the muscles Don't use momentum Controlled movement Slow movement Don't overextend",
-    "language": "en",
+    "instructions": "Posição inicial: Sente com o tronco estável e segure um halter com as duas mãos acima da cabeça.\nMovimento: Flexione os cotovelos levando o halter atrás da cabeça e estenda para voltar.\nRespiração: Solte o ar ao estender os cotovelos e inspire ao dobrá-los no retorno.\nCuidados: Não arqueie a lombar nem force a abertura dos cotovelos.",
+    "language": "pt",
     "equipment": "Dumbbell",
     "muscles": [
       "triceps"
@@ -849,7 +849,7 @@
   },
   "Mergulho no banco": {
     "wger_id": 197,
-    "instructions": "Coloque dois bancos afastados o suficiente para que você consiga se apoiar com as mãos em um deles e apenas alcançar o outro com os pés. Durante todo o exercício as pernas ficam completamente esticadas. Com os cotovelos apontando para trás, flexione-os o máximo que puder. Empurre o corpo para cima, mas sem estender totalmente os braços.",
+    "instructions": "Posição inicial: Apoie as mãos na borda de um banco firme atrás do corpo, com pés apoiados e quadril próximo ao banco.\nMovimento: Flexione os cotovelos levando o quadril para baixo; empurre o banco para subir.\nRespiração: Inspire ao descer o corpo e solte o ar na subida.\nCuidados: Mantenha cotovelos para trás e limite a descida para não forçar a parte anterior dos ombros.",
     "language": "pt",
     "equipment": "Bench",
     "muscles": [
@@ -875,7 +875,7 @@
   },
   "Supino fechado": {
     "wger_id": 76,
-    "instructions": "Preparação: deite-se no banco e segure a barra na largura dos ombros (mais fechado do que no supino convencional). Descida: desça a barra com controle até a parte inferior do peito. Técnica: mantenha os cotovelos junto ao tronco, sem deixá-los abrir para os lados. Subida: empurre a barra de volta para cima em linha reta, contraindo o tríceps no topo.",
+    "instructions": "Posição inicial: Deite no banco, com pés firmes, e segure a barra com as mãos próximas à largura dos ombros.\nMovimento: Desça a barra em direção à parte inferior do peito e empurre para cima.\nRespiração: Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.\nCuidados: Mantenha os cotovelos próximos ao tronco e use suporte de segurança ou ajuda para a barra.",
     "language": "pt",
     "equipment": "Barbell, Bench",
     "muscles": [
@@ -902,7 +902,7 @@
   },
   "Agachamento livre": {
     "wger_id": 1801,
-    "instructions": "O agachamento completo com barra é um exercício composto que recruta vários grupos musculares da parte inferior do corpo, entre eles quadríceps, posteriores de coxa e glúteos. A execução correta é essencial para maximizar os resultados e prevenir lesões, o que inclui manter os pés na largura dos ombros, gerar tensão no corpo inteiro, controlar a descida e preservar a profundidade adequada e o posicionamento dos joelhos. Movimentos auxiliares como agachamento frontal, agachamento goblet, agachamento dividido e agachamento dividido búlgaro ajudam a melhorar o desempenho no agachamento completo, por trabalharem grupos musculares específicos e aperfeiçoarem a técnica. Para alcançar novos recordes pessoais no agachamento, aumente a carga de forma gradual ao longo do tempo, varie as faixas de repetições e as séries para estimular o crescimento muscular e priorize o descanso e a recuperação entre as sessões de treino.",
+    "instructions": "Posição inicial: Apoie a barra na parte superior das costas, com os pés na largura dos ombros e pontas ligeiramente para fora.\nMovimento: Flexione quadris e joelhos para descer; empurre o chão com os pés inteiros para subir.\nRespiração: Inspire e firme o abdômen antes de descer; solte o ar de forma controlada durante a subida.\nCuidados: Mantenha joelhos acompanhando os pés, coluna neutra e suportes de segurança ajustados.",
     "language": "pt",
     "equipment": "Barbell",
     "muscles": [
@@ -930,8 +930,8 @@
   },
   "Agachamento no Smith": {
     "wger_id": 1747,
-    "instructions": "Technique and Execution The Smith machine squat is a variation of the traditional barbell squat that uses a guided, fixed-path barbell. Here's a detailed breakdown of the proper technique: Starting Position Foot Placement: Position feet slightly forward of the bar, about shoulder-width apart Bar Position: Rest the bar on your upper trapezius/shoulders, similar to a traditional back squat Stance: Feet can be slightly angled outward for natural hip rotation Squat Movement Unrack the bar by rotating it to release from the safety hooks Slowly lower your body by bending knees and hips Descend until thighs are parallel to the ground (or slightly below) Pause briefly at the bottom of the movement Drive through your heels to return to the starting position Benefits and Considerations Advantages Reduced Balance Requirements: Fixed bar path makes it easier for beginners Controlled Movement: Less risk of improper form compared to free weight squats Isolation: Allows focused leg muscle development",
-    "language": "en",
+    "instructions": "Posição inicial: Ajuste as travas, apoie a barra nas costas e posicione os pés para manter o apoio completo no chão.\nMovimento: Destrave a barra, flexione quadris e joelhos para descer e empurre o chão para subir.\nRespiração: Inspire durante a descida e solte o ar ao empurrar o chão para subir.\nCuidados: Não afunde a lombar nem deixe os joelhos caírem para dentro; teste a trajetória com carga leve.",
+    "language": "pt",
     "equipment": "",
     "muscles": [
       "gluteal",
@@ -951,8 +951,8 @@
   },
   "Agachamento hack": {
     "wger_id": 375,
-    "instructions": "",
-    "language": "en",
+    "instructions": "Posição inicial: Apoie costas e ombros na máquina, com os pés inteiros na plataforma. Ajuste as travas de segurança.\nMovimento: Libere a trava, flexione os joelhos para descer e empurre a plataforma para subir.\nRespiração: Inspire durante a descida e solte o ar ao empurrar o chão para subir.\nCuidados: Mantenha as costas no encosto, os calcanhares apoiados e não trave os joelhos.",
+    "language": "pt",
     "equipment": "",
     "muscles": [
       "quadriceps"
@@ -978,7 +978,7 @@
   },
   "Agachamento búlgaro": {
     "wger_id": 1706,
-    "instructions": "O agachamento búlgaro consiste em agachar com uma perna só, com o pé de trás apoiado em uma plataforma elevada. Elevar a perna de trás em um banco cria instabilidade e aumenta a amplitude de movimento do exercício.",
+    "instructions": "Posição inicial: Fique de costas para um banco firme e apoie o peito de um pé nele; o outro pé permanece à frente, no chão.\nMovimento: Flexione a perna da frente para descer o corpo e empurre o chão com esse pé para subir.\nRespiração: Inspire durante a descida e solte o ar ao empurrar o chão para subir.\nCuidados: Mantenha o quadril alinhado, joelho acompanhando o pé e use apoio para equilíbrio se necessário.",
     "language": "pt",
     "equipment": "Dumbbell",
     "muscles": [
@@ -999,7 +999,7 @@
   },
   "Cadeira extensora": {
     "wger_id": 369,
-    "instructions": "A extensão de pernas é um exercício de treinamento resistido que tem como alvo o músculo quadríceps. O exercício é feito em uma máquina chamada cadeira extensora. Existem vários fabricantes dessas máquinas e cada uma é um pouco diferente. A maioria das academias e salas de musculação tem a máquina em suas instalações. A extensão de pernas é um exercício isolado, que atinge um grupo muscular específico, o quadríceps. Ela não deve ser considerada um treino completo de pernas, como o agachamento ou o levantamento terra. O exercício consiste em flexionar a perna no joelho, estendê-la e depois baixá-la de volta à posição original.",
+    "instructions": "Posição inicial: Ajuste o encosto para alinhar os joelhos ao eixo da máquina e posicione o rolo acima dos tornozelos.\nMovimento: Estenda os joelhos e volte devagar à posição inicial.\nRespiração: Solte o ar ao estender os joelhos e inspire no retorno.\nCuidados: Mantenha quadril e costas apoiados; não dê trancos nem trave os joelhos.",
     "language": "pt",
     "equipment": "",
     "muscles": [
@@ -1026,8 +1026,8 @@
   },
   "Mesa flexora": {
     "wger_id": 365,
-    "instructions": "Lay on a bench and put your calves behind the leg holder (better if they are hold on around the lower calves). Hold a grip on the bars to make sure the body is firmly in place. Bend your legs bringing the weight up, go slowly back. During the exercise the body should not move, all work is done by the legs.",
-    "language": "en",
+    "instructions": "Posição inicial: Deite de barriga para baixo, com os joelhos alinhados ao eixo da máquina e o rolo acima dos calcanhares.\nMovimento: Flexione os joelhos para aproximar os calcanhares dos glúteos e retorne devagar.\nRespiração: Solte o ar ao dobrar os joelhos e inspire ao retornar lentamente.\nCuidados: Mantenha o quadril no banco e evite arquear a lombar.",
+    "language": "pt",
     "equipment": "",
     "muscles": [
       "hamstring"
@@ -1052,8 +1052,8 @@
   },
   "Cadeira flexora": {
     "wger_id": 366,
-    "instructions": "",
-    "language": "en",
+    "instructions": "Posição inicial: Sente com as costas no encosto, joelhos alinhados ao eixo e pernas sobre o rolo. Ajuste o apoio das coxas.\nMovimento: Dobre os joelhos trazendo os pés para baixo e para trás; retorne com controle.\nRespiração: Solte o ar ao dobrar os joelhos e inspire ao retornar lentamente.\nCuidados: Não levante o quadril nem deixe os pesos baterem.",
+    "language": "pt",
     "equipment": "",
     "muscles": [
       "hamstring"
@@ -1078,7 +1078,7 @@
   },
   "Afundo (passada)": {
     "wger_id": 984,
-    "instructions": "Fique de pé com as costas retas Dê um grande passo adiante com sua perna esquerda Desça com sua pélvis até quase tocar o chão com o seu joelho direito Leve sua pélvis de volta para cima Retorne para a posição de pé, dando um passo atrás Repita, trocando de pernas a cada vez",
+    "instructions": "Posição inicial: Em pé, dê um passo à frente, mantendo os pés afastados lateralmente para ter equilíbrio.\nMovimento: Dobre os dois joelhos para descer e empurre o chão com a perna da frente para voltar; alterne as pernas.\nRespiração: Inspire durante a descida e solte o ar ao empurrar o chão para subir.\nCuidados: Mantenha o joelho da frente alinhado ao pé e evite bater o joelho de trás no chão.",
     "language": "pt",
     "equipment": "none (bodyweight exercise)",
     "muscles": [
@@ -1099,8 +1099,8 @@
   },
   "Cadeira adutora": {
     "wger_id": 12,
-    "instructions": "Starting Position: Sit on the machine with your knees inward and against the pads. Pull the pin to release the pads. Grab the handles on the sides.b",
-    "language": "en",
+    "instructions": "Posição inicial: Sente com as costas apoiadas e as almofadas na parte interna das coxas. Ajuste uma abertura confortável.\nMovimento: Feche as pernas contra a resistência e volte devagar.\nRespiração: Solte o ar ao fechar as pernas e inspire ao retornar à abertura inicial.\nCuidados: Não force a abertura inicial nem use impulso do tronco.",
+    "language": "pt",
     "equipment": "",
     "muscles": [
       "adductors"
@@ -1120,8 +1120,8 @@
   },
   "Cadeira abdutora": {
     "wger_id": 1748,
-    "instructions": "Technique and Execution Starting Position Seated Positioning: Sit in the machine with back against the pad Leg Placement: Inner thighs against the machine's padded resistance points Adjust Machine: Set seat position to align your hip joint with the machine's pivot point Movement Technique Start with legs together or slightly pressed against the inner pads Slowly push legs outward, spreading them apart Move until maximum comfortable lateral range is reached Pause briefly at the outer point of the movement Slowly return to the starting position with controlled movement Biomechanical Breakdown Muscle Engagement Primary Activation: Gluteus Medius (side hip muscle) Stabilization: Engages core and lower back muscles Functional Movement: Mimics lateral leg movement used in walking, sports, and daily activities Benefits Strength and Stability Improves Hip Stability Reduces Risk of Knee Injuries Enhances Lateral Movement Capabilities Targets Often-Neglected Muscle Groups",
-    "language": "en",
+    "instructions": "Posição inicial: Sente com as costas apoiadas e almofadas na parte externa das coxas.\nMovimento: Afaste as pernas contra a resistência e retorne de forma controlada.\nRespiração: Solte o ar ao afastar as pernas e inspire no retorno controlado.\nCuidados: Não retire o quadril do banco nem balance o tronco.",
+    "language": "pt",
     "equipment": "",
     "muscles": [
       "gluteal"
@@ -1140,8 +1140,8 @@
   },
   "Ponte de glúteos": {
     "wger_id": 265,
-    "instructions": "Lie on you back with your hips and knees flexed, feet on the ground. From this position, raise your butt off of the ground to a height where your body makes a straight line from your knees to your shoulders. To make the exercise more intense, you can add weight by letting a barbell rest on your hips as you complete the motion, or you can put your feet on a slightly higher surface such as a step or a bench.",
-    "language": "en",
+    "instructions": "Posição inicial: Deite de costas com joelhos dobrados e pés no chão, próximos ao quadril.\nMovimento: Eleve o quadril até alinhar ombros, quadris e joelhos; contraia os glúteos e desça devagar.\nRespiração: Solte o ar ao elevar o quadril e inspire ao descê-lo.\nCuidados: Não hiperestenda a lombar nem empurre o chão com a cabeça.",
+    "language": "pt",
     "equipment": "",
     "muscles": [
       "gluteal"
@@ -1161,7 +1161,7 @@
   },
   "Glúteo na polia (coice)": {
     "wger_id": 1131,
-    "instructions": "Esta atividade permite exercitar a região do glúteo superior ou máximo. Por isso, ela não pode faltar na sua rotina de exercícios isolados para glúteos. Posicione-se em frente a uma máquina de polia e localize o gancho inferior. Em seguida, prenda-o na tornozeleira para trabalhar na polia baixa. Quanto à postura, mantenha-se ereto o tempo todo. Preste atenção especial às costas para mantê-las retas e não se machucar. É recomendável segurar-se na máquina para ter mais equilíbrio. Com a perna que sustenta a carga da polia, faça uma extensão lenta para trás sem flexionar o joelho.",
+    "instructions": "Posição inicial: Prenda a tornozeleira na polia baixa, segure um apoio e estabilize o tronco.\nMovimento: Leve a perna com tornozeleira para trás, estendendo o quadril, e volte com controle.\nRespiração: Solte o ar ao levar a perna para trás e inspire no retorno.\nCuidados: Mantenha a pelve alinhada; não compense arqueando a lombar.",
     "language": "pt",
     "equipment": "Cable machine",
     "muscles": [
@@ -1181,8 +1181,8 @@
   },
   "Panturrilha em pé": {
     "wger_id": 622,
-    "instructions": "Get onto the calf raises machine, you should able to completely push your calves down. Stand straight, don't make a hollow back and don't bend your legs. Pull yourself up as high as you can. Make a small pause of 1 - 2 seconds and go slowly down.",
-    "language": "en",
+    "instructions": "Posição inicial: Em pé na máquina ou em apoio estável, posicione a parte da frente dos pés na base e mantenha os joelhos destravados.\nMovimento: Eleve os calcanhares, faça uma breve pausa e abaixe lentamente pela amplitude confortável.\nRespiração: Solte o ar ao elevar os calcanhares e inspire ao baixá-los.\nCuidados: Movimente os tornozelos sem saltar ou travar os joelhos. Garanta que os pés não escorreguem do apoio.",
+    "language": "pt",
     "equipment": "",
     "muscles": [
       "calves"
@@ -1201,8 +1201,8 @@
   },
   "Panturrilha sentado": {
     "wger_id": 1620,
-    "instructions": "The seated dumbbell calf raise is a targeted exercise for strengthening the lower leg muscles. It follows the same movement pattern as the machine version: you place the weight on your knees, and by extending and flexing your ankles, you move the weight.",
-    "language": "en",
+    "instructions": "Posição inicial: Sente com joelhos dobrados e a parte da frente dos pés no apoio. Ajuste a almofada sobre as coxas.\nMovimento: Eleve os calcanhares, faça uma breve pausa e abaixe lentamente pela amplitude confortável.\nRespiração: Solte o ar ao elevar os calcanhares e inspire ao baixá-los.\nCuidados: Movimente os tornozelos sem saltar ou travar os joelhos. Garanta que os pés não escorreguem do apoio.",
+    "language": "pt",
     "equipment": "Dumbbell",
     "muscles": [
       "calves"
@@ -1221,7 +1221,7 @@
   },
   "Panturrilha no leg press": {
     "wger_id": 146,
-    "instructions": "Apoie a parte da frente dos pés na plataforma do leg press, com as pernas estendidas. Use as panturrilhas para empurrar o peso, flexionando os pés e os dedos até a posição de ponta, e depois volte à posição relaxada. Este exercício constrói massa e força nos músculos gastrocnêmio e sóleo tanto quanto — se não melhor que — qualquer outro exercício de panturrilha.",
+    "instructions": "Posição inicial: Apoie costas e quadril no leg press, com a parte da frente dos pés firme na plataforma e joelhos destravados.\nMovimento: Eleve os calcanhares, faça uma breve pausa e abaixe lentamente pela amplitude confortável.\nRespiração: Solte o ar ao elevar os calcanhares e inspire ao baixá-los.\nCuidados: Movimente os tornozelos sem saltar ou travar os joelhos. Garanta que os pés não escorreguem do apoio.",
     "language": "pt",
     "equipment": "",
     "muscles": [
@@ -1241,7 +1241,7 @@
   },
   "Abdominal crunch": {
     "wger_id": 167,
-    "instructions": "Deite-se de barriga para cima no chão com os joelhos dobrados. Curve os ombros em direção a pélvis. As mãos podem ficar atrás ou do lado do pescoço ou cruzadas sobre o peito. Repita",
+    "instructions": "Posição inicial: Deite de costas, com joelhos dobrados e pés no chão. Apoie as mãos no peito ou levemente atrás da cabeça.\nMovimento: Eleve os ombros, aproximando as costelas da pelve, e desça lentamente.\nRespiração: Solte o ar ao elevar os ombros e inspire ao descer.\nCuidados: Não puxe o pescoço nem tente sentar completamente.",
     "language": "pt",
     "equipment": "Gym mat",
     "muscles": [
@@ -1267,7 +1267,7 @@
   },
   "Elevação de pernas": {
     "wger_id": 377,
-    "instructions": "Deite-se em um banco e segure na parte reclinável com as mãos para se manter estável. Mantenha as pernas estendidas e eleve-as até formarem um ângulo de cerca de 45°. Faça uma pausa curta de 1 segundo e desça lentamente até a posição inicial. Para aumentar a intensidade, você pode fazer uma pausa mais longa de 7 segundos a cada cinco repetições.",
+    "instructions": "Posição inicial: Deite de costas no banco e segure um apoio firme; mantenha as pernas estendidas ou levemente dobradas.\nMovimento: Eleve as pernas com controle e abaixe até onde consegue manter a lombar estável.\nRespiração: Solte o ar ao elevar e inspire na descida.\nCuidados: Não balance as pernas nem deixe a lombar arquear; reduza a amplitude se necessário.",
     "language": "pt",
     "equipment": "Gym mat",
     "muscles": [
@@ -1293,7 +1293,7 @@
   },
   "Prancha": {
     "wger_id": 458,
-    "instructions": "Posição inicial: Inicie na posição de quatro.Os braços devem dobrar-se em um ângulo reto, com os ombro alinhados aos cotovelos.As costas devem estar direitas, com todo o corpo em linha reta. Passos: Mantenha essa posição.",
+    "instructions": "Posição inicial: Apoie os antebraços com cotovelos abaixo dos ombros e as pontas dos pés no chão.\nMovimento: Mantenha cabeça, tronco e quadril alinhados pelo tempo previsto.\nRespiração: Respire de forma contínua enquanto mantém o abdômen firme.\nCuidados: Não deixe o quadril cair nem eleve os ombros em direção às orelhas.",
     "language": "pt",
     "equipment": "none (bodyweight exercise)",
     "muscles": [
@@ -1313,8 +1313,8 @@
   },
   "Abdominal oblíquo": {
     "wger_id": 576,
-    "instructions": "Hold weight in one hand. Bend side ways to the knee. Pull upo to upright position using your obliquus.",
-    "language": "en",
+    "instructions": "Posição inicial: Em pé, segure um halter em uma mão, com os pés na largura do quadril.\nMovimento: Incline levemente o tronco para o lado do peso e retorne à posição vertical; depois troque o lado.\nRespiração: Solte o ar ao retornar à posição vertical e inspire ao inclinar.\nCuidados: Não gire o tronco nem force a coluna; use amplitude pequena e controlada.",
+    "language": "pt",
     "equipment": "Gym mat",
     "muscles": [
       "obliques"
@@ -1340,7 +1340,7 @@
   },
   "Roda abdominal": {
     "wger_id": 1573,
-    "instructions": "Posição inicial: ajoelhe-se no chão com a roda abdominal à sua frente. Pegada: segure as alças com firmeza. Rolagem: role a roda lentamente para frente, estendendo o corpo enquanto mantém o core firme. Retorno: puxe a roda de volta em direção aos joelhos, mantendo a tensão no core.",
+    "instructions": "Posição inicial: Ajoelhe em um colchonete e segure a roda abaixo dos ombros, com o abdômen firme.\nMovimento: Role a roda à frente somente até manter o tronco estável e puxe de volta.\nRespiração: Inspire ao avançar e solte o ar ao voltar, sem perder a firmeza do abdômen.\nCuidados: Não deixe a lombar afundar nem avance além da sua capacidade de retornar.",
     "language": "pt",
     "equipment": "none (bodyweight exercise)",
     "muscles": [
@@ -1360,7 +1360,7 @@
   },
   "Kettlebell swing": {
     "wger_id": 960,
-    "instructions": "Embora o balanço com kettlebell seja um exercício de corpo inteiro, ele trabalha principalmente os músculos da cadeia posterior (parte de trás do corpo). Os principais músculos utilizados são os glúteos, os isquiotibiais, os eretores da espinha e os músculos da parte superior das costas.",
+    "instructions": "Posição inicial: Segure o kettlebell com as duas mãos, pés um pouco além da largura do quadril e joelhos destravados.\nMovimento: Leve o quadril para trás e depois estenda-o para impulsionar o peso até aproximadamente a altura do peito; deixe-o retornar entre as pernas.\nRespiração: Solte o ar na extensão do quadril e inspire no retorno.\nCuidados: Não levante o peso com os braços nem incline a coluna para trás no topo.",
     "language": "pt",
     "equipment": "Kettlebell",
     "muscles": [

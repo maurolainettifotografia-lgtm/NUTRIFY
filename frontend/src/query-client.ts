@@ -1,7 +1,8 @@
-// One QueryClient for the whole app; the provider in app/_layout.tsx uses
-// this instance. Import it for cache calls outside components, for example
-// queryClient.invalidateQueries or setQueryData in websocket or push
-// handlers; inside components useQueryClient() returns this same instance.
 import { QueryClient } from "@tanstack/react-query";
-
-export const queryClient = new QueryClient();
+import { ApiError } from "@/src/api";
+export const queryClient = new QueryClient({ defaultOptions: {
+  queries: { staleTime: 30000, gcTime: 10 * 60000,
+    retry: (count, error) => count < 1 && !(error instanceof ApiError && error.status >= 400 && error.status < 500),
+  },
+  mutations: { retry: false },
+} });

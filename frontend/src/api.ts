@@ -34,11 +34,13 @@ export async function persistToken(token: string) {
 export async function clearToken() {
   inMemoryToken = null;
   await storage.secureRemove(TOKEN_KEY);
+  await storage.secureRemove("auth_identity_v1");
 }
 
 type Options = {
   method?: string;
   body?: any;
+  timeoutMs?: number;
   params?: Record<string, string | number | undefined>;
 };
 
@@ -59,11 +61,19 @@ export async function apiFetch<T = any>(path: string, opts: Options = {}): Promi
   const headers: Record<string, string> = { "Content-Type": "application/json" };
   if (inMemoryToken) headers.Authorization = `Bearer ${inMemoryToken}`;
 
-  const res = await fetch(url, {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), opts.timeoutMs ?? (/meal|vision|assistant|scan/.test(path) ? 100000 : path.startsWith("/auth/") && method === "POST" ? 70000 : 20000));
+  let res: Response;
+  try {
+  res = await fetch(url, {
+    signal: controller.signal,
     method,
     headers,
     body: body !== undefined ? JSON.stringify(body) : undefined,
   });
+  } catch {
+    throw new ApiError("Sem resposta do servidor. Verifique a conexão e tente novamente.", 0);
+  } finally { clearTimeout(timeout); }
 
   if (res.status === 401 && requestToken && requestToken === inMemoryToken) {
     await clearToken();

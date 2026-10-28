@@ -1,0 +1,8 @@
+frontend/
+.git/
+**/__pycache__/
+**/.env*
+**/node_modules/
+**/*.p12
+**/*.apk
+**/*.aab

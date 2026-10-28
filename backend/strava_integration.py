@@ -93,8 +93,10 @@ class StravaIntegration:
             # Respeita também a cota compartilhada pelo aplicativo.
             self.global_retry = time.time() + 15 * 60
             raise HTTPException(429, 'Limite do Strava atingido. A sincronização tentará novamente mais tarde.')
-        if response.status_code in (401, 403):
+        if response.status_code == 401:
             raise HTTPException(401, 'Reconecte sua conta Strava para continuar.')
+        if response.status_code == 403:
+            raise HTTPException(403, 'O Strava negou acesso. Confira as permissões da conexão ou reconecte a conta.')
         if response.status_code == 404:
             return None
         if not response.is_success:
@@ -122,7 +124,7 @@ class StravaIntegration:
 
     async def sync(self, uid, force=False):
         if time.time() < self.global_retry:
-            return
+            return False
         current = now()
         lease = secrets.token_hex(16)
         query = {'user_id': uid, 'retry_at': {'$lte': current}, '$or': [
@@ -134,7 +136,7 @@ class StravaIntegration:
             'lease_until': current + timedelta(minutes=5), 'lease': lease,
         }}, return_document=ReturnDocument.AFTER)
         if not connection:
-            return
+            return False
         try:
             token = await self.token(connection)
             cutoff = current - timedelta(days=CACHE_DAYS)
@@ -170,6 +172,7 @@ class StravaIntegration:
                 'last_sync': now(), 'next_sync': now() + timedelta(seconds=INTERVAL), 'retry_at': now(),
                 'sync_error': None, 'lease_until': now(),
             }})
+            return True
         except HTTPException as error:
             if error.status_code == 401:
                 await self.forget(uid)
@@ -254,8 +257,8 @@ class StravaIntegration:
                 return {'ok': True, 'cached': True}
             # A fila é persistente: reiniciar o servidor não perde o pedido.
             await self.db.strava_connections.update_one({'user_id': user['user_id']}, {'$set': {'next_sync': now()}})
-            await self.sync(user['user_id'], force=True)
-            return {'ok': True}
+            synced = await self.sync(user['user_id'], force=True)
+            return {'ok': bool(synced), 'deferred': not bool(synced)}
 
         @router.get('/strava/activities')
         async def activities(user=Depends(get_user)):

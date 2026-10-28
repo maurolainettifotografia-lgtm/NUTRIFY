@@ -67,6 +67,7 @@ export default function Workouts() {
 
       <ScrollView contentContainerStyle={[styles.scroll, { paddingBottom: insets.bottom + 24 }]} showsVerticalScrollIndicator={false}>
         <StravaPanel />
+        {routines.isError && <Card><Text style={{color:colors.error,marginBottom:12}}>Não foi possível carregar seus treinos. Seus registros continuam salvos no servidor.</Text><Button label="Tentar carregar treinos" variant="secondary" onPress={()=>void routines.refetch()}/></Card>}
         {routines.isLoading ? <ActivityIndicator color={colors.brandPrimary} style={{ marginTop: spacing.xl }} /> : null}
 
         {!routines.isLoading && list.length === 0 ? (

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Alert, AppState, Linking, Platform, Text, View } from "react-native";
+import { Alert, AppState, Linking, Platform, Pressable, Text, View } from "react-native";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import * as WebBrowser from "expo-web-browser";
 import { latestStravaActivities } from "@/src/utils/strava";
@@ -13,6 +13,21 @@ type Status = { configured: boolean; connected: boolean; last_sync: string | nul
 type Activity = { activity_id: number; start_date?: string; name: string; sport_type: string; date: string; duration_min: number; distance_km: number; calories: number | null };
 
 export function StravaPanel() {
+  const [open, setOpen] = useState(false);
+  const { colors } = useTheme();
+  return <View style={{ gap: spacing.sm }}>
+    <Pressable accessibilityRole="button" accessibilityState={{ expanded: open }} onPress={() => setOpen(value => !value)} style={{ padding: spacing.md, backgroundColor: colors.surfaceSecondary, borderRadius: 16 }}>
+      <Text style={{ color: colors.onSurface, fontSize: 16, fontWeight: "700" }}>{open ? "▾" : "▸"} Integrações e origem das calorias</Text>
+      <Text style={{ color: colors.muted, marginTop: 4 }}>Strava · Health Connect · regras de contagem</Text>
+    </Pressable>
+    {open && <>
+      <Text style={{ color: colors.onSurfaceSecondary, lineHeight: 20 }}>Diário: registros Nutrify, incluindo a estimativa MET dos treinos concluídos. Strava é exibido separadamente e não soma calorias ao diário. Evite registrar manualmente um treino já concluído no app.</Text>
+      <Text style={{ color: colors.muted, lineHeight: 20 }}>Health Connect: ainda não implementado nesta versão. Não há leitura, gravação ou pedido de permissões de saúde.</Text>
+      <StravaPanelContent />
+    </>}
+  </View>;
+}
+function StravaPanelContent() {
   const { user } = useAuth();
   const { colors } = useTheme();
   const qc = useQueryClient();
@@ -24,7 +39,7 @@ export function StravaPanel() {
   const refresh = () => qc.invalidateQueries({ queryKey: ["strava", user?.user_id] });
   const { mutate: synchronize, isPending: syncing } = useMutation({
     mutationFn: () => apiFetch("/strava/sync", { method: "POST" }),
-    onSuccess: refresh,
+    onSuccess: (result: { deferred?: boolean }) => { refresh(); if (result.deferred) toast.show("Sincronização adiada. O servidor tentará novamente respeitando o limite do Strava."); },
     onError: (e: Error) => toast.show(e.message || "Não foi possível sincronizar o Strava.", "error"),
   });
   const disconnect = useMutation({
@@ -74,7 +89,7 @@ export function StravaPanel() {
       {!status.data?.configured ? <Text testID="strava-setup-pending" style={{ color: colors.muted }}>Integração em preparação: falta concluir o cadastro do Nutrify no Strava.</Text> : null}
       <Button testID="strava-connect" label="Conectar ao Strava" onPress={connect} loading={connecting} disabled={!status.data?.configured} />
     </> : <>
-      <Text style={{ color: colors.onSurfaceSecondary }}>Atualização automática a cada 15 minutos com o serviço ativo e ao abrir o app. A hospedagem gratuita pode atrasar a sincronização.</Text>
+      <Text style={{ color: colors.onSurfaceSecondary }}>Atualização automática a cada 15 minutos com o serviço ativo e ao abrir esta integração. A hospedagem gratuita pode atrasar a sincronização.</Text>
       <Text style={{ color: colors.muted, fontSize: 12 }}>3 treinos mais recentes · Última atualização: {status.data.last_sync ? new Date(status.data.last_sync).toLocaleString("pt-BR") : "aguardando primeira sincronização"}</Text>
       {status.data.sync_error ? <Text style={{ color: colors.error }}>{status.data.sync_error}</Text> : null}
       <Button testID="strava-sync" label="Sincronizar agora" variant="secondary" onPress={() => synchronize()} loading={syncing} />

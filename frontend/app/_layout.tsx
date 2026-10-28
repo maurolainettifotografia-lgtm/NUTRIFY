@@ -1,7 +1,7 @@
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Stack, useRouter, useSegments } from "expo-router";
 import { useEffect } from "react";
-import { ActivityIndicator, StyleSheet, View } from "react-native";
+import { ActivityIndicator, StyleSheet, Text, Pressable, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { KeyboardProvider } from "react-native-keyboard-controller";
 import { SafeAreaProvider } from "react-native-safe-area-context";
@@ -17,7 +17,7 @@ import { storage } from "@/src/utils/storage";
 
 
 function RootNavigator() {
-  const { user, loading } = useAuth();
+  const { user, loading, connectionError, refreshUser } = useAuth();
   const segments = useSegments();
   const router = useRouter();
   const { colors } = useTheme();
@@ -43,6 +43,8 @@ function RootNavigator() {
   }
 
   return (
+    <View style={{ flex: 1 }}>
+    {connectionError && <Pressable accessibilityRole="button" onPress={() => { void refreshUser(); void queryClient.refetchQueries({ type: "active" }); }} style={{ padding: 12, backgroundColor: colors.surfaceSecondary }}><Text style={{ color: colors.onSurfaceSecondary, textAlign: "center" }}>Conexão indisponível · tocar para tentar novamente</Text></Pressable>}
     <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: colors.surface } }}>
       <Stack.Screen name="welcome" />
       <Stack.Screen name="onboarding" />
@@ -59,6 +61,7 @@ function RootNavigator() {
       <Stack.Screen name="privacy" />
       <Stack.Screen name="barcode" options={{ presentation: "modal" }} />
     </Stack>
+    </View>
   );
 }
 

@@ -83,7 +83,7 @@ export function useWater(date: string) {
 }
 
 export function useWorkouts(date: string) {
-  return useQuery<{ results: { id: string; type: string; title?: string | null; duration_min: number; calories: number }[] }>({
+  return useQuery<{ results: { id: string; type: string; title?: string | null; session_id?: string; source?: string; duration_min: number; calories: number }[] }>({
     queryKey: ["workouts", date],
     queryFn: () => apiFetch("/workouts", { params: { date } }),
   });

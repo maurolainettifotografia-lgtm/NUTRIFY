@@ -128,7 +128,7 @@ export default function Profile() {
         {/* Goals */}
         <Card>
           <View style={styles.rowBetween}>
-            <Text style={styles.cardTitle}>Minhas metas</Text>
+            <Text style={styles.cardTitle}>Metas base</Text>
             <Pressable testID="edit-profile" onPress={() => editRef.current?.expand()} hitSlop={8}>
               <Ionicons name="create-outline" size={20} color={colors.brandPrimary} />
             </Pressable>
@@ -196,7 +196,7 @@ export default function Profile() {
                       {w.title || (WORKOUT_TYPES.find((t) => t.key === w.type)?.label ?? w.type)} · {w.duration_min} min
                     </Text>
                     <View style={styles.workoutRight}>
-                      <Text style={styles.workoutKcal}>{w.calories} kcal</Text>
+                      <View><Text style={styles.workoutKcal}>~{w.calories} kcal</Text><Text style={{color:colors.muted,fontSize:10}}>{w.session_id ? "Treino concluído · MET" : "Registro manual"}</Text></View>
                       <Pressable
                         testID={`delete-workout-${w.id}`}
                         onPress={async () => {

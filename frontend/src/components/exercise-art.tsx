@@ -46,7 +46,7 @@ export function ExerciseIllustration({ name, art }: { name: string; art: Exercis
       <View style={{ flexDirection: "row", alignItems: "center", gap: 6, paddingVertical: 6 }}><View style={{ width: 8, height: 8, borderRadius: 4, backgroundColor: "#FF665D" }} /><Text style={{ color: "#CBD5E1", fontSize: 11, flex: 1 }}>Em vermelho: músculos em foco</Text></View>
     </View>
     <StageButtons stages={art.stages} stage={stage} onChange={setStage} />
-    <Text style={{ color: colors.muted, fontSize: 11, lineHeight: 16 }}>Ilustração 3D gerada por IA para referência visual. O destaque não mede a ativação muscular.</Text>
+    <Text style={{ color: colors.muted, fontSize: 11, lineHeight: 16 }}>O destaque indica os grupos em foco e não mede a ativação muscular.</Text>
     <Modal visible={expanded} animationType="fade" onRequestClose={() => setExpanded(false)}>
       <View style={{ flex: 1, backgroundColor: "#10151E", paddingTop: insets.top + 8, paddingBottom: insets.bottom + 12 }}>
         <View style={{ flexDirection: "row", alignItems: "center", paddingHorizontal: 16, gap: 12 }}>

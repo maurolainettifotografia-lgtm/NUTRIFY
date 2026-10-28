@@ -1,16 +1,18 @@
 import React, { useRef, useState } from "react";
-import { Pressable, ScrollView, Switch, Text, View } from "react-native";
+import { Platform, Pressable, ScrollView, Share, Switch, Text, View } from "react-native";
+import { useRouter } from "expo-router";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import BottomSheet, { BottomSheetBackdrop, BottomSheetScrollView, BottomSheetTextInput, BottomSheetView } from "@gorhom/bottom-sheet";
 import Ionicons from "@react-native-vector-icons/ionicons";
 import { Image } from "expo-image";
 
+import { profileAge } from "@/src/profile-age";
 import { apiFetch } from "@/src/api";
 import { Button, Card } from "@/src/components/primitives";
 import { useToast } from "@/src/components/toast";
 import { useAuth } from "@/src/auth-context";
-import { useProfile, useWorkouts } from "@/src/hooks";
+import { useConsent, useProfile, useWorkouts } from "@/src/hooks";
 import { ACTIVITY_LEVELS, COPYRIGHT, GOALS, GOAL_LABELS, SIGNATURE, WORKOUT_TYPES, todayStr } from "@/src/constants";
 import { setColorScheme, makeStyles, radius, spacing, useTheme } from "@/src/theme";
 import { storage } from "@/src/utils/storage";
@@ -22,7 +24,40 @@ export default function Profile() {
   const { user, signOut } = useAuth();
   const toast = useToast();
   const qc = useQueryClient();
+  const router = useRouter();
   const { data: profile } = useProfile();
+  const { data: consent } = useConsent();
+  const [exporting, setExporting] = useState(false);
+
+  const setAiConsent = useMutation({
+    mutationFn: (on: boolean) => apiFetch("/account/consent", { method: "PUT", body: { ai_processing: on } }),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ["consent"] }),
+    onError: () => toast.show("Não foi possível salvar. Tente novamente.", "error"),
+  });
+
+  // Direito de acesso e portabilidade (LGPD): baixa/compartilha todos os dados em JSON.
+  const exportData = async () => {
+    setExporting(true);
+    try {
+      const data = await apiFetch<unknown>("/account/export");
+      const json = JSON.stringify(data, null, 2);
+      if (Platform.OS === "web") {
+        const g = globalThis as any;
+        const url = g.URL.createObjectURL(new g.Blob([json], { type: "application/json" }));
+        const a = g.document.createElement("a");
+        a.href = url;
+        a.download = "nutrify-meus-dados.json";
+        a.click();
+        g.URL.revokeObjectURL(url);
+      } else {
+        await Share.share({ title: "Meus dados do Nutrify", message: json });
+      }
+    } catch {
+      toast.show("Não foi possível exportar seus dados", "error");
+    } finally {
+      setExporting(false);
+    }
+  };
   const editRef = useRef<BottomSheet>(null);
   const workoutRef = useRef<BottomSheet>(null);
   const date = todayStr();
@@ -30,11 +65,17 @@ export default function Profile() {
 
   const update = useMutation({
     mutationFn: (body: any) => apiFetch("/profile", { method: "PUT", body }),
-    onSuccess: () => {
+    onSuccess: (_data, body) => {
       qc.invalidateQueries({ queryKey: ["profile"] });
       qc.invalidateQueries({ queryKey: ["diary"] });
       qc.invalidateQueries({ queryKey: ["reports"] });
+      toast.show("Perfil atualizado");
+      if ("age_years" in body || "height_cm" in body || "goal_weight_kg" in body) {
+        editRef.current?.close();
+        router.push("/personal-plan");
+      }
     },
+    onError: (e: Error) => toast.show(e.message, "error"),
   });
 
   const [confirmDelete, setConfirmDelete] = useState(false);
@@ -78,10 +119,16 @@ export default function Profile() {
           </View>
         </Card>
 
+        <Card style={{ gap: spacing.sm }}>
+          <Text style={styles.cardTitle}>Meus dados</Text>
+          <Text style={styles.aboutText}>{profile && profileAge(profile) !== undefined ? `${profileAge(profile)} anos` : "Idade não preenchida"} · {profile?.height_cm ?? "—"} cm</Text>
+          <Text style={styles.aboutText}>Peso atual: {profile?.weight_kg ?? "—"} kg · Desejado: {profile?.goal_weight_kg ?? "—"} kg</Text>
+          <Button label="Revisar orientação personalizada" variant="secondary" onPress={() => router.push("/personal-plan")} />
+        </Card>
         {/* Goals */}
         <Card>
           <View style={styles.rowBetween}>
-            <Text style={styles.cardTitle}>Minhas metas</Text>
+            <Text style={styles.cardTitle}>Metas base</Text>
             <Pressable testID="edit-profile" onPress={() => editRef.current?.expand()} hitSlop={8}>
               <Ionicons name="create-outline" size={20} color={colors.brandPrimary} />
             </Pressable>
@@ -94,6 +141,21 @@ export default function Profile() {
           </View>
           <Text style={styles.goalMeta}>
             Objetivo: {GOAL_LABELS[profile?.goal ?? "manutencao"]} · TMB {g?.bmr} · TDEE {g?.tdee}
+          </Text>
+          {g?.floor_applied ? (
+            <Text testID="goal-floor-notice" style={styles.goalNotice}>
+              Sua meta foi ajustada para o mínimo de {g.calorie_floor} kcal por dia. Comer menos do que isso só com
+              acompanhamento de nutricionista ou médico.
+            </Text>
+          ) : null}
+          {g?.below_floor ? (
+            <Text testID="goal-below-floor-warning" style={styles.goalWarn}>
+              Atenção: sua meta personalizada está abaixo do mínimo recomendado ({g.calorie_floor} kcal por dia).
+              Procure um nutricionista ou médico antes de seguir esse plano.
+            </Text>
+          ) : null}
+          <Text style={styles.goalDisclaimer}>
+            As metas são estimativas e não substituem a orientação de um nutricionista ou médico.
           </Text>
         </Card>
 
@@ -131,10 +193,10 @@ export default function Profile() {
                 (workouts?.results ?? []).map((w) => (
                   <View key={w.id} style={styles.workoutRow}>
                     <Text style={styles.workoutName}>
-                      {WORKOUT_TYPES.find((t) => t.key === w.type)?.label ?? w.type} · {w.duration_min} min
+                      {w.title || (WORKOUT_TYPES.find((t) => t.key === w.type)?.label ?? w.type)} · {w.duration_min} min
                     </Text>
                     <View style={styles.workoutRight}>
-                      <Text style={styles.workoutKcal}>{w.calories} kcal</Text>
+                      <View><Text style={styles.workoutKcal}>~{w.calories} kcal</Text><Text style={{color:colors.muted,fontSize:10}}>{w.session_id ? "Treino concluído · MET" : "Registro manual"}</Text></View>
                       <Pressable
                         testID={`delete-workout-${w.id}`}
                         onPress={async () => {
@@ -170,6 +232,33 @@ export default function Profile() {
               thumbColor={colors.onBrandPrimary}
             />
           </View>
+        </Card>
+
+        {/* Privacidade (LGPD) */}
+        <Card>
+          <Text style={styles.cardTitle}>Privacidade e dados</Text>
+          <Pressable testID="open-privacy" onPress={() => router.push("/privacy")} style={styles.settingRow}>
+            <Text style={styles.settingLabel}>Política de Privacidade</Text>
+            <Ionicons name="chevron-forward" size={18} color={colors.muted} />
+          </Pressable>
+          <View style={styles.settingRow}>
+            <View style={{ flex: 1, paddingRight: spacing.md }}>
+              <Text style={styles.settingLabel}>Usar inteligência artificial</Text>
+              <Text style={styles.privSub}>Foto de comida, sugestões e chat com a Nutri</Text>
+            </View>
+            <Switch
+              testID="ai-consent-switch"
+              value={!!consent?.ai_processing}
+              onValueChange={(v) => setAiConsent.mutate(v)}
+              disabled={!consent || setAiConsent.isPending}
+              trackColor={{ true: colors.brandPrimary, false: colors.surfaceTertiary }}
+              thumbColor={colors.onBrandPrimary}
+            />
+          </View>
+          <Pressable testID="export-data" onPress={exportData} disabled={exporting} style={styles.settingRow}>
+            <Text style={styles.settingLabel}>{exporting ? "Preparando..." : "Exportar meus dados"}</Text>
+            <Ionicons name="download-outline" size={18} color={colors.muted} />
+          </Pressable>
         </Card>
 
         {/* About */}
@@ -208,7 +297,7 @@ export default function Profile() {
         <Text style={styles.copyright}>{COPYRIGHT}</Text>
       </ScrollView>
 
-      <EditProfileSheet sheetRef={editRef} profile={profile} onSave={(body) => { update.mutate(body); editRef.current?.close(); toast.show("Perfil atualizado"); }} />
+      <EditProfileSheet sheetRef={editRef} profile={profile} saving={update.isPending} onSave={(body) => update.mutate(body)} />
       <WorkoutSheet sheetRef={workoutRef} date={date} onSaved={() => { qc.invalidateQueries({ queryKey: ["workouts", date] }); qc.invalidateQueries({ queryKey: ["diary", date] }); workoutRef.current?.close(); toast.show("Treino registrado"); }} />
     </View>
   );
@@ -224,19 +313,26 @@ function GoalCell({ value, label }: { value?: number; label: string }) {
   );
 }
 
-function EditProfileSheet({ sheetRef, profile, onSave }: { sheetRef: React.RefObject<BottomSheet | null>; profile: any; onSave: (b: any) => void }) {
+function EditProfileSheet({ sheetRef, profile, onSave, saving }: { sheetRef: React.RefObject<BottomSheet | null>; profile: any; onSave: (b: any) => void; saving: boolean }) {
   const styles = useStyles();
   const { colors } = useTheme();
   const insets = useSafeAreaInsets();
   const [weight, setWeight] = useState("");
+  const [age, setAge] = useState("");
+  const [height, setHeight] = useState("");
+  const [step, setStep] = useState(0);
   const [goalWeight, setGoalWeight] = useState("");
   const [water, setWater] = useState("");
   const [goal, setGoal] = useState("");
   const [activity, setActivity] = useState("");
+  const validData = Number.isInteger(Number(age)) && Number(age) >= 18 && Number(age) <= 110 && Number(height.replace(",", ".")) >= 80 && Number(height.replace(",", ".")) <= 250 && Number(weight.replace(",", ".")) >= 20 && Number(weight.replace(",", ".")) <= 500 && Number(goalWeight.replace(",", ".")) >= 20 && Number(goalWeight.replace(",", ".")) <= 500;
 
   React.useEffect(() => {
     if (profile) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- Sincroniza o formulário com o perfil carregado.
       setWeight(String(profile.weight_kg ?? ""));
+      setHeight(String(profile.height_cm ?? ""));
+      setAge(profileAge(profile) !== undefined ? String(profileAge(profile)) : "");
       setGoalWeight(String(profile.goal_weight_kg ?? ""));
       setWater(String(profile.goals?.water_goal_ml ?? ""));
       setGoal(profile.goal ?? "manutencao");
@@ -256,11 +352,17 @@ function EditProfileSheet({ sheetRef, profile, onSave }: { sheetRef: React.RefOb
     >
       <BottomSheetScrollView contentContainerStyle={[styles.sheet, { paddingBottom: insets.bottom + spacing.xl }]}>
         <Text style={styles.sheetTitle}>Editar perfil</Text>
+        {step === 0 ? <>
+        <Field label="Idade (anos)" value={age} onChange={setAge} testID="edit-age" />
+        <Field label="Altura (cm)" value={height} onChange={setHeight} testID="edit-height" />
         <Field label="Peso atual (kg)" value={weight} onChange={setWeight} testID="edit-weight" />
         <Field label="Peso desejado (kg)" value={goalWeight} onChange={setGoalWeight} testID="edit-goal-weight" />
         <Field label="Meta de água (ml)" value={water} onChange={setWater} testID="edit-water" />
 
-        <Text style={styles.fieldLabel}>Objetivo</Text>
+        <Text style={styles.privSub}>Preencha os dados para revisar seu objetivo e gerar uma orientação geral.</Text>
+        <Button label="Continuar: escolher objetivo" onPress={() => setStep(1)} disabled={!validData} />
+        </> : <>
+        <Text style={styles.fieldLabel}>Qual é seu objetivo?</Text>
         <View style={styles.optionsWrap}>
           {GOALS.map((o) => (
             <Pressable key={o.key} testID={`edit-goal-${o.key}`} onPress={() => setGoal(o.key)} style={[styles.optionChip, goal === o.key && styles.optionChipActive]}>
@@ -280,18 +382,22 @@ function EditProfileSheet({ sheetRef, profile, onSave }: { sheetRef: React.RefOb
 
         <Button
           testID="save-profile"
-          label="Salvar alterações"
+          label="Salvar e revisar sugestão" disabled={!validData || !goal} loading={saving}
           onPress={() =>
             onSave({
-              weight_kg: Number(weight) || profile?.weight_kg,
-              goal_weight_kg: Number(goalWeight) || profile?.goal_weight_kg,
-              water_goal_ml: Number(water) || undefined,
+              age_years: Number(age),
+              height_cm: Number(height.replace(",", ".")),
+              weight_kg: Number(weight.replace(",", ".")),
+              goal_weight_kg: Number(goalWeight.replace(",", ".")),
+              water_goal_ml: Number(water.replace(",", ".")) || undefined,
               goal,
               activity_level: activity,
             })
           }
           style={{ marginTop: spacing.lg }}
         />
+        <Button label="Voltar aos dados" variant="ghost" onPress={() => setStep(0)} />
+        </>}
       </BottomSheetScrollView>
     </BottomSheet>
   );
@@ -351,7 +457,7 @@ function Field({ label, value, onChange, testID }: { label: string; value: strin
       <BottomSheetTextInput
         testID={testID}
         value={value}
-        onChangeText={(t) => onChange(t.replace(/[^0-9.]/g, ""))}
+        onChangeText={(t) => onChange(t.replace(/[^0-9.,]/g, ""))}
         keyboardType="decimal-pad"
         placeholderTextColor={colors.muted}
         style={styles.fieldInput}
@@ -378,6 +484,9 @@ const useStyles = makeStyles((colors) => ({
   goalValue: { color: colors.onSurface, fontSize: 17, fontWeight: "800" },
   goalLabel: { color: colors.muted, fontSize: 10, marginTop: 2 },
   goalMeta: { color: colors.muted, fontSize: 12, marginTop: spacing.md },
+  goalNotice: { color: colors.onSurfaceTertiary, fontSize: 12, lineHeight: 18, marginTop: spacing.sm, backgroundColor: colors.brandTertiary, padding: spacing.sm, borderRadius: radius.md },
+  goalWarn: { color: colors.warning, fontSize: 12, lineHeight: 18, fontWeight: "700", marginTop: spacing.sm },
+  goalDisclaimer: { color: colors.muted, fontSize: 11, lineHeight: 16, marginTop: spacing.sm },
   athleteTitleRow: { flexDirection: "row", alignItems: "center", gap: spacing.sm },
   athleteDesc: { color: colors.muted, fontSize: 13, lineHeight: 19, marginTop: spacing.sm },
   workoutSection: { marginTop: spacing.lg, gap: spacing.sm, borderTopWidth: 1, borderTopColor: colors.divider, paddingTop: spacing.md },
@@ -389,6 +498,7 @@ const useStyles = makeStyles((colors) => ({
   workoutName: { color: colors.onSurfaceSecondary, fontSize: 14, fontWeight: "600" },
   workoutRight: { flexDirection: "row", alignItems: "center", gap: spacing.md },
   workoutKcal: { color: colors.brandPrimary, fontSize: 14, fontWeight: "700" },
+  privSub: { color: colors.muted, fontSize: 12, marginTop: 2 },
   settingRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginTop: spacing.md },
   settingLeft: { flexDirection: "row", alignItems: "center", gap: spacing.sm },
   settingLabel: { color: colors.onSurfaceSecondary, fontSize: 14, fontWeight: "600" },

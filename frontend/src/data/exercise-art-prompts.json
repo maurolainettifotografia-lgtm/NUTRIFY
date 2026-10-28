@@ -1,0 +1,724 @@
+[
+  {
+    "id": 73,
+    "name": "Supino reto com barra",
+    "muscles": [
+      "chest"
+    ],
+    "stages": 2,
+    "prompt": "Create a polished 3D fitness instructional illustration for a mobile exercise app, landscape 1536x1024, two panels side by side showing the SAME flat barbell bench press exercise. Inputs are licensed Everkinetic posture references: preserve their actual body positions, barbell grip, flat bench and range of motion. Left: lowered bar above chest, bent elbows, feet flat; right: bar raised with arms extended above chest, feet flat. Athletic adult anatomical mannequin, neutral silver gray body with only pectoral muscles highlighted vivid coral red, dark navy shorts, blue athletic shoes. Attractive teal blue upholstered flat bench, brushed graphite metal barbell and blue weight plates with lime accents. Anatomically coherent hands holding bar, shoulders supported on bench, head on bench. Premium realistic 3D educational render, balanced studio lighting, subtle contact shadows, dark navy #10151e background, no gym scenery. Both complete figures and equipment fully within their half, generous margins. No text, no logos, no arrows. This is one exercise illustration with two distinct stages. Keep equipment consistent between stages. Do not add duplicate limbs, do not change it to incline press.",
+    "reference_images": [
+      "assets/exercises/73-0.png",
+      "assets/exercises/73-1.png"
+    ]
+  },
+  {
+    "id": 538,
+    "name": "Supino inclinado com barra",
+    "muscles": [
+      "chest"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Supino inclinado com barra. Pose: INCLINE BARBELL bench press on bench backrest tilted 30 degrees. Left bar at upper chest, elbows bent; right bar above upper chest, arms extended. Feet on floor.\nRed highlighted primary muscle groups ONLY: chest."
+  },
+  {
+    "id": 185,
+    "name": "Supino declinado com barra",
+    "muscles": [
+      "chest"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Supino declinado com barra. Pose: DECLINE BARBELL bench press: bench slopes downward toward the head at 15 degrees; ankles secured at higher foot end. Left bar near lower chest; right arms extended vertically over lower chest. Head visibly lower than hips.\nRed highlighted primary muscle groups ONLY: chest."
+  },
+  {
+    "id": 75,
+    "name": "Supino reto com halteres",
+    "muscles": [
+      "chest"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Supino reto com halteres. Pose: Flat DUMBBELL bench press. Athlete lying on horizontal bench holding exactly one dumbbell in each hand. Left elbows bent, dumbbells beside chest; right arms extended upward with dumbbells above chest. Feet on floor.\nRed highlighted primary muscle groups ONLY: chest."
+  },
+  {
+    "id": 537,
+    "name": "Supino inclinado com halteres",
+    "muscles": [
+      "chest"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Supino inclinado com halteres. Pose: INCLINE DUMBBELL bench press, backrest 30 degrees. Left dumbbells beside upper chest, elbows bent; right dumbbells pressed vertically over upper chest. Exactly two dumbbells in each panel.\nRed highlighted primary muscle groups ONLY: chest."
+  },
+  {
+    "id": 129,
+    "name": "Supino na máquina",
+    "muscles": [
+      "chest"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Supino na máquina. Pose: Seated chest press MACHINE with vertical backrest, handles aligned with mid chest, visible linked machine arms and weight stack. Left handles near chest, elbows bent; right handles pushed forward, arms extended. Keep back supported, feet planted.\nRed highlighted primary muscle groups ONLY: chest."
+  },
+  {
+    "id": 238,
+    "name": "Crucifixo com halteres",
+    "muscles": [
+      "chest"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Crucifixo com halteres. Pose: Flat bench DUMBBELL CHEST FLY. Lying on flat bench, feet on floor. Left arms open to sides at chest height with softly bent elbows; right dumbbells meet above chest, elbows retain same gentle bend. Not a bench press.\nRed highlighted primary muscle groups ONLY: chest."
+  },
+  {
+    "id": 135,
+    "name": "Crucifixo na máquina (peck deck)",
+    "muscles": [
+      "chest"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Crucifixo na máquina (peck deck). Pose: Seated PEC DECK chest fly machine, upright padded backrest. Left hands on machine handles, upper arms open sideways at shoulder level, elbows gently bent; right bring machine handles together in front of chest. Machine linkage visible.\nRed highlighted primary muscle groups ONLY: chest."
+  },
+  {
+    "id": 323,
+    "name": "Crossover na polia",
+    "muscles": [
+      "chest"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Crossover na polia. Pose: Standing high cable CHEST CROSSOVER between two cable towers. Split stance, torso slightly inclined. Left arms open diagonally sideways with bent elbows, one cable handle per hand; right handles come together in front of lower chest. Cables connect to two upper pulleys.\nRed highlighted primary muscle groups ONLY: chest."
+  },
+  {
+    "id": 1551,
+    "name": "Flexão de braço",
+    "muscles": [
+      "chest"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Flexão de braço. Pose: BODYWEIGHT PUSH-UP on floor, side three-quarter view. Left body in straight high plank, palms planted under/slightly wider than shoulders; right chest near floor with elbows bent about 45 degrees from torso. Toes and palms stay planted, hips in straight body line.\nRed highlighted primary muscle groups ONLY: chest."
+  },
+  {
+    "id": 194,
+    "name": "Mergulho nas paralelas",
+    "muscles": [
+      "chest",
+      "triceps"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Mergulho nas paralelas. Pose: Bodyweight PARALLEL BAR DIP on two fixed parallel blue bars. Left arms extended supporting body above bars; right elbows bent about 90 degrees with chest leaning gently forward. Feet suspended, knees slightly bent. No bench.\nRed highlighted primary muscle groups ONLY: chest, triceps."
+  },
+  {
+    "id": 1127,
+    "name": "Puxada com pegada supinada",
+    "muscles": [
+      "upper-back"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Puxada com pegada supinada. Pose: SUPINATED GRIP LAT PULLDOWN. Seated at high pulley machine, thighs secured under roller. Three-quarter REAR view showing back. Both palms face toward athlete. Left arms reaching up to straight bar overhead; right bar pulled to upper chest in front of face, elbows down. Never behind neck.\nRed highlighted primary muscle groups ONLY: upper-back."
+  },
+  {
+    "id": 83,
+    "name": "Remada curvada com barra",
+    "muscles": [
+      "upper-back"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Remada curvada com barra. Pose: BENT OVER BARBELL ROW, three-quarter rear-side view. Hip hinge, knees gently bent, neutral back tilted near horizontal. Left bar hanging below shoulders, arms extended; right bar pulled toward lower ribs, elbows back. Torso angle unchanged.\nRed highlighted primary muscle groups ONLY: upper-back."
+  },
+  {
+    "id": 81,
+    "name": "Remada unilateral com halter (serrote)",
+    "muscles": [
+      "upper-back"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Remada unilateral com halter (serrote). Pose: ONE ARM DUMBBELL ROW supported on a flat bench. Left knee and left palm on bench, right foot on ground; right hand holds one dumbbell. Left panel right arm hanging; right panel right elbow drawn back, dumbbell beside hip. Three-quarter rear view with back visible.\nRed highlighted primary muscle groups ONLY: upper-back."
+  },
+  {
+    "id": 394,
+    "name": "Remada baixa na polia",
+    "muscles": [
+      "upper-back"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Remada baixa na polia. Pose: SEATED LOW CABLE ROW. Seated upright on low cable rowing station, knees slightly bent, feet on angled foot plates. Left arms extended toward low pulley with V handle; right handle pulled to navel, elbows close to sides. Neutral spine unchanged, rear-side view.\nRed highlighted primary muscle groups ONLY: upper-back."
+  },
+  {
+    "id": 513,
+    "name": "Remada cavalinho",
+    "muscles": [
+      "upper-back"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Remada cavalinho. Pose: LANDMINE T-BAR ROW. Bar fixed to floor pivot behind athlete, loaded front end between legs with V handle. Hip hinge, neutral back. Left arms extended to handle; right handle pulled toward lower chest, elbows back. Show bar pivot, not a free barbell.\nRed highlighted primary muscle groups ONLY: upper-back."
+  },
+  {
+    "id": 1725,
+    "name": "Remada na máquina",
+    "muscles": [
+      "upper-back"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Remada na máquina. Pose: SEATED CHEST-SUPPORTED ROW MACHINE. Athlete sits facing chest pad, sternum supported against pad. Left arms extended forward holding handles; right elbows pulled backward, handles toward torso. Three-quarter rear view shows back muscles and actual seat/chest pad.\nRed highlighted primary muscle groups ONLY: upper-back."
+  },
+  {
+    "id": 161,
+    "name": "Pullover com halter",
+    "muscles": [
+      "upper-back",
+      "chest"
+    ],
+    "stages": 2,
+    "prompt": "One landscape 3D fitness diagram with two panels demonstrating a DUMBBELL PULLOVER, fully clothed adult sports mannequin wearing silver gray long-sleeve training shirt and navy leggings, blue sneakers. Left lying lengthwise on a flat teal bench, head and hips supported, feet firmly on floor, both hands securely holding ONE dumbbell vertically above chest. Right same position but arms move overhead back behind head, elbows softly bent and unchanged, dumbbell behind head. Side view. Brushed graphite bench, blue dumbbell with lime trim. Subtle red patches printed on pectoral area of the training shirt to mark muscle group. Dark navy studio background, refined realistic 3D style, educational sports equipment illustration, entire figure and weight visible in each panel. No words, no logos, no arrows. No exposed skin except head and hands. Exactly two anatomically coherent arms, no extra equipment."
+  },
+  {
+    "id": 184,
+    "name": "Levantamento terra",
+    "muscles": [
+      "upper-back"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Levantamento terra. Pose: CONVENTIONAL BARBELL DEADLIFT, side three-quarter rear view. Left bar at mid-shin on floor, hip hinge with knees bent, neutral back, both hands gripping bar outside knees; right standing tall with bar at thighs, arms straight, no leaning backward. Plates close to shins.\nRed highlighted primary muscle groups ONLY: upper-back."
+  },
+  {
+    "id": 566,
+    "name": "Desenvolvimento com barra",
+    "muscles": [
+      "deltoids"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Desenvolvimento com barra. Pose: SEATED BARBELL OVERHEAD SHOULDER PRESS, bench upright back support. Left bar at upper chest just below chin, forearms vertical; right bar above head, elbows extended. Both feet on floor, abdomen neutral, never behind-neck.\nRed highlighted primary muscle groups ONLY: deltoids."
+  },
+  {
+    "id": 567,
+    "name": "Desenvolvimento com halteres",
+    "muscles": [
+      "deltoids"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Desenvolvimento com halteres. Pose: SEATED DUMBBELL OVERHEAD SHOULDER PRESS on upright bench. Left one dumbbell beside each shoulder, elbows bent; right dumbbells above head with arms extended, head between arms. Feet on floor.\nRed highlighted primary muscle groups ONLY: deltoids."
+  },
+  {
+    "id": 543,
+    "name": "Desenvolvimento na máquina",
+    "muscles": [
+      "deltoids"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Desenvolvimento na máquina. Pose: SEATED SHOULDER PRESS MACHINE with upright backrest and linked overhead handles. Left handles beside shoulders, elbows bent; right arms push machine handles overhead. Show padded seat, machine mechanism, back supported.\nRed highlighted primary muscle groups ONLY: deltoids."
+  },
+  {
+    "id": 348,
+    "name": "Elevação lateral com halteres",
+    "muscles": [
+      "deltoids"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Elevação lateral com halteres. Pose: STANDING DUMBBELL LATERAL RAISE. Left one dumbbell at each side, arms down; right arms lifted out sideways to shoulder height, elbows slightly bent, palms facing down. Front three-quarter view, no shrugging, no overhead raise.\nRed highlighted primary muscle groups ONLY: deltoids."
+  },
+  {
+    "id": 256,
+    "name": "Elevação frontal com halteres",
+    "muscles": [
+      "deltoids"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Elevação frontal com halteres. Pose: STANDING DUMBBELL FRONT RAISE, side three-quarter view. Left arms hang with dumbbells in front of thighs; right both arms raised forward to shoulder height, slight elbow bend. Torso upright, not lateral raise.\nRed highlighted primary muscle groups ONLY: deltoids."
+  },
+  {
+    "id": 487,
+    "name": "Crucifixo inverso",
+    "muscles": [],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Crucifixo inverso. Pose: BENT OVER DUMBBELL REVERSE FLY, rear three-quarter view. Hinge torso forward with neutral back and bent knees. Left arms hang under chest holding two dumbbells; right arms open sideways at shoulder level with soft elbows. Highlight rear deltoids and upper back.\nRed highlighted primary muscle groups ONLY: ."
+  },
+  {
+    "id": 572,
+    "name": "Encolhimento com halteres",
+    "muscles": [
+      "trapezius"
+    ],
+    "stages": 2,
+    "prompt": "Create one premium 3D educational fitness illustration, two equal side-by-side panels on dark navy background. STANDING DUMBBELL SHRUG, rear three-quarter view, same athletic adult silver-gray anatomical mannequin with navy shorts and blue shoes in both. Two blue dumbbells hang at sides, elbows straight throughout. Left shoulders relaxed; right shoulders visibly elevated toward ears WITHOUT bending elbows or rolling shoulders. CORAL RED highlight ONLY the upper TRAPEZIUS: the sloped triangular muscle running from back of neck outward to shoulder blades and upper mid-back. The round shoulder caps / DELTOIDS MUST STAY SILVER GRAY, arms stay silver gray. Clearly separate neck trapezius red from silver round deltoids. Polished 3D studio rendering, cobalt blue dumbbell ends, graphite metal and lime details, full body and dumbbells inside each panel, no lettering no arrows no logos. Anatomically coherent posture and proportions, sports instructional illustration."
+  },
+  {
+    "id": 91,
+    "name": "Rosca direta com barra",
+    "muscles": [
+      "biceps"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Rosca direta com barra. Pose: STANDING STRAIGHT BARBELL BICEPS CURL. Left bar at thighs, elbows extended, supinated palms forward; right bar curled toward upper chest, elbows stay beside torso, wrists neutral. Front three-quarter view.\nRed highlighted primary muscle groups ONLY: biceps."
+  },
+  {
+    "id": 1192,
+    "name": "Rosca alternada com halteres",
+    "muscles": [
+      "biceps"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Rosca alternada com halteres. Pose: STANDING ALTERNATING DUMBBELL BICEPS CURL. Left right arm extended at side, palm forward, left arm relaxed with dumbbell; right right elbow flexed, dumbbell near shoulder, palm supinated, left arm remains extended. Two dumbbells visible.\nRed highlighted primary muscle groups ONLY: biceps."
+  },
+  {
+    "id": 272,
+    "name": "Rosca martelo",
+    "muscles": [
+      "biceps"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Rosca martelo. Pose: STANDING DUMBBELL HAMMER CURL. Left both arms down at sides, thumbs point forward; right elbows flexed with dumbbells near shoulders, palms face inward throughout. Neutral grip, no wrist supination, elbows at sides.\nRed highlighted primary muscle groups ONLY: biceps."
+  },
+  {
+    "id": 465,
+    "name": "Rosca Scott",
+    "muscles": [],
+    "stages": 2,
+    "prompt": "One premium 3D fitness exercise illustration, landscape, two equal panels. PREACHER CURL / SCOTT CURL holding an EZ bar, adult silver-gray anatomical training mannequin seated on teal blue preacher bench, upper arms supported along sloped pad. Left arms extending forward down along pad (elbows not locked), blue plate EZ bar low. Right elbows flexed, EZ bar near shoulders, upper arms remain supported. Red highlights ONLY BICEPS BRACHII on FRONT OF UPPER ARMS BETWEEN SHOULDER AND ELBOW, clearly visible rounded upper arm biceps bulges. FOREARMS BETWEEN ELBOW AND WRIST MUST STAY SILVER GRAY, no red forearms. Three-quarter FRONT viewpoint, arms visible above preacher pad so upper arm biceps red is clear. Navy shorts, blue shoes, graphite frame and cobalt plates with small lime accents. Full equipment and figure fit inside each panel. Dark navy background soft studio lighting beautiful detailed realistic 3D rendering. No text, arrows or logos."
+  },
+  {
+    "id": 95,
+    "name": "Rosca na polia",
+    "muscles": [
+      "biceps"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Rosca na polia. Pose: STANDING LOW CABLE BICEPS CURL. Low pulley in front at floor, straight bar connected to visible taut cable. Left arms extended near thighs, palms up; right bar curled toward shoulders, elbows fixed beside torso.\nRed highlighted primary muscle groups ONLY: biceps."
+  },
+  {
+    "id": 1290,
+    "name": "Rosca inversa",
+    "muscles": [
+      "forearm"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Rosca inversa. Pose: STANDING REVERSE BARBELL CURL with overhand PRONATED grip, palms facing down. Left straight bar at thighs, elbows extended; right bar curled to lower chest, elbows flexed and close to sides. Highlight brachioradialis forearms, not palms-up curl.\nRed highlighted primary muscle groups ONLY: forearm."
+  },
+  {
+    "id": 1900,
+    "name": "Tríceps pulley com corda",
+    "muscles": [
+      "triceps"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Tríceps pulley com corda. Pose: STANDING HIGH CABLE ROPE TRICEPS PUSHDOWN, side three-quarter view. High pulley with rope attachment, one rope end in each hand. Left elbows bent 90 degrees next to ribs, hands near lower chest; right elbows extended downward and rope ends apart beside hips. Upper arms remain still.\nRed highlighted primary muscle groups ONLY: triceps."
+  },
+  {
+    "id": 805,
+    "name": "Tríceps pulley com barra reta",
+    "muscles": [
+      "triceps"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Tríceps pulley com barra reta. Pose: STANDING HIGH CABLE STRAIGHT BAR TRICEPS PUSHDOWN. Left elbows bent about 90 degrees beside torso, hands gripping straight bar with pronated grip; right elbows extended downward, bar at upper thighs. Taut cable to upper pulley visible.\nRed highlighted primary muscle groups ONLY: triceps."
+  },
+  {
+    "id": 246,
+    "name": "Tríceps testa",
+    "muscles": [
+      "triceps"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Tríceps testa. Pose: LYING EZ BAR TRICEPS EXTENSION / SKULL CRUSHER on flat bench. Left arms above shoulders with elbows extended holding EZ bar; right bend only elbows to lower bar near forehead while upper arms stay nearly vertical. Both feet floor, head supported.\nRed highlighted primary muscle groups ONLY: triceps."
+  },
+  {
+    "id": 1336,
+    "name": "Tríceps francês",
+    "muscles": [
+      "triceps"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Tríceps francês. Pose: SEATED SINGLE DUMBBELL OVERHEAD TRICEPS EXTENSION / FRENCH PRESS. Both hands securely cup one dumbbell over head. Left elbows bent with dumbbell behind head; right elbows extend with dumbbell above head. Upper arms near ears, back upright supported.\nRed highlighted primary muscle groups ONLY: triceps."
+  },
+  {
+    "id": 197,
+    "name": "Mergulho no banco",
+    "muscles": [
+      "triceps"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Mergulho no banco. Pose: BODYWEIGHT BENCH DIP. Hands grip front edge of blue bench behind torso, feet on floor forward, knees bent. Left arms extended and hips just off bench; right elbows bend to 90 degrees lowering hips near bench, shoulders not below elbows. Side view.\nRed highlighted primary muscle groups ONLY: triceps."
+  },
+  {
+    "id": 76,
+    "name": "Supino fechado",
+    "muscles": [
+      "triceps"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Supino fechado. Pose: CLOSE GRIP BARBELL FLAT BENCH PRESS. Hands around shoulder width, narrower than standard press, not touching. Left bar near lower chest, elbows tucked near ribs; right bar pressed above chest. Flat bench, feet floor; highlight triceps prominently.\nRed highlighted primary muscle groups ONLY: triceps."
+  },
+  {
+    "id": 1801,
+    "name": "Agachamento livre",
+    "muscles": [
+      "hamstring",
+      "gluteal",
+      "quadriceps"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Agachamento livre. Pose: BARBELL BACK SQUAT, three-quarter side view. Bar rests across upper trapezius, hands hold it securely, feet shoulder width. Left standing upright; right hips back and down, thighs roughly parallel to floor, knees track toes, heels planted, neutral spine. No bench.\nRed highlighted primary muscle groups ONLY: hamstring, gluteal, quadriceps."
+  },
+  {
+    "id": 1747,
+    "name": "Agachamento no Smith",
+    "muscles": [
+      "gluteal",
+      "quadriceps"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Agachamento no Smith. Pose: SMITH MACHINE SQUAT. Bar on upper trapezius and attached to two clearly visible vertical guide rails. Left standing; right squat with thighs near parallel, heels down, neutral spine. Same machine rails and foot position in both stages.\nRed highlighted primary muscle groups ONLY: gluteal, quadriceps."
+  },
+  {
+    "id": 375,
+    "name": "Agachamento hack",
+    "muscles": [
+      "quadriceps"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Agachamento hack. Pose: 45-DEGREE HACK SQUAT MACHINE. Back and shoulders supported on angled sled pad, hands on handles, feet on lower platform. Left knees extended without locking; right knees bent about 90 degrees lowering sled. Show angled rails, shoulder pads and sled, not a leg press.\nRed highlighted primary muscle groups ONLY: quadriceps."
+  },
+  {
+    "id": 1706,
+    "name": "Agachamento búlgaro",
+    "muscles": [
+      "gluteal",
+      "quadriceps"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Agachamento búlgaro. Pose: BODYWEIGHT BULGARIAN SPLIT SQUAT, side three-quarter view. Rear left foot instep rests on flat bench behind, right foot flat on floor forward. Left tall split stance; right bend right knee to lower body, left knee down. Stable torso, front heel planted.\nRed highlighted primary muscle groups ONLY: gluteal, quadriceps."
+  },
+  {
+    "id": 369,
+    "name": "Cadeira extensora",
+    "muscles": [
+      "quadriceps"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Cadeira extensora. Pose: SEATED LEG EXTENSION MACHINE. Upright back supported, both knees aligned with machine pivot; padded roller against FRONT of lower shins just above ankles. Left knees bent about 90 degrees, feet down; right extend knees raising shins forward nearly horizontal. Highlight FRONT quadriceps.\nRed highlighted primary muscle groups ONLY: quadriceps."
+  },
+  {
+    "id": 365,
+    "name": "Mesa flexora",
+    "muscles": [
+      "hamstring"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Mesa flexora. Pose: PRONE LYING LEG CURL MACHINE, side rear three-quarter view. Face down on padded bench, hips stay down. Roller against BACK of lower calves/ankles. Left legs nearly straight; right knees flexed bringing heels toward buttocks. Highlight rear hamstrings, not quadriceps.\nRed highlighted primary muscle groups ONLY: hamstring."
+  },
+  {
+    "id": 366,
+    "name": "Cadeira flexora",
+    "muscles": [
+      "hamstring"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Cadeira flexora. Pose: SEATED LEG CURL MACHINE, rear-side three-quarter view. Back on upright pad, padded thigh restraint above knees, ankle roller behind lower calves. Left lower legs extended forward; right knees flexed pulling heels downward/back under seat. Highlight posterior thighs.\nRed highlighted primary muscle groups ONLY: hamstring."
+  },
+  {
+    "id": 984,
+    "name": "Afundo (passada)",
+    "muscles": [
+      "gluteal",
+      "quadriceps"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Afundo (passada). Pose: BODYWEIGHT FORWARD LUNGE. Left standing upright feet hip width; right step forward with right foot and lower into split stance, front knee about 90 degrees, rear knee just above floor. Both heels/feet anatomically correct, torso upright. No weights.\nRed highlighted primary muscle groups ONLY: gluteal, quadriceps."
+  },
+  {
+    "id": 12,
+    "name": "Cadeira adutora",
+    "muscles": [
+      "adductors"
+    ],
+    "stages": 2,
+    "prompt": "Create a premium 3D fitness diagram of SEATED HIP ADDUCTION machine (inner thighs CLOSE TOGETHER, NOT abduction). Two equal side-by-side panels, same adult silver-gray anatomical mannequin in navy shorts and blue shoes seated upright on graphite machine with teal blue cushions, dark navy studio background. LEFT START: thighs apart, each knee resting against its own blue padded resistance arm positioned on the INNER SIDE of the knee, in the space BETWEEN THE KNEES. RIGHT END: thighs move INWARD with knees close together, pushing the inner pads toward each other. Two independent inner-thigh pads, their blue upholstered contact surfaces face OUTWARDS to press against inner knees; no outer-knee resistance pads. Highlight only inner-thigh adductor muscles CORAL RED, front three-quarter view clearly showing pads between knees and upper inner thighs, quadriceps remain silver gray. Complete body, seat, foot supports and linked resistance arms visible in both panels. Realistic attractive polished 3D exercise manual rendering, no words, logos or arrows. Contrast wide knees at left versus knees nearly touching at right."
+  },
+  {
+    "id": 1748,
+    "name": "Cadeira abdutora",
+    "muscles": [
+      "gluteal"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Cadeira abdutora. Pose: SEATED HIP ABDUCTION MACHINE. Rear-side view shows side glutes. Pads against OUTER knees. Left knees near each other; right spread thighs outward against pads. Torso stays upright supported on seat, feet on supports. Highlight outer gluteus medius.\nRed highlighted primary muscle groups ONLY: gluteal."
+  },
+  {
+    "id": 265,
+    "name": "Ponte de glúteos",
+    "muscles": [
+      "gluteal"
+    ],
+    "stages": 2,
+    "prompt": "Landscape 3D FITNESS instructional diagram, two side-by-side stages of a BODYWEIGHT GLUTE BRIDGE, fully clothed adult athletic mannequin wearing silver gray fitted LONG-SLEEVE sports top and full-length navy leggings and blue sneakers. SIDE PROFILE view only. Left lying supine on a blue exercise mat, head and shoulders supported, knees bent, both feet flat, arms resting straight beside torso with palms down, pelvis on mat. Right shoulders and head stay on mat while hips rise until torso and thighs form straight diagonal line from shoulders to knees, feet stay flat and knees bent. Highlight gluteal muscle location using a small red patch ON THE FABRIC at side hip. Uniform dark navy studio background, high-quality tasteful 3D educational training diagram, full figure in each panel, no text, no logos. No equipment other than mat. No exposed body except head and hands."
+  },
+  {
+    "id": 1131,
+    "name": "Glúteo na polia (coice)",
+    "muscles": [
+      "gluteal"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Glúteo na polia (coice). Pose: STANDING LOW CABLE GLUTE KICKBACK, rear-side view. Athlete holds tower for balance, cuff attached around right ankle to LOW pulley in front. Left right foot beside left supporting foot; right extend right hip moving near-straight leg backward, torso neutral. Highlight working right glute.\nRed highlighted primary muscle groups ONLY: gluteal."
+  },
+  {
+    "id": 622,
+    "name": "Panturrilha em pé",
+    "muscles": [
+      "calves"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Panturrilha em pé. Pose: STANDING CALF RAISE MACHINE, three-quarter rear view shows calves. Shoulder pads support load, balls of feet on raised platform, heels free. Left heels lowered slightly below platform; right heels raised onto toes, knees remain softly straight. Highlight gastrocnemius calves.\nRed highlighted primary muscle groups ONLY: calves."
+  },
+  {
+    "id": 1620,
+    "name": "Panturrilha sentado",
+    "muscles": [
+      "calves"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Panturrilha sentado. Pose: SEATED DUMBBELL CALF RAISE on flat bench. Knees about 90 degrees, dumbbells rest across thighs just above knees, held steady by hands. Balls of feet on low block, heels free. Left heels lowered; right heels raised. Rear-side angle shows calves.\nRed highlighted primary muscle groups ONLY: calves."
+  },
+  {
+    "id": 146,
+    "name": "Panturrilha no leg press",
+    "muscles": [
+      "calves"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Panturrilha no leg press. Pose: CALF RAISE ON 45 DEGREE LEG PRESS. Athlete seated reclined in leg press, legs nearly straight unchanged throughout. Balls of feet on LOWER EDGE of elevated footplate, heels free. Left ankles flexed toes toward shins; right ankles extended pushing through toes. Movement only ankles.\nRed highlighted primary muscle groups ONLY: calves."
+  },
+  {
+    "id": 167,
+    "name": "Abdominal crunch",
+    "muscles": [
+      "abs"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Abdominal crunch. Pose: BODYWEIGHT ABDOMINAL CRUNCH on blue mat, side three-quarter view. Left supine with knees bent and feet flat, arms crossed over chest; right shoulders lifted slightly off mat with upper spine curled, lower back stays down. Not a full sit-up, no neck pulling.\nRed highlighted primary muscle groups ONLY: abs."
+  },
+  {
+    "id": 377,
+    "name": "Elevação de pernas",
+    "muscles": [
+      "abs"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Elevação de pernas. Pose: LYING STRAIGHT LEG RAISE on flat bench, side three-quarter view. Head and torso supported, hands grip bench edges near hips. Left legs together extended near horizontal without sagging lower back; right legs raised together to 45 degrees, knees slightly soft. Highlight lower abdominal region.\nRed highlighted primary muscle groups ONLY: abs."
+  },
+  {
+    "id": 458,
+    "name": "Prancha",
+    "muscles": [
+      "abs"
+    ],
+    "stages": 1,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Prancha. Pose: FOREARM PLANK, SINGLE continuous posture (use one large centered figure, NOT two stages). Side three-quarter view: forearms on blue mat, elbows beneath shoulders, toes planted, shoulders hips ankles in straight line, neutral head. No knee contact, no excessive arch, highlight abdominal wall.\nRed highlighted primary muscle groups ONLY: abs."
+  },
+  {
+    "id": 576,
+    "name": "Abdominal oblíquo",
+    "muscles": [
+      "obliques"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Abdominal oblíquo. Pose: CROSS-BODY OBLIQUE CRUNCH on blue mat, not standing side bend. Left supine with knees bent, hands lightly beside head; right upper torso curls and rotates left shoulder toward right knee while right foot stays planted. Lower back remains supported, avoid pulling neck. Highlight obliques.\nRed highlighted primary muscle groups ONLY: obliques."
+  },
+  {
+    "id": 1573,
+    "name": "Roda abdominal",
+    "muscles": [
+      "abs"
+    ],
+    "stages": 2,
+    "prompt": "One beautiful realistic 3D fitness exercise diagram of KNEELING AB WHEEL ROLLOUT, two equal side-by-side panels against dark navy background. Adult silver gray sports anatomical mannequin in navy shorts, blue sneakers, torso abdominal wall highlighted coral red, kneeling on blue exercise mat, ONE blue ab wheel with graphite handles held by BOTH hands in each panel. LEFT START: knees planted, hips above knees, torso tilted forward, wheel close under shoulders, arms straight down to wheel. RIGHT EXTENDED: knees remain planted at SAME spot but wheel far forward beyond head, ARMS FULLY EXTENDED FORWARD OVERHEAD in line with body, shoulders far ahead of knees, torso forms a LONG NEAR-HORIZONTAL DIAGONAL from knees through hips to head. Neutral lower back, no sagging, no elbow bending. Show clearly different wheel locations and very different extended body length. Side three-quarter view, complete figures and wheel fit in each half with margins. Polished studio lighting, cobalt and lime equipment accents, no text, no logos, no arrows. Do NOT show two almost identical kneeling starting positions."
+  },
+  {
+    "id": 960,
+    "name": "Kettlebell swing",
+    "muscles": [
+      "gluteal",
+      "hamstring"
+    ],
+    "stages": 2,
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Kettlebell swing. Pose: TWO-HANDED RUSSIAN KETTLEBELL SWING, side rear three-quarter view. Left hip hinge, knees soft, one kettlebell held by both hands swings between legs; right hips extended standing tall and kettlebell floats forward at chest level, arms long. Highlight glutes and hamstrings, not shoulders only.\nRed highlighted primary muscle groups ONLY: gluteal, hamstring."
+  },
+  {
+    "id": "custom-1",
+    "name": "Puxada frontal na polia",
+    "muscles": [
+      "upper-back"
+    ],
+    "stages": 2,
+    "equipment": "Polia alta",
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Puxada frontal na polia. Pose: OVERHAND WIDE GRIP LAT PULLDOWN. Sit at high pulley, thighs secured under pad. Rear three-quarter view. Left arms reaching up to wide curved bar overhead with palms forward; right bar pulled down IN FRONT of neck toward upper chest, elbows down. Not a supinated grip.\nRed highlighted primary muscle groups ONLY: upper-back."
+  },
+  {
+    "id": "custom-2",
+    "name": "Barra fixa",
+    "muscles": [
+      "upper-back"
+    ],
+    "stages": 2,
+    "equipment": "Barra fixa",
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Barra fixa. Pose: OVERHAND BODYWEIGHT PULL-UP at fixed high bar. Rear three-quarter view. Left suspended from bar, arms extended, palms facing away, feet clear of floor; right pull body until chin near bar, elbows bent down and back, knees slightly bent. No weights or pulleys.\nRed highlighted primary muscle groups ONLY: upper-back."
+  },
+  {
+    "id": "custom-3",
+    "name": "Remada alta",
+    "muscles": [
+      "deltoids",
+      "trapezius"
+    ],
+    "stages": 2,
+    "equipment": "Barra",
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Remada alta. Pose: STANDING BARBELL UPRIGHT ROW. Front three-quarter view. Left overhand grip on straight bar at thighs; right lift bar toward lower sternum, elbows move outward and rise to shoulder level but no higher. Torso upright, wrists below elbows.\nRed highlighted primary muscle groups ONLY: deltoids, trapezius."
+  },
+  {
+    "id": "custom-4",
+    "name": "Face pull",
+    "muscles": [
+      "deltoids",
+      "upper-back"
+    ],
+    "stages": 2,
+    "equipment": "Polia e corda",
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Face pull. Pose: STANDING HIGH CABLE ROPE FACE PULL. Rear three-quarter side view showing rear shoulders. Left arms extended holding two rope ends connected to upper pulley in front; right pull rope toward face, hands beside ears, elbows apart at shoulder height. Cable line between pulley and rope must be visible.\nRed highlighted primary muscle groups ONLY: deltoids, upper-back."
+  },
+  {
+    "id": "custom-5",
+    "name": "Rosca concentrada",
+    "muscles": [
+      "biceps"
+    ],
+    "stages": 2,
+    "equipment": "Halter e banco",
+    "prompt": "Premium 3D educational sports diagram, two equal panels on dark navy background. Seated single-arm DUMBBELL CONCENTRATION CURL, silver-gray athletic adult anatomical mannequin in navy shorts and blue sneakers sits on teal bench, feet spread and planted. Right elbow and lower upper-arm are braced against INSIDE of right thigh. Left panel right arm extended downward to blue dumbbell, right PALM SUPINATED facing forward, shoulder relaxed. Right panel right elbow flexed so dumbbell curls close to right shoulder, elbow stays braced inside thigh. Left hand rests on left thigh. Highlight CORAL RED ONLY the rounded BICEPS on the FRONT OF RIGHT UPPER ARM, strictly BETWEEN SHOULDER AND ELBOW. The entire right FOREARM between ELBOW AND WRIST must stay SILVER GRAY with no red. Make anatomical elbow clearly visible, biceps above elbow and no red below elbow. Three-quarter FRONT view so upper arm biceps is unobstructed in both poses. Full athlete, bench and dumbbell in each panel, polished realistic 3D lighting, no text, arrows or logos."
+  },
+  {
+    "id": "custom-6",
+    "name": "Tríceps coice",
+    "muscles": [
+      "triceps"
+    ],
+    "stages": 2,
+    "equipment": "Halter e banco",
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Tríceps coice. Pose: SINGLE ARM DUMBBELL TRICEPS KICKBACK. Left knee and palm supported on flat bench, right foot on floor, torso neutral near horizontal. Right upper arm parallel to torso. Left right elbow bent 90 degrees, dumbbell under elbow; right straighten right elbow backward, dumbbell near hip. Upper arm does not move.\nRed highlighted primary muscle groups ONLY: triceps."
+  },
+  {
+    "id": "custom-7",
+    "name": "Agachamento sumô",
+    "muscles": [
+      "quadriceps",
+      "gluteal",
+      "adductors"
+    ],
+    "stages": 2,
+    "equipment": "Halter",
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Agachamento sumô. Pose: GOBLET SUMO SQUAT holding one dumbbell vertically at chest with both hands. Wide stance toes turned slightly outward. Left standing tall; right squat hips down with knees tracking toes and heels planted. Neutral spine and wide stance maintained.\nRed highlighted primary muscle groups ONLY: quadriceps, gluteal, adductors."
+  },
+  {
+    "id": "custom-8",
+    "name": "Leg press 45°",
+    "muscles": [
+      "quadriceps",
+      "gluteal"
+    ],
+    "stages": 2,
+    "equipment": "Leg press 45°",
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Leg press 45°. Pose: 45 DEGREE LEG PRESS machine. Seated reclined, back supported, feet shoulder width centered on large footplate. Left knees bent about 90 degrees, sled near body; right push sled up along diagonal rails with legs extended without hyperextension. Hips stay on seat. Not hack squat, show sled and rails.\nRed highlighted primary muscle groups ONLY: quadriceps, gluteal."
+  },
+  {
+    "id": "custom-9",
+    "name": "Stiff",
+    "muscles": [
+      "hamstring",
+      "gluteal"
+    ],
+    "stages": 2,
+    "equipment": "Halteres",
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Stiff. Pose: DUMBBELL ROMANIAN DEADLIFT / STIFF. Side rear three-quarter view. Left standing tall with one dumbbell at each thigh; right hinge hips backward, torso near horizontal, dumbbells slide close along legs toward mid shin. Knees softly bent at same angle, neutral spine, no deep knee squat.\nRed highlighted primary muscle groups ONLY: hamstring, gluteal."
+  },
+  {
+    "id": "custom-10",
+    "name": "Elevação pélvica (hip thrust)",
+    "muscles": [
+      "gluteal"
+    ],
+    "stages": 2,
+    "equipment": "Barra e banco",
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Elevação pélvica (hip thrust). Pose: BARBELL HIP THRUST with upper back supported on flat bench, padded barbell across hip crease. Left hips lowered, knees bent and both feet flat; right hips raised until knees hips shoulders align horizontally, shins near vertical. Head neutral, upper back on bench, hands steady bar. Rear-side angle shows glutes.\nRed highlighted primary muscle groups ONLY: gluteal."
+  },
+  {
+    "id": "custom-11",
+    "name": "Abdução de quadril na polia",
+    "muscles": [
+      "gluteal"
+    ],
+    "stages": 2,
+    "equipment": "Polia baixa e tornozeleira",
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Abdução de quadril na polia. Pose: STANDING LOW CABLE HIP ABDUCTION. Rear three-quarter view, left hand holds tower for balance. Cable ankle cuff around right ankle attached to low pulley on left side. Left right foot near planted left foot; right right leg moves sideways outward with knee softly straight, torso remains upright. Highlight outer right hip.\nRed highlighted primary muscle groups ONLY: gluteal."
+  },
+  {
+    "id": "custom-12",
+    "name": "Abdominal na polia",
+    "muscles": [
+      "abs"
+    ],
+    "stages": 2,
+    "equipment": "Polia alta e corda",
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Abdominal na polia. Pose: KNEELING HIGH CABLE ABDOMINAL CRUNCH. Side view, knees on mat facing high cable tower, rope ends held gently beside temples. Left torso tall with hips above knees; right curl ribcage toward pelvis with spinal flexion, hands remain near temples, hips relatively still. Visible taut cable overhead. Not a triceps movement.\nRed highlighted primary muscle groups ONLY: abs."
+  },
+  {
+    "id": "custom-13",
+    "name": "Abdominal bicicleta",
+    "muscles": [
+      "abs",
+      "obliques"
+    ],
+    "stages": 2,
+    "equipment": "Colchonete",
+    "prompt": "One premium 3D sports exercise diagram of BICYCLE CRUNCH, two equal side-by-side panels dark navy background. Adult silver-gray anatomical mannequin, navy shorts, blue shoes, abdomen and obliques coral red, blue mat. LEFT START: supine on mat, hands lightly beside head with elbows wide, head and shoulder blades raised slightly, BOTH knees bent at 90 degrees above hips, shins parallel to floor in tabletop. RIGHT ACTION: rotate RIGHT SHOULDER toward bent LEFT KNEE, LEFT KNEE draws toward chest, RIGHT LEG extends straight diagonally forward just above mat. Keep hips and lower back on mat, do not pull head. Entire figure fits each panel. LEFT must show clearly TWO bent knees in tabletop; RIGHT must show ONE extended leg and a torso twist, visibly different positions. Lateral three-quarter front view, beautiful detailed 3D lighting, no labels, words, arrows or logos."
+  },
+  {
+    "id": "custom-14",
+    "name": "Burpee",
+    "muscles": [
+      "quadriceps",
+      "gluteal",
+      "chest"
+    ],
+    "stages": 2,
+    "equipment": "Peso do corpo",
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Burpee. Pose: BURPEE shown in TWO KEY STAGES, not a full animation. Left high plank on palms and toes with body straight; right athlete standing in small vertical jump with both arms overhead and feet just clear of floor. Same adult athlete, no equipment, blue mat below. Entire figure and raised arms visible.\nRed highlighted primary muscle groups ONLY: quadriceps, gluteal, chest."
+  },
+  {
+    "id": "custom-15",
+    "name": "Agachamento com salto",
+    "muscles": [
+      "quadriceps",
+      "gluteal"
+    ],
+    "stages": 2,
+    "equipment": "Peso do corpo",
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Agachamento com salto. Pose: BODYWEIGHT JUMP SQUAT shown in two stages. Left crouched squat with thighs near parallel, heels grounded and arms forward; right vertical jump, hips and knees extended, feet slightly off floor, arms at sides. Full figure with comfortable overhead margins, no equipment.\nRed highlighted primary muscle groups ONLY: quadriceps, gluteal."
+  },
+  {
+    "id": "custom-16",
+    "name": "Mountain climber",
+    "muscles": [
+      "abs",
+      "quadriceps"
+    ],
+    "stages": 2,
+    "equipment": "Peso do corpo",
+    "prompt": "Create a premium realistic 3D fitness diagram of MOUNTAIN CLIMBER, two equal panels, dark navy studio background, blue floor mat. Same athletic adult silver-gray anatomical sports mannequin with navy shorts blue sneakers, coral red abdominal wall and front thighs. LEFT START: high plank, palms fixed beneath shoulders, both arms straight, BOTH LEGS FULLY EXTENDED BACK, toes planted, shoulders hips heels form one straight diagonal line. RIGHT ACTION: hands in same position, LEFT leg still fully extended back on toes, RIGHT KNEE pulled forward under abdomen toward right elbow, right foot suspended under hips. Neutral back and hips level, no sagging. Side three-quarter view, full figure visible in each panel. Clear difference: left two straight legs; right one bent knee forward. No text, arrows or logos. High-quality polished sports instructional rendering with anatomically coherent limbs."
+  },
+  {
+    "id": "custom-17",
+    "name": "Thruster",
+    "muscles": [
+      "quadriceps",
+      "gluteal",
+      "deltoids"
+    ],
+    "stages": 2,
+    "equipment": "Halteres",
+    "prompt": "Use case: scientific-educational. Create ONE premium 3D fitness exercise illustration for Nutrify mobile app. Landscape 1536x1024. Exactly two equally sized side-by-side panels, start position LEFT and finish RIGHT, same complete athlete and equipment in both. Adult athletic anatomical mannequin in sculpted neutral silver gray, anatomically coherent hands, joints and proportions, detailed but tasteful surface muscles. Main exercised muscles highlighted vivid CORAL RED (specific groups below). Navy fitted shorts with small lime trim, blue athletic shoes. Equipment: teal blue upholstery, brushed graphite frames, cobalt blue weights with subtle lime accents. Dark navy #10151e studio background, balanced soft lighting and subtle ground shadows, high-end realistic 3D educational rendering. Entire figures and equipment fit comfortably inside their half with margins. No text, letters, logos, watermarks or arrows. Never extra limbs or disconnected hands. Keep identical equipment scale and athlete between panels. Where rear muscles are targeted choose a rear three-quarter angle so red target muscles are visible. Technical pose definition takes precedence over any generic reference. \nExercise: Thruster. Pose: DUMBBELL THRUSTER / squat-to-overhead press with exactly two dumbbells. Left deep front squat, feet planted, dumbbells resting beside shoulders, elbows bent; right standing tall with dumbbells pressed overhead, elbows extended. Neutral spine and heels down in standing stage.\nRed highlighted primary muscle groups ONLY: quadriceps, gluteal, deltoids."
+  }
+]

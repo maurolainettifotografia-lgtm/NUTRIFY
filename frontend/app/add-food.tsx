@@ -6,6 +6,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import BottomSheet, { BottomSheetBackdrop, BottomSheetTextInput, BottomSheetView } from "@gorhom/bottom-sheet";
 import Ionicons from "@react-native-vector-icons/ionicons";
 
+import { MealDescription } from "@/src/components/meal-description";
 import { apiFetch } from "@/src/api";
 import { Button } from "@/src/components/primitives";
 import { useToast } from "@/src/components/toast";
@@ -30,6 +31,7 @@ type Food = {
 };
 
 const TABS = [
+  { key: "text", label: "Refeição" },
   { key: "search", label: "Buscar" },
   { key: "favorites", label: "Favoritos" },
   { key: "custom", label: "Meus" },
@@ -47,11 +49,15 @@ export default function AddFood() {
   const [meal, setMeal] = useState(params.meal ?? "almoco");
   const date = params.date ?? todayStr();
 
-  const [tab, setTab] = useState<(typeof TABS)[number]["key"]>("search");
+  const [tab, setTab] = useState<(typeof TABS)[number]["key"]>("text");
+  const [otherWays, setOtherWays] = useState(false);
   const [q, setQ] = useState("");
   const [debounced, setDebounced] = useState("");
   const [selected, setSelected] = useState<Food | null>(null);
   const [grams, setGrams] = useState("100");
+  // Quantidade valida: de 1 a 5000 g. Campo vazio ou "0" nao vira 100 g em silencio: o botao fica desativado.
+  const gramsNum = Number(grams);
+  const gramsValid = gramsNum > 0 && gramsNum <= 5000;
   const [showCreate, setShowCreate] = useState(false);
   const sheetRef = useRef<BottomSheet>(null);
   const debounceT = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -102,7 +108,7 @@ export default function AddFood() {
           meal,
           name: f.name,
           brand: f.brand ?? null,
-          grams: Number(grams) || 100,
+          grams: gramsNum,
           calories: f.calories,
           protein: f.protein,
           carbs: f.carbs,
@@ -117,6 +123,7 @@ export default function AddFood() {
     },
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ["diary", date] });
+      qc.invalidateQueries({ queryKey: ["reports"] });
       sheetRef.current?.close();
       toast.show(`Adicionado ao ${MEAL_LABELS[meal]}`);
       setSelected(null);
@@ -133,8 +140,8 @@ export default function AddFood() {
   });
 
   const factor = (Number(grams) || 0) / 100;
-  const byTab = { search, favorites, custom, recipes }[tab];
-  const list = byTab.data?.results;
+  const byTab = { text: search, search, favorites, custom, recipes }[tab];
+  const list = tab === "text" ? [] : byTab.data?.results;
   const loading = tab === "search" ? search.isFetching : byTab.isLoading;
   const isRecipe = selected?.source === "recipe";
   const quickOptions = isRecipe && selected?.serving_grams
@@ -147,12 +154,12 @@ export default function AddFood() {
         <Pressable testID="close-add-food" onPress={() => router.back()} hitSlop={10}>
           <Ionicons name="close" size={26} color={colors.onSurface} />
         </Pressable>
-        <Text style={styles.headerTitle}>Adicionar alimento</Text>
+        <Text style={styles.headerTitle}>Adicionar refeição</Text>
         <View style={styles.headerActions}>
           <Pressable testID="open-barcode" onPress={() => router.replace(`/barcode?meal=${meal}&date=${date}`)} hitSlop={10}>
             <Ionicons name="barcode-outline" size={24} color={colors.brandPrimary} />
           </Pressable>
-          <Pressable testID="open-scan" onPress={() => router.replace("/scan")} hitSlop={10}>
+          <Pressable testID="open-scan" onPress={() => router.replace(`/scan?meal=${meal}&date=${date}`)} hitSlop={10}>
             <Ionicons name="camera-outline" size={24} color={colors.brandPrimary} />
           </Pressable>
         </View>
@@ -176,14 +183,16 @@ export default function AddFood() {
         }}
       />
 
-      {/* tabs */}
-      <View style={styles.tabs}>
+      <Pressable testID="other-food-options" accessibilityRole="button" onPress={() => setOtherWays(!otherWays)} style={{ paddingHorizontal: spacing.lg, paddingBottom: spacing.sm }}><Text style={{ color: colors.muted, fontSize: 12 }}>{otherWays ? "Ocultar outras opções" : "Outras formas de adicionar"}</Text></Pressable>
+      {otherWays || tab !== "text" ? <View style={styles.tabs}>
         {TABS.map((t) => (
           <Pressable key={t.key} testID={`tab-${t.key}`} onPress={() => setTab(t.key)} style={[styles.tab, tab === t.key && styles.tabActive]}>
             <Text style={[styles.tabText, tab === t.key && styles.tabTextActive]}>{t.label}</Text>
           </Pressable>
         ))}
-      </View>
+      </View> : null}
+
+      {tab === "text" ? <MealDescription meal={meal} date={date} onSaved={() => router.back()} /> : null}
 
       {tab === "search" ? (
         <View style={styles.searchWrap}>
@@ -225,7 +234,7 @@ export default function AddFood() {
         </Pressable>
       ) : null}
 
-      {loading ? (
+      {tab === "text" ? null : loading ? (
         <ActivityIndicator color={colors.brandPrimary} style={{ marginTop: spacing.xl }} />
       ) : (
         <FlatList
@@ -308,6 +317,9 @@ export default function AddFood() {
                   />
                   <Text style={styles.gramsUnit}>g</Text>
                 </View>
+                {!gramsValid ? (
+                  <Text testID="grams-error" style={styles.gramsHint}>Informe a quantidade em gramas (de 1 a 5000).</Text>
+                ) : null}
               </View>
 
               <View style={styles.quickGrams}>
@@ -325,7 +337,7 @@ export default function AddFood() {
                 <PreviewCell value={Math.round(selected.fat * factor)} label="Gord" />
               </View>
 
-              <Button testID="confirm-add-food" label={`Adicionar ao ${MEAL_LABELS[meal]}`} onPress={() => add.mutate()} loading={add.isPending} />
+              <Button testID="confirm-add-food" label={`Adicionar ao ${MEAL_LABELS[meal]}`} onPress={() => add.mutate()} loading={add.isPending} disabled={!gramsValid} />
             </>
           ) : null}
         </BottomSheetView>
@@ -460,6 +472,7 @@ const useStyles = makeStyles((colors) => ({
   gramsLabel: { color: colors.muted, fontSize: 13, fontWeight: "600" },
   gramsInputRow: { flexDirection: "row", alignItems: "center", backgroundColor: colors.surfaceTertiary, borderRadius: radius.md, paddingHorizontal: spacing.lg },
   gramsInput: { flex: 1, color: colors.onSurface, fontSize: 22, fontWeight: "700", paddingVertical: spacing.md },
+  gramsHint: { color: colors.error, fontSize: 12 },
   gramsUnit: { color: colors.muted, fontSize: 16, fontWeight: "600" },
   quickGrams: { flexDirection: "row", gap: spacing.sm },
   quickGramBtn: { flex: 1, backgroundColor: colors.surfaceTertiary, borderRadius: radius.md, paddingVertical: spacing.sm, alignItems: "center" },

@@ -1,9 +1,14 @@
 import React, { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
-import { Platform } from "react-native";
+import { AppState, Platform } from "react-native";
 import * as Linking from "expo-linking";
 import * as WebBrowser from "expo-web-browser";
 
-import { apiFetch, clearToken, loadStoredToken, persistToken, setAuthToken } from "@/src/api";
+import { apiFetch, ApiError, getAuthToken, clearToken, loadStoredToken, persistToken, setAuthToken, subscribeSessionExpired } from "@/src/api";
+import { requestAppleCredential } from "@/src/apple-signin";
+
+import { storage } from "@/src/utils/storage";
+
+import { queryClient } from "@/src/query-client";
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -15,11 +20,23 @@ export type AppUser = {
   onboarded: boolean;
 };
 
+
+// Only a minimal identity is cached in secure storage; health data remains on the server.
+async function cacheIdentity(user: AppUser) {
+  const token = getAuthToken();
+  if (!token) return;
+  const { user_id, email, name, onboarded } = user;
+  await storage.secureSet("auth_identity_v1", JSON.stringify({ version: 1, token, savedAt: Date.now(), user: { user_id, email, name, onboarded } }));
+}
+
 type AuthState = {
   user: AppUser | null;
   loading: boolean;
   signingIn: boolean;
+  connectionError: boolean;
+  signInWithEmail: (email: string, password: string, name?: string) => Promise<void>;
   signInWithGoogle: () => Promise<void>;
+  signInWithApple: () => Promise<void>;
   signOut: () => Promise<void>;
   refreshUser: () => Promise<void>;
   setOnboarded: () => void;
@@ -37,6 +54,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<AppUser | null>(null);
   const [loading, setLoading] = useState(true);
   const [signingIn, setSigningIn] = useState(false);
+  const [connectionError, setConnectionError] = useState(false);
   const processedIds = useRef<Set<string>>(new Set());
   const capturedUrl = useRef<string | null>(null);
 
@@ -50,8 +68,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         body: { session_id: sessionId },
       });
       await persistToken(data.session_token);
+      queryClient.clear();
       setUser(data.user);
+      setConnectionError(false);
+      await cacheIdentity(data.user);
     } catch (e) {
+      processedIds.current.delete(sessionId);
       console.error("session exchange failed", e);
     } finally {
       setSigningIn(false);
@@ -59,13 +81,32 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const refreshUser = useCallback(async () => {
+    const token = getAuthToken();
+    if (!token) return;
     try {
-      const me = await apiFetch<AppUser>("/auth/me");
+      const me = await apiFetch<AppUser>("/auth/me", { timeoutMs: 8000 });
+      if (token !== getAuthToken()) return;
       setUser(me);
-    } catch {
-      setUser(null);
+      setConnectionError(false);
+      await cacheIdentity(me);
+    } catch (error) {
+      if (token !== getAuthToken()) return;
+      if (error instanceof ApiError && error.status === 401) setUser(null);
+      else setConnectionError(true);
     }
   }, []);
+
+  useEffect(() => {
+    const sub = AppState.addEventListener("change", state => {
+      if (state === "active" && getAuthToken()) void refreshUser();
+    });
+    return () => sub.remove();
+  }, [refreshUser]);
+
+  useEffect(() => subscribeSessionExpired(() => {
+    queryClient.clear();
+    setUser(null);
+  }), []);
 
   // Bootstrap on mount
   useEffect(() => {
@@ -98,11 +139,24 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       // Otherwise check stored token
       const token = await loadStoredToken();
       if (token) {
-        await refreshUser();
+        let restored = false;
+        try {
+          const raw = await storage.secureGet<string>("auth_identity_v1", "");
+          const cached = raw ? JSON.parse(raw) : null;
+          if (cached?.version === 1 && cached.token === token && cached.user?.user_id && typeof cached.user.onboarded === "boolean" && Date.now() - cached.savedAt < 7 * 86400000) {
+            if (mounted) { setUser(cached.user); setLoading(false); }
+            restored = true;
+          }
+        } catch { /* Old or corrupt cache: validate against the server. */ }
+        if (restored) void refreshUser();
+        else await refreshUser();
       }
       if (mounted) setLoading(false);
     };
-    boot();
+    boot().catch((error) => {
+      console.error("Falha ao restaurar sessão", error);
+      if (mounted) setLoading(false);
+    });
     return () => {
       mounted = false;
     };
@@ -118,6 +172,22 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     });
     return () => sub.remove();
   }, [exchangeSession]);
+
+  const signInWithEmail = useCallback(async (email: string, password: string, name?: string) => {
+    setSigningIn(true);
+    try {
+      const data = await apiFetch<{ session_token: string; user: AppUser }>(name === undefined ? "/auth/login" : "/auth/register-pin", {
+        method: "POST", body: { email, password, ...(name === undefined ? {} : { name }) },
+      });
+      await persistToken(data.session_token);
+      queryClient.clear();
+      setUser(data.user);
+      setConnectionError(false);
+      await cacheIdentity(data.user);
+    } finally {
+      setSigningIn(false);
+    }
+  }, []);
 
   const signInWithGoogle = useCallback(async () => {
     setSigningIn(true);
@@ -144,12 +214,33 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, [exchangeSession]);
 
+  const signInWithApple = useCallback(async () => {
+    setSigningIn(true);
+    try {
+      const cred = await requestAppleCredential();
+      if (!cred) return; // a pessoa cancelou
+      const data = await apiFetch<{ session_token: string; user: AppUser }>("/auth/apple", { method: "POST", body: cred });
+      await persistToken(data.session_token);
+      queryClient.clear();
+      setUser(data.user);
+      setConnectionError(false);
+      await cacheIdentity(data.user);
+    } catch (e) {
+      console.error("apple sign in error", e);
+    } finally {
+      setSigningIn(false);
+    }
+  }, []);
+
   const signOut = useCallback(async () => {
     try {
-      await apiFetch("/auth/logout", { method: "POST" });
+      await apiFetch("/auth/logout", { method: "POST", timeoutMs: 3000 });
     } catch {}
     await clearToken();
     setAuthToken(null);
+    queryClient.clear();
+    processedIds.current.clear();
+    capturedUrl.current = null;
     setUser(null);
   }, []);
 
@@ -159,7 +250,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <AuthContext.Provider
-      value={{ user, loading, signingIn, signInWithGoogle, signOut, refreshUser, setOnboarded }}
+      value={{ user, loading, signingIn, connectionError, signInWithEmail, signInWithGoogle, signInWithApple, signOut, refreshUser, setOnboarded }}
     >
       {children}
     </AuthContext.Provider>

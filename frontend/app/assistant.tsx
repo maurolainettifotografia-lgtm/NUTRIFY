@@ -6,7 +6,8 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { KeyboardAvoidingView } from "react-native-keyboard-controller";
 import Ionicons from "@react-native-vector-icons/ionicons";
 
-import { apiFetch, getAuthToken } from "@/src/api";
+import { apiFetch, getAuthToken, BACKEND_URL } from "@/src/api";
+import { AiConsentGate } from "@/src/components/ai-consent-gate";
 import { useToast } from "@/src/components/toast";
 import { todayStr } from "@/src/constants";
 import { makeStyles, radius, spacing, useTheme } from "@/src/theme";
@@ -20,9 +21,9 @@ const SUGGESTIONS = [
   "Como está minha alimentação hoje?",
 ];
 
-const BASE = process.env.EXPO_PUBLIC_BACKEND_URL;
+const BASE = BACKEND_URL;
 
-export default function Assistant() {
+function AssistantInner() {
   const styles = useStyles();
   const { colors } = useTheme();
   const insets = useSafeAreaInsets();
@@ -47,8 +48,10 @@ export default function Assistant() {
     const text = raw.trim();
     if (!text || streaming) return;
     setInput("");
-    const aiId = `ai-${Date.now()}`;
-    setMessages((m) => [...m, { id: `u-${Date.now()}`, role: "user", content: text }, { id: aiId, role: "assistant", content: "" }]);
+    // eslint-disable-next-line react-hooks/purity -- Executado somente ao enviar uma mensagem.
+    const timestamp = Date.now();
+    const aiId = `ai-${timestamp}`;
+    setMessages((m) => [...m, { id: `u-${timestamp}`, role: "user", content: text }, { id: aiId, role: "assistant", content: "" }]);
     setStreaming(true);
     scrollToEnd();
 
@@ -61,6 +64,10 @@ export default function Assistant() {
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${getAuthToken()}` },
         body: JSON.stringify({ message: text, date: todayStr() }),
       });
+      if (res.status === 429) {
+        append("Você atingiu o limite diário de mensagens com a Nutri. Volte amanhã!");
+        return;
+      }
       if (!res.ok || !res.body) throw new Error("bad response");
       const reader = res.body.getReader();
       const decoder = new TextDecoder();
@@ -214,3 +221,11 @@ const useStyles = makeStyles((colors) => ({
   sendBtn: { width: 44, height: 44, borderRadius: 999, backgroundColor: colors.brandPrimary, alignItems: "center", justifyContent: "center" },
   disclaimer: { color: colors.muted, fontSize: 10, textAlign: "center", opacity: 0.7, paddingBottom: spacing.xs },
 }));
+
+export default function Assistant() {
+  return (
+    <AiConsentGate>
+      <AssistantInner />
+    </AiConsentGate>
+  );
+}

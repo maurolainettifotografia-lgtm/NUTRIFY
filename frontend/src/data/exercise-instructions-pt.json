@@ -1,0 +1,482 @@
+{
+  "supino reto com barra": {
+    "start": "Deite no banco reto, com os pés apoiados e os ombros estáveis. Segure a barra acima do peito.",
+    "movement": "Desça a barra em direção ao peito com controle e empurre para cima, mantendo os punhos alinhados.",
+    "breathing": "Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.",
+    "care": "Não quique o peso no peito. Use suportes de segurança ou ajuda para retirar e recolocar a barra."
+  },
+  "supino inclinado com barra": {
+    "start": "Deite no banco inclinado a cerca de 30–45°, com os pés apoiados e os ombros estáveis. Segure a barra acima do peito.",
+    "movement": "Desça a barra em direção ao peito com controle e empurre para cima, mantendo os punhos alinhados.",
+    "breathing": "Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.",
+    "care": "Não quique o peso no peito. Use suportes de segurança ou ajuda para retirar e recolocar a barra."
+  },
+  "supino declinado com barra": {
+    "start": "Deite no banco declinado, com as pernas presas no suporte, com os pés apoiados e os ombros estáveis. Segure a barra acima do peito.",
+    "movement": "Desça a barra em direção ao peito com controle e empurre para cima, mantendo os punhos alinhados.",
+    "breathing": "Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.",
+    "care": "Não quique o peso no peito. Use suportes de segurança ou ajuda para retirar e recolocar a barra."
+  },
+  "supino reto com halteres": {
+    "start": "Deite no banco reto, com os pés apoiados e os ombros estáveis. Segure os halteres ao lado do peito.",
+    "movement": "Desça os halteres ao lado do peito com controle e empurre para cima, mantendo os punhos alinhados.",
+    "breathing": "Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.",
+    "care": "Não bata os halteres entre si nem aumente a curvatura da lombar."
+  },
+  "supino inclinado com halteres": {
+    "start": "Deite no banco inclinado a cerca de 30–45°, com os pés apoiados e os ombros estáveis. Segure os halteres ao lado do peito.",
+    "movement": "Desça os halteres ao lado do peito com controle e empurre para cima, mantendo os punhos alinhados.",
+    "breathing": "Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.",
+    "care": "Não bata os halteres entre si nem aumente a curvatura da lombar."
+  },
+  "supino na maquina": {
+    "start": "Ajuste o banco para deixar as alças na altura do peito. Apoie costas e pés.",
+    "movement": "Empurre as alças à frente e retorne devagar, sem deixar os pesos baterem.",
+    "breathing": "Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.",
+    "care": "Mantenha as costas no encosto e respeite a amplitude confortável dos ombros."
+  },
+  "crucifixo com halteres": {
+    "start": "Deite no banco reto, com pés apoiados e halteres acima do peito; cotovelos levemente flexionados.",
+    "movement": "Abra os braços em arco para os lados e feche pelo mesmo caminho.",
+    "breathing": "Solte o ar ao aproximar os braços e inspire ao abri-los.",
+    "care": "Mantenha o ângulo dos cotovelos e não force os braços abaixo da amplitude confortável."
+  },
+  "crucifixo na maquina (peck deck)": {
+    "start": "Sente com as costas apoiadas e ajuste o banco para alinhar braços e alças à altura do peito.",
+    "movement": "Aproxime os braços à frente e abra novamente de forma controlada.",
+    "breathing": "Solte o ar ao aproximar os braços e inspire ao abri-los.",
+    "care": "Não projete os ombros para frente nem deixe os pesos baterem."
+  },
+  "crossover na polia": {
+    "start": "Segure as alças das polias, com um pé à frente e cotovelos levemente dobrados.",
+    "movement": "Traga as mãos em arco à frente do peito e retorne com controle.",
+    "breathing": "Solte o ar ao aproximar os braços e inspire ao abri-los.",
+    "care": "Estabilize o tronco e mantenha o ângulo dos cotovelos; não force o alongamento dos ombros."
+  },
+  "flexao de braco": {
+    "start": "Apoie as mãos um pouco além dos ombros e as pontas dos pés no chão, com o corpo alinhado.",
+    "movement": "Flexione os cotovelos para aproximar o peito do chão; empurre o chão para voltar.",
+    "breathing": "Inspire ao descer o corpo e solte o ar ao empurrar o chão para subir.",
+    "care": "Evite deixar o quadril cair ou levar a cabeça à frente. Reduza a dificuldade apoiando os joelhos."
+  },
+  "mergulho nas paralelas": {
+    "start": "Segure as barras paralelas e sustente o corpo com os braços estendidos, sem travar os cotovelos.",
+    "movement": "Flexione os cotovelos para descer até uma amplitude confortável e empurre as barras para subir.",
+    "breathing": "Inspire ao descer o corpo e solte o ar na subida.",
+    "care": "Não afunde os ombros, balance as pernas ou force uma descida profunda."
+  },
+  "puxada com pegada supinada": {
+    "start": "Sente na polia alta com coxas presas ao apoio e palmas voltadas para você.",
+    "movement": "Puxe a barra à frente até a parte superior do peito e estenda os braços lentamente.",
+    "breathing": "Solte o ar durante a puxada e inspire ao retornar de forma controlada.",
+    "care": "Não puxe atrás da nuca, balance o tronco ou solte a carga no retorno."
+  },
+  "remada curvada com barra": {
+    "start": "Em pé, segure a barra com palmas para baixo. Flexione levemente os joelhos e incline o tronco pelo quadril.",
+    "movement": "Puxe a barra em direção ao abdômen, levando os cotovelos para trás; abaixe com controle.",
+    "breathing": "Solte o ar durante a puxada e inspire ao retornar de forma controlada.",
+    "care": "Mantenha coluna e pescoço alinhados, sem levantar o tronco a cada repetição."
+  },
+  "remada unilateral com halter (serrote)": {
+    "start": "Apoie uma mão e o joelho do mesmo lado no banco. Segure o halter com a outra mão, braço abaixo do ombro.",
+    "movement": "Puxe o halter em direção ao quadril e abaixe lentamente; repita do outro lado.",
+    "breathing": "Solte o ar durante a puxada e inspire ao retornar de forma controlada.",
+    "care": "Não gire o tronco nem eleve o ombro. O apoio deve permanecer firme.",
+    "reference": "https://www.puregym.com/exercises/back/rows/single-arm-bent-over-row/"
+  },
+  "remada baixa na polia": {
+    "start": "Sente com os pés nos apoios e joelhos levemente flexionados. Segure a alça com os braços à frente.",
+    "movement": "Puxe em direção ao abdômen, levando os cotovelos para trás, e retorne lentamente.",
+    "breathing": "Solte o ar durante a puxada e inspire ao retornar de forma controlada.",
+    "care": "Não arredonde a coluna nem use balanço do tronco para mover a carga."
+  },
+  "remada cavalinho": {
+    "start": "Segure a alça da barra fixada na base, com joelhos levemente dobrados e tronco inclinado pelo quadril.",
+    "movement": "Puxe em direção ao abdômen, levando os cotovelos para trás, e retorne lentamente.",
+    "breathing": "Solte o ar durante a puxada e inspire ao retornar de forma controlada.",
+    "care": "Não arredonde a coluna nem use balanço do tronco para mover a carga."
+  },
+  "remada na maquina": {
+    "start": "Ajuste o banco, apoie o peito no suporte quando disponível e segure as alças com os braços à frente.",
+    "movement": "Puxe em direção ao abdômen, levando os cotovelos para trás, e retorne lentamente.",
+    "breathing": "Solte o ar durante a puxada e inspire ao retornar de forma controlada.",
+    "care": "Não arredonde a coluna nem use balanço do tronco para mover a carga."
+  },
+  "pullover com halter": {
+    "start": "Deite no banco com os pés firmes e segure um halter com as duas mãos acima do peito. Flexione um pouco os cotovelos.",
+    "movement": "Leve o halter em arco para trás da cabeça e retorne acima do peito.",
+    "breathing": "Inspire ao levar o halter para trás e solte o ar ao trazê-lo acima do peito.",
+    "care": "Use carga leve, não arqueie a lombar e limite a descida à mobilidade dos ombros."
+  },
+  "levantamento terra": {
+    "start": "Posicione a barra próxima às canelas, com os pés na largura do quadril. Flexione quadris e joelhos para segurá-la.",
+    "movement": "Empurre o chão e estenda quadris e joelhos juntos. Volte levando o quadril para trás e depois dobrando os joelhos.",
+    "breathing": "Inspire e firme o abdômen antes de subir; solte o ar de forma controlada, mantendo o tronco estável.",
+    "care": "Mantenha a barra perto do corpo e a coluna neutra; não se incline para trás no final."
+  },
+  "desenvolvimento com barra": {
+    "start": "Sente com as costas apoiadas e pés no chão. Posicione a barra na altura dos ombros.",
+    "movement": "Empurre a barra para cima e retorne devagar à altura dos ombros.",
+    "breathing": "Solte o ar ao empurrar o peso acima da cabeça e inspire ao baixá-lo.",
+    "care": "Mantenha abdômen firme e não arqueie a lombar nem force o peso atrás da cabeça."
+  },
+  "desenvolvimento com halteres": {
+    "start": "Sente com as costas apoiadas e pés no chão. Posicione os halteres na altura dos ombros.",
+    "movement": "Empurre os halteres para cima e retorne devagar à altura dos ombros.",
+    "breathing": "Solte o ar ao empurrar o peso acima da cabeça e inspire ao baixá-lo.",
+    "care": "Mantenha abdômen firme e não arqueie a lombar nem force o peso atrás da cabeça."
+  },
+  "desenvolvimento na maquina": {
+    "start": "Sente com as costas apoiadas e pés no chão. Posicione as alças na altura dos ombros.",
+    "movement": "Empurre as alças para cima e retorne devagar à altura dos ombros.",
+    "breathing": "Solte o ar ao empurrar o peso acima da cabeça e inspire ao baixá-lo.",
+    "care": "Mantenha abdômen firme e não arqueie a lombar nem force o peso atrás da cabeça.",
+    "reference": "https://www.puregym.com/exercises/arms-and-shoulders/shoulder-press/shoulder-press-machine/"
+  },
+  "elevacao lateral com halteres": {
+    "start": "Em pé, segure os halteres ao lado do corpo, com cotovelos levemente dobrados.",
+    "movement": "Eleve os braços para os lados até a altura dos ombros e desça lentamente.",
+    "breathing": "Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.",
+    "care": "Não balance o tronco, encolha os ombros ou force a amplitude."
+  },
+  "elevacao frontal com halteres": {
+    "start": "Em pé, segure os halteres à frente das coxas, com cotovelos levemente dobrados.",
+    "movement": "Eleve os braços à frente até a altura dos ombros e volte com controle.",
+    "breathing": "Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.",
+    "care": "Mantenha o tronco estável e reduza a carga se precisar se inclinar para trás."
+  },
+  "crucifixo inverso": {
+    "start": "Sente na ponta do banco com pés apoiados e incline o tronco pelo quadril. Segure os halteres abaixo dos ombros.",
+    "movement": "Abra os braços para os lados, com cotovelos levemente flexionados, e desça devagar.",
+    "breathing": "Solte o ar ao abrir os braços e inspire ao retornar.",
+    "care": "Não arredonde a coluna nem transforme o movimento em balanço."
+  },
+  "encolhimento com halteres": {
+    "start": "Fique em pé com um halter em cada mão, braços ao lado do corpo.",
+    "movement": "Eleve os ombros em direção às orelhas, faça uma breve pausa e abaixe devagar.",
+    "breathing": "Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.",
+    "care": "Não gire os ombros nem movimente o pescoço para impulsionar a carga."
+  },
+  "rosca direta com barra": {
+    "start": "Em pé, segure a barra com palmas para cima e mãos na largura dos ombros.",
+    "movement": "Flexione os cotovelos para subir a barra e abaixe lentamente.",
+    "breathing": "Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.",
+    "care": "Mantenha os cotovelos próximos ao corpo e evite balanço."
+  },
+  "rosca alternada com halteres": {
+    "start": "Segure um halter em cada mão, com palmas voltadas para o corpo.",
+    "movement": "Suba um halter por vez, girando a palma para cima; abaixe devagar e alterne.",
+    "breathing": "Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.",
+    "care": "Não leve o cotovelo para frente nem gire o tronco."
+  },
+  "rosca martelo": {
+    "start": "Segure os halteres ao lado do corpo, com palmas voltadas uma para a outra.",
+    "movement": "Flexione os cotovelos sem girar as mãos; desça de forma controlada.",
+    "breathing": "Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.",
+    "care": "Mantenha punhos neutros e braços junto ao tronco."
+  },
+  "rosca scott": {
+    "start": "Ajuste o banco para apoiar a parte posterior dos braços na almofada. Segure a barra EZ com palmas para cima.",
+    "movement": "Flexione os cotovelos e retorne lentamente, sem travá-los na parte baixa.",
+    "breathing": "Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.",
+    "care": "Não retire os braços do apoio nem use impulso na extensão."
+  },
+  "rosca na polia": {
+    "start": "Em pé de frente para a polia baixa, segure a barra com palmas para cima.",
+    "movement": "Flexione os cotovelos levando a barra em direção ao peito e retorne devagar.",
+    "breathing": "Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.",
+    "care": "Mantenha cotovelos junto ao corpo e não puxe com os ombros."
+  },
+  "rosca inversa": {
+    "start": "Em pé, segure a barra com palmas voltadas para baixo e mãos na largura dos ombros.",
+    "movement": "Flexione os cotovelos elevando a barra e abaixe com controle.",
+    "breathing": "Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.",
+    "care": "Não dobre os punhos nem use balanço do tronco."
+  },
+  "triceps pulley com corda": {
+    "start": "Em pé diante da polia alta, segure a corda com palmas voltadas uma para a outra e mantenha os cotovelos junto às costelas.",
+    "movement": "Estenda os cotovelos empurrando para baixo e retorne lentamente, mantendo os braços estáveis. Afaste levemente as pontas da corda ao final.",
+    "breathing": "Solte o ar ao estender os cotovelos e inspire ao dobrá-los no retorno.",
+    "care": "Não movimente os ombros nem incline o corpo para empurrar a carga."
+  },
+  "triceps pulley com barra reta": {
+    "start": "Em pé diante da polia alta, segure a barra reta com palmas para baixo e mantenha os cotovelos junto às costelas.",
+    "movement": "Estenda os cotovelos empurrando para baixo e retorne lentamente, mantendo os braços estáveis.",
+    "breathing": "Solte o ar ao estender os cotovelos e inspire ao dobrá-los no retorno.",
+    "care": "Não movimente os ombros nem incline o corpo para empurrar a carga."
+  },
+  "triceps testa": {
+    "start": "Deite no banco e segure a barra EZ acima do peito, com braços estáveis e cotovelos apontando para cima.",
+    "movement": "Flexione os cotovelos aproximando a barra da testa com cuidado e estenda para voltar.",
+    "breathing": "Solte o ar ao estender os cotovelos e inspire ao dobrá-los no retorno.",
+    "care": "Mantenha a cabeça apoiada e use carga controlável; não deixe a barra tocar o rosto."
+  },
+  "triceps frances": {
+    "start": "Sente com o tronco estável e segure um halter com as duas mãos acima da cabeça.",
+    "movement": "Flexione os cotovelos levando o halter atrás da cabeça e estenda para voltar.",
+    "breathing": "Solte o ar ao estender os cotovelos e inspire ao dobrá-los no retorno.",
+    "care": "Não arqueie a lombar nem force a abertura dos cotovelos.",
+    "reference": "https://www.puregym.com/exercises/arms-and-shoulders/tricep-extension/overhead-tricep-extension/"
+  },
+  "mergulho no banco": {
+    "start": "Apoie as mãos na borda de um banco firme atrás do corpo, com pés apoiados e quadril próximo ao banco.",
+    "movement": "Flexione os cotovelos levando o quadril para baixo; empurre o banco para subir.",
+    "breathing": "Inspire ao descer o corpo e solte o ar na subida.",
+    "care": "Mantenha cotovelos para trás e limite a descida para não forçar a parte anterior dos ombros."
+  },
+  "supino fechado": {
+    "start": "Deite no banco, com pés firmes, e segure a barra com as mãos próximas à largura dos ombros.",
+    "movement": "Desça a barra em direção à parte inferior do peito e empurre para cima.",
+    "breathing": "Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.",
+    "care": "Mantenha os cotovelos próximos ao tronco e use suporte de segurança ou ajuda para a barra."
+  },
+  "agachamento livre": {
+    "start": "Apoie a barra na parte superior das costas, com os pés na largura dos ombros e pontas ligeiramente para fora.",
+    "movement": "Flexione quadris e joelhos para descer; empurre o chão com os pés inteiros para subir.",
+    "breathing": "Inspire e firme o abdômen antes de descer; solte o ar de forma controlada durante a subida.",
+    "care": "Mantenha joelhos acompanhando os pés, coluna neutra e suportes de segurança ajustados."
+  },
+  "agachamento no smith": {
+    "start": "Ajuste as travas, apoie a barra nas costas e posicione os pés para manter o apoio completo no chão.",
+    "movement": "Destrave a barra, flexione quadris e joelhos para descer e empurre o chão para subir.",
+    "breathing": "Inspire durante a descida e solte o ar ao empurrar o chão para subir.",
+    "care": "Não afunde a lombar nem deixe os joelhos caírem para dentro; teste a trajetória com carga leve."
+  },
+  "agachamento hack": {
+    "start": "Apoie costas e ombros na máquina, com os pés inteiros na plataforma. Ajuste as travas de segurança.",
+    "movement": "Libere a trava, flexione os joelhos para descer e empurre a plataforma para subir.",
+    "breathing": "Inspire durante a descida e solte o ar ao empurrar o chão para subir.",
+    "care": "Mantenha as costas no encosto, os calcanhares apoiados e não trave os joelhos.",
+    "reference": "https://www.puregym.com/exercises/legs/quad-exercises/squats/hack-squat/"
+  },
+  "agachamento bulgaro": {
+    "start": "Fique de costas para um banco firme e apoie o peito de um pé nele; o outro pé permanece à frente, no chão.",
+    "movement": "Flexione a perna da frente para descer o corpo e empurre o chão com esse pé para subir.",
+    "breathing": "Inspire durante a descida e solte o ar ao empurrar o chão para subir.",
+    "care": "Mantenha o quadril alinhado, joelho acompanhando o pé e use apoio para equilíbrio se necessário.",
+    "reference": "https://www.nasm.org/resource-center/exercise-library/bulgarian-split-squat"
+  },
+  "cadeira extensora": {
+    "start": "Ajuste o encosto para alinhar os joelhos ao eixo da máquina e posicione o rolo acima dos tornozelos.",
+    "movement": "Estenda os joelhos e volte devagar à posição inicial.",
+    "breathing": "Solte o ar ao estender os joelhos e inspire no retorno.",
+    "care": "Mantenha quadril e costas apoiados; não dê trancos nem trave os joelhos."
+  },
+  "mesa flexora": {
+    "start": "Deite de barriga para baixo, com os joelhos alinhados ao eixo da máquina e o rolo acima dos calcanhares.",
+    "movement": "Flexione os joelhos para aproximar os calcanhares dos glúteos e retorne devagar.",
+    "breathing": "Solte o ar ao dobrar os joelhos e inspire ao retornar lentamente.",
+    "care": "Mantenha o quadril no banco e evite arquear a lombar."
+  },
+  "cadeira flexora": {
+    "start": "Sente com as costas no encosto, joelhos alinhados ao eixo e pernas sobre o rolo. Ajuste o apoio das coxas.",
+    "movement": "Dobre os joelhos trazendo os pés para baixo e para trás; retorne com controle.",
+    "breathing": "Solte o ar ao dobrar os joelhos e inspire ao retornar lentamente.",
+    "care": "Não levante o quadril nem deixe os pesos baterem.",
+    "reference": "https://www.puregym.com/exercises/legs/hamstring-exercises/hamstring-curls/seated-leg-curl/"
+  },
+  "afundo (passada)": {
+    "start": "Em pé, dê um passo à frente, mantendo os pés afastados lateralmente para ter equilíbrio.",
+    "movement": "Dobre os dois joelhos para descer e empurre o chão com a perna da frente para voltar; alterne as pernas.",
+    "breathing": "Inspire durante a descida e solte o ar ao empurrar o chão para subir.",
+    "care": "Mantenha o joelho da frente alinhado ao pé e evite bater o joelho de trás no chão."
+  },
+  "cadeira adutora": {
+    "start": "Sente com as costas apoiadas e as almofadas na parte interna das coxas. Ajuste uma abertura confortável.",
+    "movement": "Feche as pernas contra a resistência e volte devagar.",
+    "breathing": "Solte o ar ao fechar as pernas e inspire ao retornar à abertura inicial.",
+    "care": "Não force a abertura inicial nem use impulso do tronco."
+  },
+  "cadeira abdutora": {
+    "start": "Sente com as costas apoiadas e almofadas na parte externa das coxas.",
+    "movement": "Afaste as pernas contra a resistência e retorne de forma controlada.",
+    "breathing": "Solte o ar ao afastar as pernas e inspire no retorno controlado.",
+    "care": "Não retire o quadril do banco nem balance o tronco."
+  },
+  "ponte de gluteos": {
+    "start": "Deite de costas com joelhos dobrados e pés no chão, próximos ao quadril.",
+    "movement": "Eleve o quadril até alinhar ombros, quadris e joelhos; contraia os glúteos e desça devagar.",
+    "breathing": "Solte o ar ao elevar o quadril e inspire ao descê-lo.",
+    "care": "Não hiperestenda a lombar nem empurre o chão com a cabeça."
+  },
+  "gluteo na polia (coice)": {
+    "start": "Prenda a tornozeleira na polia baixa, segure um apoio e estabilize o tronco.",
+    "movement": "Leve a perna com tornozeleira para trás, estendendo o quadril, e volte com controle.",
+    "breathing": "Solte o ar ao levar a perna para trás e inspire no retorno.",
+    "care": "Mantenha a pelve alinhada; não compense arqueando a lombar."
+  },
+  "panturrilha em pe": {
+    "start": "Em pé na máquina ou em apoio estável, posicione a parte da frente dos pés na base e mantenha os joelhos destravados.",
+    "movement": "Eleve os calcanhares, faça uma breve pausa e abaixe lentamente pela amplitude confortável.",
+    "breathing": "Solte o ar ao elevar os calcanhares e inspire ao baixá-los.",
+    "care": "Movimente os tornozelos sem saltar ou travar os joelhos. Garanta que os pés não escorreguem do apoio."
+  },
+  "panturrilha sentado": {
+    "start": "Sente com joelhos dobrados e a parte da frente dos pés no apoio. Ajuste a almofada sobre as coxas.",
+    "movement": "Eleve os calcanhares, faça uma breve pausa e abaixe lentamente pela amplitude confortável.",
+    "breathing": "Solte o ar ao elevar os calcanhares e inspire ao baixá-los.",
+    "care": "Movimente os tornozelos sem saltar ou travar os joelhos. Garanta que os pés não escorreguem do apoio."
+  },
+  "panturrilha no leg press": {
+    "start": "Apoie costas e quadril no leg press, com a parte da frente dos pés firme na plataforma e joelhos destravados.",
+    "movement": "Eleve os calcanhares, faça uma breve pausa e abaixe lentamente pela amplitude confortável.",
+    "breathing": "Solte o ar ao elevar os calcanhares e inspire ao baixá-los.",
+    "care": "Movimente os tornozelos sem saltar ou travar os joelhos. Garanta que os pés não escorreguem do apoio."
+  },
+  "abdominal crunch": {
+    "start": "Deite de costas, com joelhos dobrados e pés no chão. Apoie as mãos no peito ou levemente atrás da cabeça.",
+    "movement": "Eleve os ombros, aproximando as costelas da pelve, e desça lentamente.",
+    "breathing": "Solte o ar ao elevar os ombros e inspire ao descer.",
+    "care": "Não puxe o pescoço nem tente sentar completamente."
+  },
+  "elevacao de pernas": {
+    "start": "Deite de costas no banco e segure um apoio firme; mantenha as pernas estendidas ou levemente dobradas.",
+    "movement": "Eleve as pernas com controle e abaixe até onde consegue manter a lombar estável.",
+    "breathing": "Solte o ar ao elevar e inspire na descida.",
+    "care": "Não balance as pernas nem deixe a lombar arquear; reduza a amplitude se necessário."
+  },
+  "prancha": {
+    "start": "Apoie os antebraços com cotovelos abaixo dos ombros e as pontas dos pés no chão.",
+    "movement": "Mantenha cabeça, tronco e quadril alinhados pelo tempo previsto.",
+    "breathing": "Respire de forma contínua enquanto mantém o abdômen firme.",
+    "care": "Não deixe o quadril cair nem eleve os ombros em direção às orelhas."
+  },
+  "abdominal obliquo": {
+    "start": "Em pé, segure um halter em uma mão, com os pés na largura do quadril.",
+    "movement": "Incline levemente o tronco para o lado do peso e retorne à posição vertical; depois troque o lado.",
+    "breathing": "Solte o ar ao retornar à posição vertical e inspire ao inclinar.",
+    "care": "Não gire o tronco nem force a coluna; use amplitude pequena e controlada."
+  },
+  "roda abdominal": {
+    "start": "Ajoelhe em um colchonete e segure a roda abaixo dos ombros, com o abdômen firme.",
+    "movement": "Role a roda à frente somente até manter o tronco estável e puxe de volta.",
+    "breathing": "Inspire ao avançar e solte o ar ao voltar, sem perder a firmeza do abdômen.",
+    "care": "Não deixe a lombar afundar nem avance além da sua capacidade de retornar."
+  },
+  "kettlebell swing": {
+    "start": "Segure o kettlebell com as duas mãos, pés um pouco além da largura do quadril e joelhos destravados.",
+    "movement": "Leve o quadril para trás e depois estenda-o para impulsionar o peso até aproximadamente a altura do peito; deixe-o retornar entre as pernas.",
+    "breathing": "Solte o ar na extensão do quadril e inspire no retorno.",
+    "care": "Não levante o peso com os braços nem incline a coluna para trás no topo.",
+    "reference": "https://www.puregym.com/exercises/full-body/kettlebell-swing/"
+  },
+  "puxada frontal na polia": {
+    "start": "Sente com as coxas presas ao apoio e segure a barra da polia alta com as palmas para frente.",
+    "movement": "Puxe a barra à frente em direção ao alto do peito e retorne devagar.",
+    "breathing": "Solte o ar durante a puxada e inspire ao retornar de forma controlada.",
+    "care": "Mantenha o tronco estável e não puxe a barra atrás da cabeça.",
+    "reference": "https://www.nasm.org/resource-center/blog/training/the-biomechanics-of-the-lat-pulldown-muscles-grip-and-form"
+  },
+  "barra fixa": {
+    "start": "Segure a barra com as palmas para frente, mãos um pouco além dos ombros e abdômen firme.",
+    "movement": "Puxe o corpo aproximando o peito da barra e desça de maneira controlada.",
+    "breathing": "Solte o ar durante a puxada e inspire ao retornar de forma controlada.",
+    "care": "Não balance as pernas ou estique o pescoço para alcançar a barra. Use assistência se precisar.",
+    "reference": "https://www.nasm.org/resource-center/exercise-library/pull-up"
+  },
+  "remada alta": {
+    "start": "Em pé, segure a barra à frente das coxas com palmas para baixo e mãos um pouco além dos ombros.",
+    "movement": "Suba a barra perto do corpo levando os cotovelos para os lados e retorne lentamente.",
+    "breathing": "Solte o ar durante a puxada e inspire ao retornar de forma controlada.",
+    "care": "Pare na altura confortável do peito, sem forçar os ombros ou usar balanço.",
+    "reference": "https://www.puregym.com/exercises/arms-and-shoulders/upright-rows/barbell-upright-row/"
+  },
+  "face pull": {
+    "start": "Prenda uma corda à polia na altura dos olhos e dê um passo para trás, com joelhos destravados.",
+    "movement": "Puxe a corda em direção ao rosto, afastando as mãos e levando os cotovelos para trás; retorne lentamente.",
+    "breathing": "Solte o ar durante a puxada e inspire ao retornar de forma controlada.",
+    "care": "Mantenha o pescoço neutro e não arqueie a lombar.",
+    "reference": "https://www.nasm.org/resource-center/exercise-library/face-pull"
+  },
+  "rosca concentrada": {
+    "start": "Sente no banco com pés no chão e apoie o braço que segura o halter na parte interna da coxa.",
+    "movement": "Flexione o cotovelo levando o halter ao ombro e desça com controle; depois troque o braço.",
+    "breathing": "Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.",
+    "care": "Mantenha o apoio do braço e não gire o tronco.",
+    "reference": "https://www.puregym.dk/inspiration/concentration-curls-din-vej-til-traenede-biceps"
+  },
+  "triceps coice": {
+    "start": "Apoie uma mão no banco, incline o tronco e mantenha o braço do halter junto ao corpo, com cotovelo dobrado.",
+    "movement": "Estenda o cotovelo levando o halter para trás e retorne devagar.",
+    "breathing": "Solte o ar ao estender os cotovelos e inspire ao dobrá-los no retorno.",
+    "care": "O braço acima do cotovelo permanece imóvel; não gire os ombros.",
+    "reference": "https://contentcdn.eacefitness.com/certifiednews/images/article/pdfs/ACETricepsStudy.pdf"
+  },
+  "agachamento sumo": {
+    "start": "Afaste os pés além dos ombros, com pontas para fora. Segure um halter à frente, entre as pernas.",
+    "movement": "Flexione quadris e joelhos para descer e empurre o chão com os pés inteiros para voltar.",
+    "breathing": "Inspire durante a descida e solte o ar ao empurrar o chão para subir.",
+    "care": "Mantenha joelhos acompanhando os pés e não projete o quadril para frente no topo.",
+    "reference": "https://www.puregym.com/exercises/legs/quad-exercises/squats/sumo-squat/"
+  },
+  "leg press 45°": {
+    "start": "Apoie costas e quadril no encosto e coloque os pés inteiros na plataforma. Ajuste as travas.",
+    "movement": "Flexione os joelhos aproximando a plataforma e empurre com os pés para voltar.",
+    "breathing": "Solte o ar ao empurrar a plataforma e inspire ao flexionar os joelhos.",
+    "care": "Pare antes de o quadril descolar do encosto e não trave os joelhos.",
+    "reference": "https://www.nasm.org/resource-center/exercise-library/leg-press"
+  },
+  "stiff": {
+    "start": "Em pé, segure os halteres à frente das coxas e mantenha os joelhos levemente dobrados.",
+    "movement": "Empurre o quadril para trás, descendo os halteres próximos às pernas; estenda o quadril para voltar.",
+    "breathing": "Inspire durante a descida e solte o ar ao voltar à posição em pé, mantendo o abdômen firme.",
+    "care": "Não trave os joelhos nem arredonde a coluna. A descida termina ao limite da mobilidade, sem buscar o chão.",
+    "reference": "https://www.nasm.org/resource-center/exercise-library/dumbbell-romanian-deadlift"
+  },
+  "elevacao pelvica (hip thrust)": {
+    "start": "Apoie a parte superior das costas em um banco firme, pés no chão e barra acolchoada sobre o quadril.",
+    "movement": "Eleve o quadril até alinhar ombros, quadris e joelhos e desça devagar.",
+    "breathing": "Solte o ar ao elevar o quadril e inspire ao descê-lo.",
+    "care": "Mantenha o queixo levemente recolhido, o banco estável e não hiperestenda a lombar.",
+    "reference": "https://www.puregym.com/exercises/glutes/hip-thrusts/barbell-hip-thrust/"
+  },
+  "abducao de quadril na polia": {
+    "start": "Fique de lado para a polia baixa, com a tornozeleira na perna mais distante da máquina, e segure um apoio.",
+    "movement": "Afaste a perna para o lado e retorne lentamente, sem cruzar ou girar o quadril.",
+    "breathing": "Solte o ar ao afastar as pernas e inspire no retorno controlado.",
+    "care": "Mantenha a pelve nivelada e não incline o tronco para compensar.",
+    "reference": "https://www.puregym.com/exercises/legs/inner-outer-thigh/cable-hip-abduction/"
+  },
+  "abdominal na polia": {
+    "start": "Ajoelhe diante da polia alta, segurando a corda ao lado da cabeça, sem puxar o pescoço.",
+    "movement": "Flexione o tronco aproximando as costelas da pelve e retorne lentamente.",
+    "breathing": "Solte o ar ao contrair o abdômen e inspire no retorno.",
+    "care": "Evite puxar com os braços ou transformar o exercício em flexão do quadril.",
+    "reference": "https://www.bodycraft.com/pdfs/exercise/PFTBook.pdf"
+  },
+  "abdominal bicicleta": {
+    "start": "Deite de costas com mãos levemente ao lado da cabeça, joelhos elevados e abdômen firme.",
+    "movement": "Alterne a aproximação de um joelho e a rotação do tronco para o lado oposto, enquanto estende a outra perna.",
+    "breathing": "Solte o ar durante cada contração e inspire ao alternar.",
+    "care": "Não puxe o pescoço nem deixe a lombar arquear; execute devagar.",
+    "reference": "https://www.puregym.com/exercises/abs/bicycle-crunches/"
+  },
+  "burpee": {
+    "start": "Em pé, com espaço livre à frente, flexione quadris e joelhos para apoiar as mãos no chão.",
+    "movement": "Leve os pés para trás em prancha, traga-os novamente para perto das mãos e levante; acrescente o salto somente com controle.",
+    "breathing": "Respire continuamente e solte o ar ao se levantar.",
+    "care": "Não deixe a lombar afundar. Volte com um pé por vez para reduzir o impacto.",
+    "reference": "https://www.puregym.com/exercises/plyometrics/burpees/"
+  },
+  "agachamento com salto": {
+    "start": "Fique em pé, com os pés na largura dos ombros, e faça um agachamento curto.",
+    "movement": "Estenda quadris e joelhos para saltar e aterrisse suavemente, dobrando os joelhos.",
+    "breathing": "Solte o ar no salto e inspire ao preparar a próxima repetição.",
+    "care": "Mantenha joelhos alinhados aos pés e recupere o equilíbrio antes de repetir.",
+    "reference": "https://www.nasm.org/resource-center/exercise-library/squat-jump"
+  },
+  "mountain climber": {
+    "start": "Comece em prancha alta, mãos abaixo dos ombros e corpo alinhado.",
+    "movement": "Traga um joelho em direção ao peito, retorne e alterne com a outra perna.",
+    "breathing": "Respire de forma contínua durante as alternâncias.",
+    "care": "Mantenha as mãos no lugar e não eleve ou deixe cair o quadril. Comece devagar.",
+    "reference": "https://www.puregym.com/exercises/full-body/mountain-climbers/"
+  },
+  "thruster": {
+    "start": "Em pé, segure os halteres junto aos ombros, com pés na largura dos ombros e abdômen firme.",
+    "movement": "Agache com controle e use a subida para empurrar os halteres acima da cabeça; retorne aos ombros antes de repetir.",
+    "breathing": "Inspire na descida e solte o ar ao subir e empurrar os halteres.",
+    "care": "Mantenha joelhos alinhados aos pés e não arqueie a lombar no movimento acima da cabeça.",
+    "reference": "https://www.acefitness.org/resources/everyone/exercise-library/315/front-squat-to-overhead-press/"
+  }
+}

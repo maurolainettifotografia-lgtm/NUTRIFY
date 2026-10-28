@@ -24,7 +24,7 @@ export const GOALS = [
   { key: "ganho_massa", label: "Ganho de massa muscular", icon: "barbell-outline" },
   { key: "manutencao", label: "Manutenção de peso", icon: "remove-outline" },
   { key: "recomposicao", label: "Recomposição corporal", icon: "sync-outline" },
-  { key: "performance", label: "Performance esportiva", icon: "flash-outline" },
+  { key: "performance", label: "Condicionamento / performance", icon: "flash-outline" },
 ] as const;
 
 export const GOAL_LABELS: Record<string, string> = Object.fromEntries(
@@ -38,6 +38,49 @@ export const WORKOUT_TYPES = [
   { key: "outro", label: "Outro", icon: "fitness-outline", kcalPerMin: 6 },
 ] as const;
 
+export const MUSCLE_LABELS: Record<string, string> = {
+  peito: "Peito", costas: "Costas", ombros: "Ombros", biceps: "Bíceps", triceps: "Tríceps",
+  pernas: "Pernas", gluteos: "Glúteos", panturrilha: "Panturrilha", abdomen: "Abdômen",
+  corpo_inteiro: "Corpo inteiro", outro: "Outro",
+};
+
+/** Minusculas e sem acento, para buscar "triceps" e achar "Tríceps". */
+export function fold(s: string) {
+  return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+}
+
+/** "2026-10-20" -> "20/10" */
+export function formatShortDate(d: string) {
+  const [, m, day] = d.split("-");
+  return `${day}/${m}`;
+}
+
+/** 67.5 -> "67,5"; 60 -> "60" */
+export function formatKg(n: number) {
+  return String(Math.round(n * 10) / 10).replace(".", ",");
+}
+
+export type RecordLike = { name: string; kind: string; value: number; previous: number };
+
+/** "Supino reto: 67,5 kg (antes 65 kg)" */
+export function describeRecord(r: RecordLike) {
+  if (r.kind === "reps") return `${r.name}: ${r.value} repetições`;
+  const label = r.kind === "1rm" ? "1RM estimado " : "";
+  const before = r.previous > 0 ? ` (antes ${formatKg(r.previous)} kg)` : "";
+  return `${r.name}: ${label}${formatKg(r.value)} kg${before}`;
+}
+
+export function formatClock(totalSeconds: number) {
+  const m = Math.floor(totalSeconds / 60);
+  const s = totalSeconds % 60;
+  return `${m}:${String(s).padStart(2, "0")}`;
+}
+
+// Versao da Politica de Privacidade (igual a POLICY_VERSION do servidor).
+export const POLICY_VERSION = "2026-10";
+// PREENCHA com o seu e-mail de contato para assuntos de privacidade (aparece na Politica de Privacidade).
+export const PRIVACY_CONTACT = "maurolainettifotografia@gmail.com";
+
 export const SIGNATURE = "by Mauro Lainetti";
 export const COPYRIGHT = "© 2026 Nutrify — Mauro Lainetti. Todos os direitos reservados.";
 
@@ -50,3 +93,4 @@ export function toDateStr(d: Date) {
 export function todayStr() {
   return toDateStr(new Date());
 }
+

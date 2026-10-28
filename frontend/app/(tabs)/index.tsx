@@ -5,7 +5,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Ionicons from "@react-native-vector-icons/ionicons";
 import Animated, { FadeInDown } from "react-native-reanimated";
 
-import { CalorieRing, MacroBar } from "@/src/components/charts";
+import { NutritionRings } from "@/src/components/nutrition-rings";
 import { Card } from "@/src/components/primitives";
 import { WaterWidget } from "@/src/components/water-widget";
 import { useDiary } from "@/src/hooks";
@@ -18,7 +18,7 @@ export default function Dashboard() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const date = todayStr();
-  const { data, isLoading, refetch, isRefetching } = useDiary(date);
+  const { data, isLoading, isError, refetch, isRefetching } = useDiary(date);
   const [refreshing, setRefreshing] = useState(false);
 
   const onRefresh = useCallback(async () => {
@@ -42,8 +42,8 @@ export default function Dashboard() {
           <Text style={styles.greeting}>{greeting} 👋</Text>
           <Text style={styles.date}>{dateLabel}</Text>
         </View>
-        <Pressable testID="scan-shortcut" onPress={() => router.push("/scan")} style={styles.scanBtn}>
-          <Ionicons name="scan" size={20} color={colors.onBrandPrimary} />
+        <Pressable testID="scan-shortcut" accessibilityRole="button" accessibilityLabel="Fotografar alimento" onPress={() => router.push("/scan")} style={styles.scanBtn}>
+          <Ionicons name="camera-outline" size={20} color={colors.onBrandPrimary} />
         </Pressable>
       </View>
 
@@ -63,19 +63,7 @@ export default function Dashboard() {
 
         <Animated.View entering={FadeInDown.duration(400)}>
           <Card testID="calorie-card" style={styles.heroCard}>
-            <CalorieRing consumed={totals.calories} target={target} />
-            <View style={styles.macros}>
-              <MacroBar label="Proteínas" consumed={totals.protein} target={goals?.protein ?? 120} color={colors.brandPrimary} />
-              <MacroBar label="Carboidratos" consumed={totals.carbs} target={goals?.carbs ?? 220} color="#38BDF8" />
-              <MacroBar label="Gorduras" consumed={totals.fat} target={goals?.fat ?? 60} color={colors.warning} />
-            </View>
-            <View style={styles.statsRow}>
-              <Stat label="Meta" value={`${Math.round(target)}`} unit="kcal" />
-              <View style={styles.statDivider} />
-              <Stat label="Consumido" value={`${Math.round(totals.calories)}`} unit="kcal" />
-              <View style={styles.statDivider} />
-              <Stat label="Restante" value={`${Math.max(0, Math.round(target - totals.calories))}`} unit="kcal" />
-            </View>
+            {data ? <NutritionRings consumed={totals} goals={{ calories: target, protein: goals?.protein ?? 0, carbs: goals?.carbs ?? 0, fat: goals?.fat ?? 0 }} /> : <View style={{ gap: 12, alignItems: "center" }}><Text style={{ color: colors.muted }}>{isError ? "Não foi possível carregar seu resumo." : "Carregando seu resumo…"}</Text>{isError ? <Pressable accessibilityRole="button" onPress={() => refetch()} style={{ padding: 12 }}><Text style={{ color: colors.brandPrimary }}>Tentar novamente</Text></Pressable> : null}</View>}
           </Card>
         </Animated.View>
 
@@ -131,17 +119,6 @@ export default function Dashboard() {
 
         <Text style={styles.disclaimer}>As estimativas são aproximadas e não substituem orientação nutricional profissional.</Text>
       </ScrollView>
-    </View>
-  );
-}
-
-function Stat({ label, value, unit }: { label: string; value: string; unit: string }) {
-  const styles = useStyles();
-  return (
-    <View style={styles.stat}>
-      <Text style={styles.statValue}>{value}</Text>
-      <Text style={styles.statUnit}>{unit}</Text>
-      <Text style={styles.statLabel}>{label}</Text>
     </View>
   );
 }

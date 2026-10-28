@@ -74,6 +74,7 @@ export default function Barcode() {
         },
       });
       qc.invalidateQueries({ queryKey: ["diary", date] });
+      qc.invalidateQueries({ queryKey: ["reports"] });
       toast.show(`Adicionado ao ${MEAL_LABELS[meal]}`);
       reset();
     } catch {

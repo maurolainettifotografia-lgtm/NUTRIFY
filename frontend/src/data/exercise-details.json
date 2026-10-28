@@ -1,0 +1,1384 @@
+{
+  "Supino reto com barra": {
+    "wger_id": 73,
+    "instructions": "Posição inicial: Deite no banco reto, com os pés apoiados e os ombros estáveis. Segure a barra acima do peito.\nMovimento: Desça a barra em direção ao peito com controle e empurre para cima, mantendo os punhos alinhados.\nRespiração: Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.\nCuidados: Não quique o peso no peito. Use suportes de segurança ou ajuda para retirar e recolocar a barra.",
+    "language": "pt",
+    "equipment": "Barbell, Bench",
+    "muscles": [
+      "chest"
+    ],
+    "source": "https://wger.de/en/exercise/73/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "73-0.png",
+        "source": "https://wger.de/media/exercise-images/192/Bench-press-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "73-1.png",
+        "source": "https://wger.de/media/exercise-images/192/Bench-press-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Supino inclinado com barra": {
+    "wger_id": 538,
+    "instructions": "Posição inicial: Deite no banco inclinado a cerca de 30–45°, com os pés apoiados e os ombros estáveis. Segure a barra acima do peito.\nMovimento: Desça a barra em direção ao peito com controle e empurre para cima, mantendo os punhos alinhados.\nRespiração: Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.\nCuidados: Não quique o peso no peito. Use suportes de segurança ou ajuda para retirar e recolocar a barra.",
+    "language": "pt",
+    "equipment": "Barbell, Incline bench",
+    "muscles": [
+      "chest"
+    ],
+    "source": "https://wger.de/en/exercise/538/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "538-0.png",
+        "source": "https://wger.de/media/exercise-images/41/Incline-bench-press-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "538-1.png",
+        "source": "https://wger.de/media/exercise-images/41/Incline-bench-press-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Supino declinado com barra": {
+    "wger_id": 185,
+    "instructions": "Posição inicial: Deite no banco declinado, com as pernas presas no suporte, com os pés apoiados e os ombros estáveis. Segure a barra acima do peito.\nMovimento: Desça a barra em direção ao peito com controle e empurre para cima, mantendo os punhos alinhados.\nRespiração: Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.\nCuidados: Não quique o peso no peito. Use suportes de segurança ou ajuda para retirar e recolocar a barra.",
+    "language": "pt",
+    "equipment": "Barbell, Bench",
+    "muscles": [
+      "chest"
+    ],
+    "source": "https://wger.de/en/exercise/185/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "185-0.png",
+        "source": "https://wger.de/media/exercise-images/100/Decline-bench-press-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "185-1.png",
+        "source": "https://wger.de/media/exercise-images/100/Decline-bench-press-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Supino reto com halteres": {
+    "wger_id": 75,
+    "instructions": "Posição inicial: Deite no banco reto, com os pés apoiados e os ombros estáveis. Segure os halteres ao lado do peito.\nMovimento: Desça os halteres ao lado do peito com controle e empurre para cima, mantendo os punhos alinhados.\nRespiração: Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.\nCuidados: Não bata os halteres entre si nem aumente a curvatura da lombar.",
+    "language": "pt",
+    "equipment": "Bench, Dumbbell",
+    "muscles": [
+      "chest"
+    ],
+    "source": "https://wger.de/en/exercise/75/view/",
+    "author": "Jhonatan",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "75-0.png",
+        "source": "https://wger.de/media/exercise-images/97/Dumbbell-bench-press-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "75-1.png",
+        "source": "https://wger.de/media/exercise-images/97/Dumbbell-bench-press-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Supino inclinado com halteres": {
+    "wger_id": 537,
+    "instructions": "Posição inicial: Deite no banco inclinado a cerca de 30–45°, com os pés apoiados e os ombros estáveis. Segure os halteres ao lado do peito.\nMovimento: Desça os halteres ao lado do peito com controle e empurre para cima, mantendo os punhos alinhados.\nRespiração: Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.\nCuidados: Não bata os halteres entre si nem aumente a curvatura da lombar.",
+    "language": "pt",
+    "equipment": "Dumbbell, Incline bench",
+    "muscles": [
+      "chest"
+    ],
+    "source": "https://wger.de/en/exercise/537/view/",
+    "author": "Jhonatan",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "537-0.png",
+        "source": "https://wger.de/media/exercise-images/16/Incline-press-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "537-1.jpg",
+        "source": "https://wger.de/media/exercise-images/537/9f3c7817-3e3d-417d-8b08-2c0a1aa5fe03.jpg",
+        "author": "erikocobra",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Supino na máquina": {
+    "wger_id": 129,
+    "instructions": "Posição inicial: Ajuste o banco para deixar as alças na altura do peito. Apoie costas e pés.\nMovimento: Empurre as alças à frente e retorne devagar, sem deixar os pesos baterem.\nRespiração: Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.\nCuidados: Mantenha as costas no encosto e respeite a amplitude confortável dos ombros.",
+    "language": "pt",
+    "equipment": "",
+    "muscles": [
+      "chest"
+    ],
+    "source": "https://wger.de/en/exercise/129/view/",
+    "author": "wger.de",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "129-0.webp",
+        "source": "https://wger.de/media/exercise-images/129/b263c968-e067-4750-916a-d8758a7df23e.webp",
+        "author": "roneydya",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Crucifixo com halteres": {
+    "wger_id": 238,
+    "instructions": "Posição inicial: Deite no banco reto, com pés apoiados e halteres acima do peito; cotovelos levemente flexionados.\nMovimento: Abra os braços em arco para os lados e feche pelo mesmo caminho.\nRespiração: Solte o ar ao aproximar os braços e inspire ao abri-los.\nCuidados: Mantenha o ângulo dos cotovelos e não force os braços abaixo da amplitude confortável.",
+    "language": "pt",
+    "equipment": "Dumbbell",
+    "muscles": [
+      "chest"
+    ],
+    "source": "https://wger.de/en/exercise/238/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "238-0.png",
+        "source": "https://wger.de/media/exercise-images/238/2fc242d3-5bdd-4f97-99bd-678adb8c96fc.png",
+        "author": "cshep442",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      {
+        "file": "238-1.png",
+        "source": "https://wger.de/media/exercise-images/238/c6464fb3-1924-4ff1-adfa-fd36da9b5d13.png",
+        "author": "cshep442",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Crucifixo na máquina (peck deck)": {
+    "wger_id": 135,
+    "instructions": "Posição inicial: Sente com as costas apoiadas e ajuste o banco para alinhar braços e alças à altura do peito.\nMovimento: Aproxime os braços à frente e abra novamente de forma controlada.\nRespiração: Solte o ar ao aproximar os braços e inspire ao abri-los.\nCuidados: Não projete os ombros para frente nem deixe os pesos baterem.",
+    "language": "pt",
+    "equipment": "",
+    "muscles": [
+      "chest"
+    ],
+    "source": "https://wger.de/en/exercise/135/view/",
+    "author": "wger.de",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "135-0.png",
+        "source": "https://wger.de/media/exercise-images/98/Butterfly-machine-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "135-1.png",
+        "source": "https://wger.de/media/exercise-images/98/Butterfly-machine-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Crossover na polia": {
+    "wger_id": 323,
+    "instructions": "Posição inicial: Segure as alças das polias, com um pé à frente e cotovelos levemente dobrados.\nMovimento: Traga as mãos em arco à frente do peito e retorne com controle.\nRespiração: Solte o ar ao aproximar os braços e inspire ao abri-los.\nCuidados: Estabilize o tronco e mantenha o ângulo dos cotovelos; não force o alongamento dos ombros.",
+    "language": "pt",
+    "equipment": "Cable machine",
+    "muscles": [
+      "chest"
+    ],
+    "source": "https://wger.de/en/exercise/323/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "323-0.png",
+        "source": "https://wger.de/media/exercise-images/71/Cable-crossover-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "323-1.png",
+        "source": "https://wger.de/media/exercise-images/71/Cable-crossover-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Flexão de braço": {
+    "wger_id": 1551,
+    "instructions": "Posição inicial: Apoie as mãos um pouco além dos ombros e as pontas dos pés no chão, com o corpo alinhado.\nMovimento: Flexione os cotovelos para aproximar o peito do chão; empurre o chão para voltar.\nRespiração: Inspire ao descer o corpo e solte o ar ao empurrar o chão para subir.\nCuidados: Evite deixar o quadril cair ou levar a cabeça à frente. Reduza a dificuldade apoiando os joelhos.",
+    "language": "pt",
+    "equipment": "none (bodyweight exercise)",
+    "muscles": [
+      "chest"
+    ],
+    "source": "https://wger.de/en/exercise/1551/view/",
+    "author": "Settebello",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "images": [
+      {
+        "file": "1551-0.jpg",
+        "source": "https://wger.de/media/exercise-images/1551/a6a9e561-3965-45c6-9f2b-ee671e1a3a45.png.400x400_q85.jpg",
+        "author": "Settebello",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "note": "Miniatura 400px gerada pelo wger; licença da imagem original preservada."
+      }
+    ]
+  },
+  "Mergulho nas paralelas": {
+    "wger_id": 194,
+    "instructions": "Posição inicial: Segure as barras paralelas e sustente o corpo com os braços estendidos, sem travar os cotovelos.\nMovimento: Flexione os cotovelos para descer até uma amplitude confortável e empurre as barras para subir.\nRespiração: Inspire ao descer o corpo e solte o ar na subida.\nCuidados: Não afunde os ombros, balance as pernas ou force uma descida profunda.",
+    "language": "pt",
+    "equipment": "none (bodyweight exercise)",
+    "muscles": [
+      "chest",
+      "triceps"
+    ],
+    "source": "https://wger.de/en/exercise/194/view/",
+    "author": "BFad07",
+    "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "images": [
+      {
+        "file": "194-0.png",
+        "source": "https://wger.de/media/exercise-images/194/34600351-8b0b-4cb0-8daa-583537be15b0.png",
+        "author": "cshep442",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Puxada com pegada supinada": {
+    "wger_id": 1127,
+    "instructions": "Posição inicial: Sente na polia alta com coxas presas ao apoio e palmas voltadas para você.\nMovimento: Puxe a barra à frente até a parte superior do peito e estenda os braços lentamente.\nRespiração: Solte o ar durante a puxada e inspire ao retornar de forma controlada.\nCuidados: Não puxe atrás da nuca, balance o tronco ou solte a carga no retorno.",
+    "language": "pt",
+    "equipment": "Cable machine",
+    "muscles": [
+      "upper-back"
+    ],
+    "source": "https://wger.de/en/exercise/1127/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "images": [
+      {
+        "file": "1127-0.jpg",
+        "source": "https://wger.de/media/exercise-images/1127/4942b7c0-6bda-4983-88e5-86547c3d445e.png",
+        "author": "Franpol",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Remada curvada com barra": {
+    "wger_id": 83,
+    "instructions": "Posição inicial: Em pé, segure a barra com palmas para baixo. Flexione levemente os joelhos e incline o tronco pelo quadril.\nMovimento: Puxe a barra em direção ao abdômen, levando os cotovelos para trás; abaixe com controle.\nRespiração: Solte o ar durante a puxada e inspire ao retornar de forma controlada.\nCuidados: Mantenha coluna e pescoço alinhados, sem levantar o tronco a cada repetição.",
+    "language": "pt",
+    "equipment": "Barbell",
+    "muscles": [
+      "upper-back"
+    ],
+    "source": "https://wger.de/en/exercise/83/view/",
+    "author": "br_Orion",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "83-0.png",
+        "source": "https://wger.de/media/exercise-images/109/Barbell-rear-delt-row-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "83-1.png",
+        "source": "https://wger.de/media/exercise-images/109/Barbell-rear-delt-row-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Remada unilateral com halter (serrote)": {
+    "wger_id": 81,
+    "instructions": "Posição inicial: Apoie uma mão e o joelho do mesmo lado no banco. Segure o halter com a outra mão, braço abaixo do ombro.\nMovimento: Puxe o halter em direção ao quadril e abaixe lentamente; repita do outro lado.\nRespiração: Solte o ar durante a puxada e inspire ao retornar de forma controlada.\nCuidados: Não gire o tronco nem eleve o ombro. O apoio deve permanecer firme.",
+    "language": "pt",
+    "equipment": "Bench, Dumbbell",
+    "muscles": [
+      "upper-back"
+    ],
+    "source": "https://wger.de/en/exercise/81/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "images": [
+      {
+        "file": "81-0.jpg",
+        "source": "https://wger.de/media/exercise-images/81/a751a438-ae2d-4751-8d61-cef0e9292174.png",
+        "author": "Franpol",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Remada baixa na polia": {
+    "wger_id": 394,
+    "instructions": "Posição inicial: Sente com os pés nos apoios e joelhos levemente flexionados. Segure a alça com os braços à frente.\nMovimento: Puxe em direção ao abdômen, levando os cotovelos para trás, e retorne lentamente.\nRespiração: Solte o ar durante a puxada e inspire ao retornar de forma controlada.\nCuidados: Não arredonde a coluna nem use balanço do tronco para mover a carga.",
+    "language": "pt",
+    "equipment": "Cable machine",
+    "muscles": [
+      "upper-back"
+    ],
+    "source": "https://wger.de/en/exercise/394/view/",
+    "author": "wger.de",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "394-0.png",
+        "source": "https://wger.de/media/exercise-images/143/Cable-seated-rows-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "394-1.png",
+        "source": "https://wger.de/media/exercise-images/143/Cable-seated-rows-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Remada cavalinho": {
+    "wger_id": 513,
+    "instructions": "Posição inicial: Segure a alça da barra fixada na base, com joelhos levemente dobrados e tronco inclinado pelo quadril.\nMovimento: Puxe em direção ao abdômen, levando os cotovelos para trás, e retorne lentamente.\nRespiração: Solte o ar durante a puxada e inspire ao retornar de forma controlada.\nCuidados: Não arredonde a coluna nem use balanço do tronco para mover a carga.",
+    "language": "pt",
+    "equipment": "",
+    "muscles": [
+      "upper-back"
+    ],
+    "source": "https://wger.de/en/exercise/513/view/",
+    "author": "wger.de",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "513-0.png",
+        "source": "https://wger.de/media/exercise-images/106/T-bar-row-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "513-1.png",
+        "source": "https://wger.de/media/exercise-images/106/T-bar-row-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Remada na máquina": {
+    "wger_id": 1725,
+    "instructions": "Posição inicial: Ajuste o banco, apoie o peito no suporte quando disponível e segure as alças com os braços à frente.\nMovimento: Puxe em direção ao abdômen, levando os cotovelos para trás, e retorne lentamente.\nRespiração: Solte o ar durante a puxada e inspire ao retornar de forma controlada.\nCuidados: Não arredonde a coluna nem use balanço do tronco para mover a carga.",
+    "language": "pt",
+    "equipment": "",
+    "muscles": [
+      "upper-back"
+    ],
+    "source": "https://wger.de/en/exercise/1725/view/",
+    "author": "barry",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "images": [
+      {
+        "file": "1725-0.jpg",
+        "source": "https://wger.de/media/exercise-images/1725/f0ebd44e-b8e1-400c-b598-ca371f3a07af.png.400x400_q85.jpg",
+        "author": "barry",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "note": "Miniatura 400px gerada pelo wger; licença da imagem original preservada."
+      }
+    ]
+  },
+  "Pullover com halter": {
+    "wger_id": 161,
+    "instructions": "Posição inicial: Deite no banco com os pés firmes e segure um halter com as duas mãos acima do peito. Flexione um pouco os cotovelos.\nMovimento: Leve o halter em arco para trás da cabeça e retorne acima do peito.\nRespiração: Inspire ao levar o halter para trás e solte o ar ao trazê-lo acima do peito.\nCuidados: Use carga leve, não arqueie a lombar e limite a descida à mobilidade dos ombros.",
+    "language": "pt",
+    "equipment": "Dumbbell",
+    "muscles": [
+      "upper-back",
+      "chest"
+    ],
+    "source": "https://wger.de/en/exercise/161/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": []
+  },
+  "Levantamento terra": {
+    "wger_id": 184,
+    "instructions": "Posição inicial: Posicione a barra próxima às canelas, com os pés na largura do quadril. Flexione quadris e joelhos para segurá-la.\nMovimento: Empurre o chão e estenda quadris e joelhos juntos. Volte levando o quadril para trás e depois dobrando os joelhos.\nRespiração: Inspire e firme o abdômen antes de subir; solte o ar de forma controlada, mantendo o tronco estável.\nCuidados: Mantenha a barra perto do corpo e a coluna neutra; não se incline para trás no final.",
+    "language": "pt",
+    "equipment": "Barbell",
+    "muscles": [
+      "upper-back"
+    ],
+    "source": "https://wger.de/en/exercise/184/view/",
+    "author": "wger.de",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "184-0.jpg",
+        "source": "https://wger.de/media/exercise-images/184/1709c405-620a-4d07-9658-fade2b66a2df.jpeg",
+        "author": "philip",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Desenvolvimento com barra": {
+    "wger_id": 566,
+    "instructions": "Posição inicial: Sente com as costas apoiadas e pés no chão. Posicione a barra na altura dos ombros.\nMovimento: Empurre a barra para cima e retorne devagar à altura dos ombros.\nRespiração: Solte o ar ao empurrar o peso acima da cabeça e inspire ao baixá-lo.\nCuidados: Mantenha abdômen firme e não arqueie a lombar nem force o peso atrás da cabeça.",
+    "language": "pt",
+    "equipment": "Barbell",
+    "muscles": [
+      "deltoids"
+    ],
+    "source": "https://wger.de/en/exercise/566/view/",
+    "author": "wger.de",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "566-0.png",
+        "source": "https://wger.de/media/exercise-images/119/seated-barbell-shoulder-press-large-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "566-1.png",
+        "source": "https://wger.de/media/exercise-images/119/seated-barbell-shoulder-press-large-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Desenvolvimento com halteres": {
+    "wger_id": 567,
+    "instructions": "Posição inicial: Sente com as costas apoiadas e pés no chão. Posicione os halteres na altura dos ombros.\nMovimento: Empurre os halteres para cima e retorne devagar à altura dos ombros.\nRespiração: Solte o ar ao empurrar o peso acima da cabeça e inspire ao baixá-lo.\nCuidados: Mantenha abdômen firme e não arqueie a lombar nem force o peso atrás da cabeça.",
+    "language": "pt",
+    "equipment": "Dumbbell",
+    "muscles": [
+      "deltoids"
+    ],
+    "source": "https://wger.de/en/exercise/567/view/",
+    "author": "wger.de",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "567-0.png",
+        "source": "https://wger.de/media/exercise-images/123/dumbbell-shoulder-press-large-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "567-1.png",
+        "source": "https://wger.de/media/exercise-images/123/dumbbell-shoulder-press-large-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Desenvolvimento na máquina": {
+    "wger_id": 543,
+    "instructions": "Posição inicial: Sente com as costas apoiadas e pés no chão. Posicione as alças na altura dos ombros.\nMovimento: Empurre as alças para cima e retorne devagar à altura dos ombros.\nRespiração: Solte o ar ao empurrar o peso acima da cabeça e inspire ao baixá-lo.\nCuidados: Mantenha abdômen firme e não arqueie a lombar nem force o peso atrás da cabeça.",
+    "language": "pt",
+    "equipment": "",
+    "muscles": [
+      "deltoids"
+    ],
+    "source": "https://wger.de/en/exercise/543/view/",
+    "author": "wger.de",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "543-0.png",
+        "source": "https://wger.de/media/exercise-images/53/Shoulder-press-machine-2.png",
+        "author": "wger.de",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "543-1.png",
+        "source": "https://wger.de/media/exercise-images/53/Shoulder-press-machine-1.png",
+        "author": "wger.de",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Elevação lateral com halteres": {
+    "wger_id": 348,
+    "instructions": "Posição inicial: Em pé, segure os halteres ao lado do corpo, com cotovelos levemente dobrados.\nMovimento: Eleve os braços para os lados até a altura dos ombros e desça lentamente.\nRespiração: Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.\nCuidados: Não balance o tronco, encolha os ombros ou force a amplitude.",
+    "language": "pt",
+    "equipment": "Dumbbell",
+    "muscles": [
+      "deltoids"
+    ],
+    "source": "https://wger.de/en/exercise/348/view/",
+    "author": "wger.de",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "348-0.png",
+        "source": "https://wger.de/media/exercise-images/148/lateral-dumbbell-raises-large-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "348-1.png",
+        "source": "https://wger.de/media/exercise-images/148/lateral-dumbbell-raises-large-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Elevação frontal com halteres": {
+    "wger_id": 256,
+    "instructions": "Posição inicial: Em pé, segure os halteres à frente das coxas, com cotovelos levemente dobrados.\nMovimento: Eleve os braços à frente até a altura dos ombros e volte com controle.\nRespiração: Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.\nCuidados: Mantenha o tronco estável e reduza a carga se precisar se inclinar para trás.",
+    "language": "pt",
+    "equipment": "Barbell, Dumbbell",
+    "muscles": [
+      "deltoids"
+    ],
+    "source": "https://wger.de/en/exercise/256/view/",
+    "author": "Manu, wikipedia",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "256-0.png",
+        "source": "https://wger.de/media/exercise-images/256/b7def5bc-2352-499b-b9e5-fff741003831.png",
+        "author": "philip",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Crucifixo inverso": {
+    "wger_id": 487,
+    "instructions": "Posição inicial: Sente na ponta do banco com pés apoiados e incline o tronco pelo quadril. Segure os halteres abaixo dos ombros.\nMovimento: Abra os braços para os lados, com cotovelos levemente flexionados, e desça devagar.\nRespiração: Solte o ar ao abrir os braços e inspire ao retornar.\nCuidados: Não arredonde a coluna nem transforme o movimento em balanço.",
+    "language": "pt",
+    "equipment": "Dumbbell",
+    "muscles": [],
+    "source": "https://wger.de/en/exercise/487/view/",
+    "author": "YYCfit",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "487-0.png",
+        "source": "https://wger.de/media/exercise-images/487/ad724e5c-b1ed-49e8-9279-a17545b0dd0b.png",
+        "author": "cshep442",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      {
+        "file": "487-1.png",
+        "source": "https://wger.de/media/exercise-images/487/692c598c-0493-42a5-be8b-b9d2e9adcd00.png",
+        "author": "cshep442",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Encolhimento com halteres": {
+    "wger_id": 572,
+    "instructions": "Posição inicial: Fique em pé com um halter em cada mão, braços ao lado do corpo.\nMovimento: Eleve os ombros em direção às orelhas, faça uma breve pausa e abaixe devagar.\nRespiração: Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.\nCuidados: Não gire os ombros nem movimente o pescoço para impulsionar a carga.",
+    "language": "pt",
+    "equipment": "Dumbbell",
+    "muscles": [
+      "trapezius"
+    ],
+    "source": "https://wger.de/en/exercise/572/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "572-0.png",
+        "source": "https://wger.de/media/exercise-images/151/Dumbbell-shrugs-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "572-1.webp",
+        "source": "https://wger.de/media/exercise-images/572/9e730259-1dcd-4b5e-b4cc-9ebc0cfda75c.webp",
+        "author": "AlucardEvil40",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Rosca direta com barra": {
+    "wger_id": 91,
+    "instructions": "Posição inicial: Em pé, segure a barra com palmas para cima e mãos na largura dos ombros.\nMovimento: Flexione os cotovelos para subir a barra e abaixe lentamente.\nRespiração: Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.\nCuidados: Mantenha os cotovelos próximos ao corpo e evite balanço.",
+    "language": "pt",
+    "equipment": "Barbell",
+    "muscles": [
+      "biceps"
+    ],
+    "source": "https://wger.de/en/exercise/91/view/",
+    "author": "roneydya",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "91-0.png",
+        "source": "https://wger.de/media/exercise-images/74/Bicep-curls-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "91-1.png",
+        "source": "https://wger.de/media/exercise-images/74/Bicep-curls-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Rosca alternada com halteres": {
+    "wger_id": 1192,
+    "instructions": "Posição inicial: Segure um halter em cada mão, com palmas voltadas para o corpo.\nMovimento: Suba um halter por vez, girando a palma para cima; abaixe devagar e alterne.\nRespiração: Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.\nCuidados: Não leve o cotovelo para frente nem gire o tronco.",
+    "language": "pt",
+    "equipment": "Dumbbell",
+    "muscles": [
+      "biceps"
+    ],
+    "source": "https://wger.de/en/exercise/1192/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "images": [
+      {
+        "file": "1192-0.jpg",
+        "source": "https://wger.de/media/exercise-images/1192/651a4535-8210-4dbd-8f06-61d95fdd9963.png",
+        "author": "Franpol",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Rosca martelo": {
+    "wger_id": 272,
+    "instructions": "Posição inicial: Segure os halteres ao lado do corpo, com palmas voltadas uma para a outra.\nMovimento: Flexione os cotovelos sem girar as mãos; desça de forma controlada.\nRespiração: Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.\nCuidados: Mantenha punhos neutros e braços junto ao tronco.",
+    "language": "pt",
+    "equipment": "Dumbbell",
+    "muscles": [
+      "biceps"
+    ],
+    "source": "https://wger.de/en/exercise/272/view/",
+    "author": "roneydya",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "272-0.png",
+        "source": "https://wger.de/media/exercise-images/86/Bicep-hammer-curl-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "272-1.png",
+        "source": "https://wger.de/media/exercise-images/86/Bicep-hammer-curl-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Rosca Scott": {
+    "wger_id": 465,
+    "instructions": "Posição inicial: Ajuste o banco para apoiar a parte posterior dos braços na almofada. Segure a barra EZ com palmas para cima.\nMovimento: Flexione os cotovelos e retorne lentamente, sem travá-los na parte baixa.\nRespiração: Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.\nCuidados: Não retire os braços do apoio nem use impulso na extensão.",
+    "language": "pt",
+    "equipment": "SZ-Bar",
+    "muscles": [],
+    "source": "https://wger.de/en/exercise/465/view/",
+    "author": "cgoob883",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "465-0.png",
+        "source": "https://wger.de/media/exercise-images/193/Preacher-curl-3-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "465-1.png",
+        "source": "https://wger.de/media/exercise-images/193/Preacher-curl-3-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Rosca na polia": {
+    "wger_id": 95,
+    "instructions": "Posição inicial: Em pé de frente para a polia baixa, segure a barra com palmas para cima.\nMovimento: Flexione os cotovelos levando a barra em direção ao peito e retorne devagar.\nRespiração: Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.\nCuidados: Mantenha cotovelos junto ao corpo e não puxe com os ombros.",
+    "language": "pt",
+    "equipment": "Cable machine",
+    "muscles": [
+      "biceps"
+    ],
+    "source": "https://wger.de/en/exercise/95/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "95-0.png",
+        "source": "https://wger.de/media/exercise-images/129/Standing-biceps-curl-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "95-1.png",
+        "source": "https://wger.de/media/exercise-images/129/Standing-biceps-curl-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Rosca inversa": {
+    "wger_id": 1290,
+    "instructions": "Posição inicial: Em pé, segure a barra com palmas voltadas para baixo e mãos na largura dos ombros.\nMovimento: Flexione os cotovelos elevando a barra e abaixe com controle.\nRespiração: Solte o ar ao elevar a carga e inspire ao abaixá-la lentamente.\nCuidados: Não dobre os punhos nem use balanço do tronco.",
+    "language": "pt",
+    "equipment": "Barbell",
+    "muscles": [
+      "forearm"
+    ],
+    "source": "https://wger.de/en/exercise/1290/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "images": [
+      {
+        "file": "1290-0.jpg",
+        "source": "https://wger.de/media/exercise-images/1290/c05818bf-1c81-46df-9f24-42e354265388.png",
+        "author": "Franpol",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ],
+    "mapping_note": "Mapeamento do Nutrify ajustado ao movimento identificado pelo nome; atribuição do texto original preservada."
+  },
+  "Tríceps pulley com corda": {
+    "wger_id": 1900,
+    "instructions": "Posição inicial: Em pé diante da polia alta, segure a corda com palmas voltadas uma para a outra e mantenha os cotovelos junto às costelas.\nMovimento: Estenda os cotovelos empurrando para baixo e retorne lentamente, mantendo os braços estáveis. Afaste levemente as pontas da corda ao final.\nRespiração: Solte o ar ao estender os cotovelos e inspire ao dobrá-los no retorno.\nCuidados: Não movimente os ombros nem incline o corpo para empurrar a carga.",
+    "language": "pt",
+    "equipment": "Cable machine",
+    "muscles": [
+      "triceps"
+    ],
+    "source": "https://wger.de/en/exercise/1900/view/",
+    "author": "nishant0712",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "images": [
+      {
+        "file": "1900-0.png",
+        "source": "https://wger.de/media/exercise-images/1900/a8243245-8f8f-4e2b-93ca-694d416cb11d.png.400x400_q85.png",
+        "author": "nishant0712",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "note": "Miniatura 400px gerada pelo wger; licença da imagem original preservada."
+      }
+    ]
+  },
+  "Tríceps pulley com barra reta": {
+    "wger_id": 805,
+    "instructions": "Posição inicial: Em pé diante da polia alta, segure a barra reta com palmas para baixo e mantenha os cotovelos junto às costelas.\nMovimento: Estenda os cotovelos empurrando para baixo e retorne lentamente, mantendo os braços estáveis.\nRespiração: Solte o ar ao estender os cotovelos e inspire ao dobrá-los no retorno.\nCuidados: Não movimente os ombros nem incline o corpo para empurrar a carga.",
+    "language": "pt",
+    "equipment": "Cable machine",
+    "muscles": [
+      "triceps"
+    ],
+    "source": "https://wger.de/en/exercise/805/view/",
+    "author": "cshep442",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "images": [
+      {
+        "file": "805-0.png",
+        "source": "https://wger.de/media/exercise-images/805/7a437824-e2cc-46e1-804a-674f0ea31d25.png.400x400_q85.png",
+        "author": "wger contributors",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "note": "Miniatura 400px gerada pelo wger; licença da imagem original preservada."
+      }
+    ]
+  },
+  "Tríceps testa": {
+    "wger_id": 246,
+    "instructions": "Posição inicial: Deite no banco e segure a barra EZ acima do peito, com braços estáveis e cotovelos apontando para cima.\nMovimento: Flexione os cotovelos aproximando a barra da testa com cuidado e estenda para voltar.\nRespiração: Solte o ar ao estender os cotovelos e inspire ao dobrá-los no retorno.\nCuidados: Mantenha a cabeça apoiada e use carga controlável; não deixe a barra tocar o rosto.",
+    "language": "pt",
+    "equipment": "Bench, SZ-Bar",
+    "muscles": [
+      "triceps"
+    ],
+    "source": "https://wger.de/en/exercise/246/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "246-0.png",
+        "source": "https://wger.de/media/exercise-images/84/Lying-close-grip-triceps-press-to-chin-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "246-1.png",
+        "source": "https://wger.de/media/exercise-images/84/Lying-close-grip-triceps-press-to-chin-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Tríceps francês": {
+    "wger_id": 1336,
+    "instructions": "Posição inicial: Sente com o tronco estável e segure um halter com as duas mãos acima da cabeça.\nMovimento: Flexione os cotovelos levando o halter atrás da cabeça e estenda para voltar.\nRespiração: Solte o ar ao estender os cotovelos e inspire ao dobrá-los no retorno.\nCuidados: Não arqueie a lombar nem force a abertura dos cotovelos.",
+    "language": "pt",
+    "equipment": "Dumbbell",
+    "muscles": [
+      "triceps"
+    ],
+    "source": "https://wger.de/en/exercise/1336/view/",
+    "author": "Anastasious",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "images": [
+      {
+        "file": "1336-0.webp",
+        "source": "https://wger.de/media/exercise-images/1336/ebf88217-df26-4ef7-94cb-f0c2220c6abe.webp",
+        "author": "wger contributors",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Mergulho no banco": {
+    "wger_id": 197,
+    "instructions": "Posição inicial: Apoie as mãos na borda de um banco firme atrás do corpo, com pés apoiados e quadril próximo ao banco.\nMovimento: Flexione os cotovelos levando o quadril para baixo; empurre o banco para subir.\nRespiração: Inspire ao descer o corpo e solte o ar na subida.\nCuidados: Mantenha cotovelos para trás e limite a descida para não forçar a parte anterior dos ombros.",
+    "language": "pt",
+    "equipment": "Bench",
+    "muscles": [
+      "triceps"
+    ],
+    "source": "https://wger.de/en/exercise/197/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "197-0.png",
+        "source": "https://wger.de/media/exercise-images/83/Bench-dips-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "197-1.png",
+        "source": "https://wger.de/media/exercise-images/83/Bench-dips-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Supino fechado": {
+    "wger_id": 76,
+    "instructions": "Posição inicial: Deite no banco, com pés firmes, e segure a barra com as mãos próximas à largura dos ombros.\nMovimento: Desça a barra em direção à parte inferior do peito e empurre para cima.\nRespiração: Solte o ar ao empurrar o peso e inspire ao descê-lo com controle.\nCuidados: Mantenha os cotovelos próximos ao tronco e use suporte de segurança ou ajuda para a barra.",
+    "language": "pt",
+    "equipment": "Barbell, Bench",
+    "muscles": [
+      "triceps"
+    ],
+    "source": "https://wger.de/en/exercise/76/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "76-0.png",
+        "source": "https://wger.de/media/exercise-images/88/Narrow-grip-bench-press-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "76-1.png",
+        "source": "https://wger.de/media/exercise-images/76/9abec4e4-90ba-44f9-9e6e-5e35f7273078.png.400x400_q85.png",
+        "author": "nishant0712",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "note": "Miniatura 400px gerada pelo wger; licença da imagem original preservada."
+      }
+    ]
+  },
+  "Agachamento livre": {
+    "wger_id": 1801,
+    "instructions": "Posição inicial: Apoie a barra na parte superior das costas, com os pés na largura dos ombros e pontas ligeiramente para fora.\nMovimento: Flexione quadris e joelhos para descer; empurre o chão com os pés inteiros para subir.\nRespiração: Inspire e firme o abdômen antes de descer; solte o ar de forma controlada durante a subida.\nCuidados: Mantenha joelhos acompanhando os pés, coluna neutra e suportes de segurança ajustados.",
+    "language": "pt",
+    "equipment": "Barbell",
+    "muscles": [
+      "hamstring",
+      "gluteal",
+      "quadriceps"
+    ],
+    "source": "https://wger.de/en/exercise/1801/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "images": [
+      {
+        "file": "1801-0.webp",
+        "source": "https://wger.de/media/exercise-images/1801/60043328-1cfb-4289-9865-aaf64d5aaa28.jpg",
+        "author": "Workout Guru",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      {
+        "file": "1801-1.webp",
+        "source": "https://wger.de/media/exercise-images/1801/68720d5e-f422-47ac-81e4-c7b51144d302.jpg",
+        "author": "Workout Guru",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Agachamento no Smith": {
+    "wger_id": 1747,
+    "instructions": "Posição inicial: Ajuste as travas, apoie a barra nas costas e posicione os pés para manter o apoio completo no chão.\nMovimento: Destrave a barra, flexione quadris e joelhos para descer e empurre o chão para subir.\nRespiração: Inspire durante a descida e solte o ar ao empurrar o chão para subir.\nCuidados: Não afunde a lombar nem deixe os joelhos caírem para dentro; teste a trajetória com carga leve.",
+    "language": "pt",
+    "equipment": "",
+    "muscles": [
+      "gluteal",
+      "quadriceps"
+    ],
+    "source": "https://wger.de/en/exercise/1747/view/",
+    "author": "Tierrasverdes",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "images": [
+      {
+        "file": "1747-0.jpg",
+        "source": "https://wger.de/media/exercise-images/1747/af9647dd-04ec-4adf-9c07-4e33edb77277.jpg",
+        "author": "wger contributors",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Agachamento hack": {
+    "wger_id": 375,
+    "instructions": "Posição inicial: Apoie costas e ombros na máquina, com os pés inteiros na plataforma. Ajuste as travas de segurança.\nMovimento: Libere a trava, flexione os joelhos para descer e empurre a plataforma para subir.\nRespiração: Inspire durante a descida e solte o ar ao empurrar o chão para subir.\nCuidados: Mantenha as costas no encosto, os calcanhares apoiados e não trave os joelhos.",
+    "language": "pt",
+    "equipment": "",
+    "muscles": [
+      "quadriceps"
+    ],
+    "source": "https://wger.de/en/exercise/375/view/",
+    "author": "wger.de",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "375-0.png",
+        "source": "https://wger.de/media/exercise-images/130/Narrow-stance-hack-squats-1-1024x721.png.400x400_q85.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "note": "Miniatura 400px gerada pelo wger; licença da imagem original preservada."
+      },
+      {
+        "file": "375-1.png",
+        "source": "https://wger.de/media/exercise-images/130/Narrow-stance-hack-squats-2-1024x721.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Agachamento búlgaro": {
+    "wger_id": 1706,
+    "instructions": "Posição inicial: Fique de costas para um banco firme e apoie o peito de um pé nele; o outro pé permanece à frente, no chão.\nMovimento: Flexione a perna da frente para descer o corpo e empurre o chão com esse pé para subir.\nRespiração: Inspire durante a descida e solte o ar ao empurrar o chão para subir.\nCuidados: Mantenha o quadril alinhado, joelho acompanhando o pé e use apoio para equilíbrio se necessário.",
+    "language": "pt",
+    "equipment": "Dumbbell",
+    "muscles": [
+      "gluteal",
+      "quadriceps"
+    ],
+    "source": "https://wger.de/en/exercise/1706/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "images": [
+      {
+        "file": "1706-0.jpg",
+        "source": "https://wger.de/media/exercise-images/1706/0c5243cc-2539-4005-aee0-d3a8c5d3a32c.jfif",
+        "author": "AlucardEvil40",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Cadeira extensora": {
+    "wger_id": 369,
+    "instructions": "Posição inicial: Ajuste o encosto para alinhar os joelhos ao eixo da máquina e posicione o rolo acima dos tornozelos.\nMovimento: Estenda os joelhos e volte devagar à posição inicial.\nRespiração: Solte o ar ao estender os joelhos e inspire no retorno.\nCuidados: Mantenha quadril e costas apoiados; não dê trancos nem trave os joelhos.",
+    "language": "pt",
+    "equipment": "",
+    "muscles": [
+      "quadriceps"
+    ],
+    "source": "https://wger.de/en/exercise/369/view/",
+    "author": "jptjptjptjpt",
+    "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "images": [
+      {
+        "file": "369-0.jpg",
+        "source": "https://wger.de/media/exercise-images/369/78c915d1-e46d-4d30-8124-65d68664c3ef.png",
+        "author": "Franpol",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      {
+        "file": "369-1.png",
+        "source": "https://wger.de/media/exercise-images/369/4d621b17-f6cb-4107-97c0-9f44e9a2dbc6.webp.400x400_q85.png",
+        "author": "wger contributors",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "note": "Miniatura 400px gerada pelo wger; licença da imagem original preservada."
+      }
+    ]
+  },
+  "Mesa flexora": {
+    "wger_id": 365,
+    "instructions": "Posição inicial: Deite de barriga para baixo, com os joelhos alinhados ao eixo da máquina e o rolo acima dos calcanhares.\nMovimento: Flexione os joelhos para aproximar os calcanhares dos glúteos e retorne devagar.\nRespiração: Solte o ar ao dobrar os joelhos e inspire ao retornar lentamente.\nCuidados: Mantenha o quadril no banco e evite arquear a lombar.",
+    "language": "pt",
+    "equipment": "",
+    "muscles": [
+      "hamstring"
+    ],
+    "source": "https://wger.de/en/exercise/365/view/",
+    "author": "wger.de",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "365-0.png",
+        "source": "https://wger.de/media/exercise-images/154/lying-leg-curl-machine-large-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "365-1.png",
+        "source": "https://wger.de/media/exercise-images/154/lying-leg-curl-machine-large-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Cadeira flexora": {
+    "wger_id": 366,
+    "instructions": "Posição inicial: Sente com as costas no encosto, joelhos alinhados ao eixo e pernas sobre o rolo. Ajuste o apoio das coxas.\nMovimento: Dobre os joelhos trazendo os pés para baixo e para trás; retorne com controle.\nRespiração: Solte o ar ao dobrar os joelhos e inspire ao retornar lentamente.\nCuidados: Não levante o quadril nem deixe os pesos baterem.",
+    "language": "pt",
+    "equipment": "",
+    "muscles": [
+      "hamstring"
+    ],
+    "source": "https://wger.de/en/exercise/366/view/",
+    "author": "wger.de",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "366-0.png",
+        "source": "https://wger.de/media/exercise-images/117/seated-leg-curl-large-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "366-1.png",
+        "source": "https://wger.de/media/exercise-images/117/seated-leg-curl-large-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Afundo (passada)": {
+    "wger_id": 984,
+    "instructions": "Posição inicial: Em pé, dê um passo à frente, mantendo os pés afastados lateralmente para ter equilíbrio.\nMovimento: Dobre os dois joelhos para descer e empurre o chão com a perna da frente para voltar; alterne as pernas.\nRespiração: Inspire durante a descida e solte o ar ao empurrar o chão para subir.\nCuidados: Mantenha o joelho da frente alinhado ao pé e evite bater o joelho de trás no chão.",
+    "language": "pt",
+    "equipment": "none (bodyweight exercise)",
+    "muscles": [
+      "gluteal",
+      "quadriceps"
+    ],
+    "source": "https://wger.de/en/exercise/984/view/",
+    "author": "",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "images": [
+      {
+        "file": "984-0.jpg",
+        "source": "https://wger.de/media/exercise-images/984/5c7ffe68-e7b2-47f3-a22a-f9cc28640432.png",
+        "author": "Franpol",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Cadeira adutora": {
+    "wger_id": 12,
+    "instructions": "Posição inicial: Sente com as costas apoiadas e as almofadas na parte interna das coxas. Ajuste uma abertura confortável.\nMovimento: Feche as pernas contra a resistência e volte devagar.\nRespiração: Solte o ar ao fechar as pernas e inspire ao retornar à abertura inicial.\nCuidados: Não force a abertura inicial nem use impulso do tronco.",
+    "language": "pt",
+    "equipment": "",
+    "muscles": [
+      "adductors"
+    ],
+    "source": "https://wger.de/en/exercise/12/view/",
+    "author": "flori",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "12-0.webp",
+        "source": "https://wger.de/media/exercise-images/12/4a42cc6f-648d-40cc-a72a-c49dd47e1667.webp",
+        "author": "wger contributors",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ],
+    "mapping_note": "Mapeamento do Nutrify ajustado ao movimento identificado pelo nome; atribuição do texto original preservada."
+  },
+  "Cadeira abdutora": {
+    "wger_id": 1748,
+    "instructions": "Posição inicial: Sente com as costas apoiadas e almofadas na parte externa das coxas.\nMovimento: Afaste as pernas contra a resistência e retorne de forma controlada.\nRespiração: Solte o ar ao afastar as pernas e inspire no retorno controlado.\nCuidados: Não retire o quadril do banco nem balance o tronco.",
+    "language": "pt",
+    "equipment": "",
+    "muscles": [
+      "gluteal"
+    ],
+    "source": "https://wger.de/en/exercise/1748/view/",
+    "author": "Tierrasverdes",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "images": [
+      {
+        "file": "1748-0.jpg",
+        "source": "https://wger.de/media/exercise-images/1748/923a3ff7-c269-49bd-9f03-697151a40f06.jpg",
+        "author": "wger contributors",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Ponte de glúteos": {
+    "wger_id": 265,
+    "instructions": "Posição inicial: Deite de costas com joelhos dobrados e pés no chão, próximos ao quadril.\nMovimento: Eleve o quadril até alinhar ombros, quadris e joelhos; contraia os glúteos e desça devagar.\nRespiração: Solte o ar ao elevar o quadril e inspire ao descê-lo.\nCuidados: Não hiperestenda a lombar nem empurre o chão com a cabeça.",
+    "language": "pt",
+    "equipment": "",
+    "muscles": [
+      "gluteal"
+    ],
+    "source": "https://wger.de/en/exercise/265/view/",
+    "author": "tdprice12",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "images": [
+      {
+        "file": "265-0.png",
+        "source": "https://wger.de/media/exercise-images/265/7528acb4-b2cc-4b75-b6ae-d514cbd4f78b.png.400x400_q85.png",
+        "author": "wger contributors",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "note": "Miniatura 400px gerada pelo wger; licença da imagem original preservada."
+      }
+    ]
+  },
+  "Glúteo na polia (coice)": {
+    "wger_id": 1131,
+    "instructions": "Posição inicial: Prenda a tornozeleira na polia baixa, segure um apoio e estabilize o tronco.\nMovimento: Leve a perna com tornozeleira para trás, estendendo o quadril, e volte com controle.\nRespiração: Solte o ar ao levar a perna para trás e inspire no retorno.\nCuidados: Mantenha a pelve alinhada; não compense arqueando a lombar.",
+    "language": "pt",
+    "equipment": "Cable machine",
+    "muscles": [
+      "gluteal"
+    ],
+    "source": "https://wger.de/en/exercise/1131/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "images": [
+      {
+        "file": "1131-0.jpg",
+        "source": "https://wger.de/media/exercise-images/1131/3bcf3024-2dcc-4995-9694-55aa2c2e4a9a.png",
+        "author": "Franpol",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Panturrilha em pé": {
+    "wger_id": 622,
+    "instructions": "Posição inicial: Em pé na máquina ou em apoio estável, posicione a parte da frente dos pés na base e mantenha os joelhos destravados.\nMovimento: Eleve os calcanhares, faça uma breve pausa e abaixe lentamente pela amplitude confortável.\nRespiração: Solte o ar ao elevar os calcanhares e inspire ao baixá-los.\nCuidados: Movimente os tornozelos sem saltar ou travar os joelhos. Garanta que os pés não escorreguem do apoio.",
+    "language": "pt",
+    "equipment": "",
+    "muscles": [
+      "calves"
+    ],
+    "source": "https://wger.de/en/exercise/622/view/",
+    "author": "wger.de",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "622-0.jpg",
+        "source": "https://wger.de/media/exercise-images/622/9a429bd0-afd3-4ad0-8043-e9beec901c81.jpeg",
+        "author": "clafal",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Panturrilha sentado": {
+    "wger_id": 1620,
+    "instructions": "Posição inicial: Sente com joelhos dobrados e a parte da frente dos pés no apoio. Ajuste a almofada sobre as coxas.\nMovimento: Eleve os calcanhares, faça uma breve pausa e abaixe lentamente pela amplitude confortável.\nRespiração: Solte o ar ao elevar os calcanhares e inspire ao baixá-los.\nCuidados: Movimente os tornozelos sem saltar ou travar os joelhos. Garanta que os pés não escorreguem do apoio.",
+    "language": "pt",
+    "equipment": "Dumbbell",
+    "muscles": [
+      "calves"
+    ],
+    "source": "https://wger.de/en/exercise/1620/view/",
+    "author": "AlucardEvil40",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "images": [
+      {
+        "file": "1620-0.jpg",
+        "source": "https://wger.de/media/exercise-images/1620/edd40e39-e337-4460-a8dd-6127d40ddd16.jpeg",
+        "author": "AlucardEvil40",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Panturrilha no leg press": {
+    "wger_id": 146,
+    "instructions": "Posição inicial: Apoie costas e quadril no leg press, com a parte da frente dos pés firme na plataforma e joelhos destravados.\nMovimento: Eleve os calcanhares, faça uma breve pausa e abaixe lentamente pela amplitude confortável.\nRespiração: Solte o ar ao elevar os calcanhares e inspire ao baixá-los.\nCuidados: Movimente os tornozelos sem saltar ou travar os joelhos. Garanta que os pés não escorreguem do apoio.",
+    "language": "pt",
+    "equipment": "",
+    "muscles": [
+      "calves"
+    ],
+    "source": "https://wger.de/en/exercise/146/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "images": [
+      {
+        "file": "146-0.jpg",
+        "source": "https://wger.de/media/exercise-images/146/8b284904-d072-4381-a256-4c81d8fd9c1f.png",
+        "author": "wger contributors",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Abdominal crunch": {
+    "wger_id": 167,
+    "instructions": "Posição inicial: Deite de costas, com joelhos dobrados e pés no chão. Apoie as mãos no peito ou levemente atrás da cabeça.\nMovimento: Eleve os ombros, aproximando as costelas da pelve, e desça lentamente.\nRespiração: Solte o ar ao elevar os ombros e inspire ao descer.\nCuidados: Não puxe o pescoço nem tente sentar completamente.",
+    "language": "pt",
+    "equipment": "Gym mat",
+    "muscles": [
+      "abs"
+    ],
+    "source": "https://wger.de/en/exercise/167/view/",
+    "author": "wger.de",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "167-0.png",
+        "source": "https://wger.de/media/exercise-images/91/Crunches-1.png",
+        "author": "wger contributors",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "167-1.png",
+        "source": "https://wger.de/media/exercise-images/91/Crunches-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Elevação de pernas": {
+    "wger_id": 377,
+    "instructions": "Posição inicial: Deite de costas no banco e segure um apoio firme; mantenha as pernas estendidas ou levemente dobradas.\nMovimento: Eleve as pernas com controle e abaixe até onde consegue manter a lombar estável.\nRespiração: Solte o ar ao elevar e inspire na descida.\nCuidados: Não balance as pernas nem deixe a lombar arquear; reduza a amplitude se necessário.",
+    "language": "pt",
+    "equipment": "Gym mat",
+    "muscles": [
+      "abs"
+    ],
+    "source": "https://wger.de/en/exercise/377/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "377-0.png",
+        "source": "https://wger.de/media/exercise-images/125/Leg-raises-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "377-1.png",
+        "source": "https://wger.de/media/exercise-images/125/Leg-raises-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ]
+  },
+  "Prancha": {
+    "wger_id": 458,
+    "instructions": "Posição inicial: Apoie os antebraços com cotovelos abaixo dos ombros e as pontas dos pés no chão.\nMovimento: Mantenha cabeça, tronco e quadril alinhados pelo tempo previsto.\nRespiração: Respire de forma contínua enquanto mantém o abdômen firme.\nCuidados: Não deixe o quadril cair nem eleve os ombros em direção às orelhas.",
+    "language": "pt",
+    "equipment": "none (bodyweight exercise)",
+    "muscles": [
+      "abs"
+    ],
+    "source": "https://wger.de/en/exercise/458/view/",
+    "author": "YYCfit / BFad07",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "458-0.png",
+        "source": "https://wger.de/media/exercise-images/458/b7bd9c28-9f1d-4647-bd17-ab6a3adf5770.png",
+        "author": "utkb",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Abdominal oblíquo": {
+    "wger_id": 576,
+    "instructions": "Posição inicial: Em pé, segure um halter em uma mão, com os pés na largura do quadril.\nMovimento: Incline levemente o tronco para o lado do peso e retorne à posição vertical; depois troque o lado.\nRespiração: Solte o ar ao retornar à posição vertical e inspire ao inclinar.\nCuidados: Não gire o tronco nem force a coluna; use amplitude pequena e controlada.",
+    "language": "pt",
+    "equipment": "Gym mat",
+    "muscles": [
+      "obliques"
+    ],
+    "source": "https://wger.de/en/exercise/576/view/",
+    "author": "kwrindy",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "images": [
+      {
+        "file": "576-0.png",
+        "source": "https://wger.de/media/exercise-images/176/Cross-body-crunch-1.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "576-1.png",
+        "source": "https://wger.de/media/exercise-images/176/Cross-body-crunch-2.png",
+        "author": "Everkinetic",
+        "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
+    "mapping_note": "Mapeamento do Nutrify ajustado ao movimento identificado pelo nome; atribuição do texto original preservada."
+  },
+  "Roda abdominal": {
+    "wger_id": 1573,
+    "instructions": "Posição inicial: Ajoelhe em um colchonete e segure a roda abaixo dos ombros, com o abdômen firme.\nMovimento: Role a roda à frente somente até manter o tronco estável e puxe de volta.\nRespiração: Inspire ao avançar e solte o ar ao voltar, sem perder a firmeza do abdômen.\nCuidados: Não deixe a lombar afundar nem avance além da sua capacidade de retornar.",
+    "language": "pt",
+    "equipment": "none (bodyweight exercise)",
+    "muscles": [
+      "abs"
+    ],
+    "source": "https://wger.de/en/exercise/1573/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "images": [
+      {
+        "file": "1573-0.png",
+        "source": "https://wger.de/media/exercise-images/1573/a9ab402b-61ef-4d60-b91a-df52bf7f41a9.jpg",
+        "author": "wger contributors",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  },
+  "Kettlebell swing": {
+    "wger_id": 960,
+    "instructions": "Posição inicial: Segure o kettlebell com as duas mãos, pés um pouco além da largura do quadril e joelhos destravados.\nMovimento: Leve o quadril para trás e depois estenda-o para impulsionar o peso até aproximadamente a altura do peito; deixe-o retornar entre as pernas.\nRespiração: Solte o ar na extensão do quadril e inspire no retorno.\nCuidados: Não levante o peso com os braços nem incline a coluna para trás no topo.",
+    "language": "pt",
+    "equipment": "Kettlebell",
+    "muscles": [
+      "gluteal",
+      "hamstring"
+    ],
+    "source": "https://wger.de/en/exercise/960/view/",
+    "author": "jptjptjptjpt",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "images": [
+      {
+        "file": "960-0.png",
+        "source": "https://wger.de/media/exercise-images/960/da4d0560-da89-4bb5-b91f-746458fb04ad.png.400x400_q85.png",
+        "author": "wger contributors",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "note": "Miniatura 400px gerada pelo wger; licença da imagem original preservada."
+      }
+    ],
+    "mapping_note": "Mapeamento do Nutrify ajustado ao movimento identificado pelo nome; atribuição do texto original preservada."
+  }
+}

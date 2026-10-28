@@ -45,6 +45,15 @@ export function WaterWidget({ date }: { date: string }) {
         <View style={[styles.fill, { width: `${pct * 100}%` }]} />
       </View>
       <View style={styles.quickRow}>
+        <Pressable
+          testID="water-sub-200"
+          disabled={total <= 0 || add.isPending}
+          onPress={() => add.mutate(-200)}
+          style={({ pressed }) => [styles.quickBtn, (total <= 0 || pressed) && { opacity: total <= 0 ? 0.35 : 0.7 }]}
+        >
+          <Ionicons name="remove" size={14} color={colors.onSurfaceSecondary} />
+          <Text style={styles.quickText}>200 ml</Text>
+        </Pressable>
         {QUICK.map((q) => (
           <Pressable
             key={q}

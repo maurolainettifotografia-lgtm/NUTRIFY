@@ -59,7 +59,7 @@ Strava agora diferencia 403 de token inválido: mantém conexão/cache e informa
 - MongoDB isolado: concorrência, reenvio, conflito, usuário distinto, remoção, reparo de gravação secundária com um novo cliente de banco soma com mais de 100 registros e exclusão durante um reenvio.
 - Strava: conversão de unidades, kcal ausente, 401/403/429/5xx, bloqueio global e rotação criptografada de ambos os tokens com transporte simulado.
 - **8 testes do cliente HTTP aprovados**: autenticação, offline, expiração, 401 atrasado, timeout, erro não JSON, 204 e mensagem de validação. Executam o cliente real transpilado, com rede/armazenamento isolados.
-- TypeScript sem erros; ESLint de app/src sem erros; export web aprovado; `git diff --check` aprovado.
+- TypeScript sem erros; ESLint de app/src sem erros; export web aprovado; `git diff d94ff1e a2a865f --check` do patch de correções aprovado. A consolidação preserva espaços em branco herdados de alguns arquivos gerados.
 - Interface local com conta fictícia: login, painel, abrir integrações, mapa muscular, figuras/posições, instruções e créditos, duas séries concluídas e sessão salva. Recarregar preservou histórico e login. Sem API, manteve a navegação e mostrou aviso; reconectar recuperou os registros.
 - Layout inspecionado em desktop e 390 × 844. Sem erros de console na execução online examinada. Validação visual por amostragem de Supino e Face pull, além da checagem dos 76 arquivos e guias. Os 76 WebP foram decodificados/verificados com Pillow e têm hashes distintos.
 - **Serviço real após deploy:** quatro POSTs concorrentes idênticos geraram uma sessão e um lançamento calórico. Excluir a sessão removeu o lançamento; reenvio após exclusão retornou 409. Somente dados sintéticos foram usados.

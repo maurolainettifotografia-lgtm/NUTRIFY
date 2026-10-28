@@ -10,6 +10,7 @@ import { useTheme } from "@/src/theme";
 const TABS = [
   { name: "index", label: "Painel", icon: "grid", sf: "square.grid.2x2.fill" },
   { name: "diary", label: "Diário", icon: "book", sf: "book.fill" },
+  { name: "workouts", label: "Treinos", icon: "barbell", sf: "dumbbell.fill" },
   { name: "reports", label: "Evolução", icon: "stats-chart", sf: "chart.line.uptrend.xyaxis" },
   { name: "profile", label: "Perfil", icon: "person", sf: "person.fill" },
 ] as const;

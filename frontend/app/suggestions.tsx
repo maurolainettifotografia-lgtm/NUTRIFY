@@ -6,6 +6,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Ionicons from "@react-native-vector-icons/ionicons";
 
 import { apiFetch } from "@/src/api";
+import { AiConsentGate } from "@/src/components/ai-consent-gate";
 import { Button } from "@/src/components/primitives";
 import { useToast } from "@/src/components/toast";
 import { MEALS, MEAL_LABELS, todayStr } from "@/src/constants";
@@ -26,7 +27,7 @@ function defaultMeal() {
   return "ceia";
 }
 
-export default function Suggestions() {
+function SuggestionsInner() {
   const styles = useStyles();
   const { colors } = useTheme();
   const insets = useSafeAreaInsets();
@@ -63,6 +64,7 @@ export default function Suggestions() {
     },
     onSuccess: (id) => {
       qc.invalidateQueries({ queryKey: ["diary", date] });
+      qc.invalidateQueries({ queryKey: ["reports"] });
       setAdded((a) => ({ ...a, [id]: true }));
       toast.show(`Refeição adicionada ao ${MEAL_LABELS[meal]}`);
     },
@@ -213,3 +215,11 @@ const useStyles = makeStyles((colors) => ({
   emptyText: { color: colors.muted, fontSize: 14, textAlign: "center", lineHeight: 20 },
   disclaimer: { color: colors.muted, fontSize: 11, textAlign: "center", opacity: 0.7 },
 }));
+
+export default function Suggestions() {
+  return (
+    <AiConsentGate>
+      <SuggestionsInner />
+    </AiConsentGate>
+  );
+}

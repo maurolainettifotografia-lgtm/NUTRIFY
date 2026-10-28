@@ -32,6 +32,7 @@ export default function Diary() {
     mutationFn: (id: string) => apiFetch(`/diary/${id}`, { method: "DELETE" }),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ["diary", date] });
+      qc.invalidateQueries({ queryKey: ["reports"] });
       toast.show("Alimento removido");
     },
   });
@@ -40,6 +41,7 @@ export default function Diary() {
     mutationFn: () => apiFetch("/diary/copy", { method: "POST", body: { from_date: addDays(date, -1), to_date: date } }),
     onSuccess: (r: any) => {
       qc.invalidateQueries({ queryKey: ["diary", date] });
+      qc.invalidateQueries({ queryKey: ["reports"] });
       toast.show(r.copied > 0 ? `${r.copied} itens copiados de ontem` : "Nada para copiar de ontem", r.copied > 0 ? "success" : "info");
     },
   });
@@ -121,7 +123,9 @@ function EntryRow({ entry, onDelete }: { entry: DiaryEntry; onDelete: () => void
   return (
     <View style={styles.entry}>
       <View style={{ flex: 1 }}>
-        <Text style={styles.entryName} numberOfLines={1}>{entry.name}</Text>
+        <Text style={styles.entryName} numberOfLines={entry.items ? 3 : 1}>{entry.name}</Text>
+        {entry.items?.map((item, i) => <Text key={i} style={styles.entrySub}>{item.grams} g · {item.name} · ~{Math.round(item.calories * item.grams / 100)} kcal</Text>)}
+        {entry.estimated ? <Text style={styles.entrySub}>{entry.source === "ai_text" ? "Estimativa da IA" : "Estimativa · TACO/referências comuns"}</Text> : null}
         <Text style={styles.entrySub}>
           {Math.round(entry.grams)} g · {Math.round(entry.computed.calories)} kcal · P {Math.round(entry.computed.protein)} C {Math.round(entry.computed.carbs)} G {Math.round(entry.computed.fat)}
         </Text>

@@ -11,13 +11,19 @@ export type Goals = {
   fat: number;
   athlete_mode: boolean;
   water_goal_ml: number;
+  calorie_floor?: number;
+  floor_applied?: boolean;
+  below_floor?: boolean;
 };
 
 export type Profile = {
+  personal_plan?: { text: string; notice: string; created_at: string; profile_snapshot: Record<string, unknown> };
   onboarded: boolean;
   name?: string;
   sex?: string;
   birth_date?: string;
+  age_years?: number;
+  age_recorded_on?: string;
   height_cm?: number;
   weight_kg?: number;
   goal_weight_kg?: number;
@@ -30,6 +36,10 @@ export type Profile = {
 };
 
 export type DiaryEntry = {
+  estimated?: boolean;
+  source?: string;
+  assumptions?: string[];
+  items?: { name: string; grams: number; calories: number; protein: number; carbs: number; fat: number }[];
   id: string;
   meal: string;
   name: string;
@@ -73,8 +83,102 @@ export function useWater(date: string) {
 }
 
 export function useWorkouts(date: string) {
-  return useQuery<{ results: { id: string; type: string; duration_min: number; calories: number }[] }>({
+  return useQuery<{ results: { id: string; type: string; title?: string | null; duration_min: number; calories: number }[] }>({
     queryKey: ["workouts", date],
     queryFn: () => apiFetch("/workouts", { params: { date } }),
+  });
+}
+
+export type RoutineExercise = {
+  name: string;
+  muscle_group: string;
+  sets: number;
+  reps: number;
+  weight_kg: number;
+  rest_s: number;
+  notes?: string | null;
+};
+
+export type Routine = {
+  id: string;
+  name: string;
+  notes?: string | null;
+  exercises: RoutineExercise[];
+  exercise_count: number;
+  last_done?: string | null;
+};
+
+export type SessionSet = { reps: number; weight_kg: number };
+
+export type PersonalRecord = { name: string; kind: "carga" | "1rm" | "reps"; value: number; previous: number; reps?: number | null };
+
+export type Session = {
+  calories_burned?: number;
+  records?: PersonalRecord[];
+  id: string;
+  routine_id?: string | null;
+  routine_name: string;
+  date: string;
+  duration_min: number;
+  volume_kg: number;
+  total_sets: number;
+  exercises: { name: string; muscle_group: string; sets: SessionSet[] }[];
+};
+
+export type LastPerformance = Record<string, { name: string; date: string; sets: SessionSet[] }>;
+
+export function useRoutines() {
+  return useQuery<{ results: Routine[] }>({
+    queryKey: ["routines"],
+    queryFn: () => apiFetch("/routines"),
+  });
+}
+
+export function useSessions(limit = 10) {
+  return useQuery<{ results: Session[] }>({
+    queryKey: ["sessions", limit],
+    queryFn: () => apiFetch("/sessions", { params: { limit } }),
+  });
+}
+
+export type Consent = { policy_version: string; ai_processing: boolean; terms_accepted: boolean };
+
+export function useConsent() {
+  return useQuery<Consent>({
+    queryKey: ["consent"],
+    queryFn: () => apiFetch("/account/consent"),
+  });
+}
+
+export type ProgressPoint = {
+  date: string;
+  max_weight: number;
+  est_1rm: number;
+  max_reps: number;
+  bw_reps: number;
+  volume: number;
+  sets: SessionSet[];
+};
+
+export type ExerciseProgress = {
+  name: string;
+  points: ProgressPoint[];
+  records: { max_weight: { value: number; date: string } | null; best_1rm: { value: number; date: string } | null };
+};
+
+export type ExerciseDone = { name: string; sessions: number; last_date: string };
+
+export function useProgressExercises() {
+  return useQuery<{ results: ExerciseDone[] }>({
+    queryKey: ["progress", "exercises"],
+    queryFn: () => apiFetch("/progress/exercises"),
+  });
+}
+
+export function useExerciseProgress(name: string | null) {
+  return useQuery<ExerciseProgress>({
+    queryKey: ["progress", "exercise", name],
+    queryFn: () => apiFetch("/progress/exercise", { params: { name: name ?? "" } }),
+    enabled: !!name,
   });
 }

@@ -1,7 +1,7 @@
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Stack, useRouter, useSegments } from "expo-router";
 import { useEffect } from "react";
-import { ActivityIndicator, LogBox, StyleSheet, View } from "react-native";
+import { ActivityIndicator, StyleSheet, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { KeyboardProvider } from "react-native-keyboard-controller";
 import { SafeAreaProvider } from "react-native-safe-area-context";
@@ -15,7 +15,6 @@ import { queryClient } from "@/src/query-client";
 import { setColorScheme, useTheme } from "@/src/theme";
 import { storage } from "@/src/utils/storage";
 
-LogBox.ignoreAllLogs(true);
 
 function RootNavigator() {
   const { user, loading } = useAuth();
@@ -27,9 +26,9 @@ function RootNavigator() {
     if (loading) return;
     const first = segments[0] as string | undefined;
     if (!user) {
-      if (first !== "welcome") router.replace("/welcome");
+      if (first !== "welcome" && first !== "privacy") router.replace("/welcome");
     } else if (!user.onboarded) {
-      if (first !== "onboarding") router.replace("/onboarding");
+      if (first !== "onboarding" && first !== "privacy") router.replace("/onboarding");
     } else if (first === "welcome" || first === "onboarding" || first === undefined) {
       router.replace("/");
     }
@@ -52,7 +51,12 @@ function RootNavigator() {
       <Stack.Screen name="scan" options={{ presentation: "modal" }} />
       <Stack.Screen name="assistant" />
       <Stack.Screen name="suggestions" />
+      <Stack.Screen name="personal-plan" />
       <Stack.Screen name="recipe-editor" />
+      <Stack.Screen name="routine-editor" />
+      <Stack.Screen name="workout-session" />
+      <Stack.Screen name="exercise-progress" />
+      <Stack.Screen name="privacy" />
       <Stack.Screen name="barcode" options={{ presentation: "modal" }} />
     </Stack>
   );

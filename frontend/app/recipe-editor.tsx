@@ -40,6 +40,7 @@ export default function RecipeEditor() {
 
   useEffect(() => {
     if (existing.data) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- Preenche o formulário ao carregar uma receita.
       setName(existing.data.name);
       setServings(String(existing.data.servings));
       setIngredients(existing.data.ingredients);

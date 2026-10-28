@@ -3,7 +3,10 @@ import { Platform } from "react-native";
 import * as Linking from "expo-linking";
 import * as WebBrowser from "expo-web-browser";
 
-import { apiFetch, clearToken, loadStoredToken, persistToken, setAuthToken } from "@/src/api";
+import { apiFetch, clearToken, loadStoredToken, persistToken, setAuthToken, subscribeSessionExpired } from "@/src/api";
+import { requestAppleCredential } from "@/src/apple-signin";
+
+import { queryClient } from "@/src/query-client";
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -19,7 +22,9 @@ type AuthState = {
   user: AppUser | null;
   loading: boolean;
   signingIn: boolean;
+  signInWithEmail: (email: string, password: string, name?: string) => Promise<void>;
   signInWithGoogle: () => Promise<void>;
+  signInWithApple: () => Promise<void>;
   signOut: () => Promise<void>;
   refreshUser: () => Promise<void>;
   setOnboarded: () => void;
@@ -50,8 +55,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         body: { session_id: sessionId },
       });
       await persistToken(data.session_token);
+      queryClient.clear();
       setUser(data.user);
     } catch (e) {
+      processedIds.current.delete(sessionId);
       console.error("session exchange failed", e);
     } finally {
       setSigningIn(false);
@@ -66,6 +73,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setUser(null);
     }
   }, []);
+
+  useEffect(() => subscribeSessionExpired(() => {
+    queryClient.clear();
+    setUser(null);
+  }), []);
 
   // Bootstrap on mount
   useEffect(() => {
@@ -102,7 +114,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
       if (mounted) setLoading(false);
     };
-    boot();
+    boot().catch((error) => {
+      console.error("Falha ao restaurar sessão", error);
+      if (mounted) setLoading(false);
+    });
     return () => {
       mounted = false;
     };
@@ -118,6 +133,20 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     });
     return () => sub.remove();
   }, [exchangeSession]);
+
+  const signInWithEmail = useCallback(async (email: string, password: string, name?: string) => {
+    setSigningIn(true);
+    try {
+      const data = await apiFetch<{ session_token: string; user: AppUser }>(name === undefined ? "/auth/login" : "/auth/register-pin", {
+        method: "POST", body: { email, password, ...(name === undefined ? {} : { name }) },
+      });
+      await persistToken(data.session_token);
+      queryClient.clear();
+      setUser(data.user);
+    } finally {
+      setSigningIn(false);
+    }
+  }, []);
 
   const signInWithGoogle = useCallback(async () => {
     setSigningIn(true);
@@ -144,12 +173,31 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, [exchangeSession]);
 
+  const signInWithApple = useCallback(async () => {
+    setSigningIn(true);
+    try {
+      const cred = await requestAppleCredential();
+      if (!cred) return; // a pessoa cancelou
+      const data = await apiFetch<{ session_token: string; user: AppUser }>("/auth/apple", { method: "POST", body: cred });
+      await persistToken(data.session_token);
+      queryClient.clear();
+      setUser(data.user);
+    } catch (e) {
+      console.error("apple sign in error", e);
+    } finally {
+      setSigningIn(false);
+    }
+  }, []);
+
   const signOut = useCallback(async () => {
     try {
       await apiFetch("/auth/logout", { method: "POST" });
     } catch {}
     await clearToken();
     setAuthToken(null);
+    queryClient.clear();
+    processedIds.current.clear();
+    capturedUrl.current = null;
     setUser(null);
   }, []);
 
@@ -159,7 +207,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <AuthContext.Provider
-      value={{ user, loading, signingIn, signInWithGoogle, signOut, refreshUser, setOnboarded }}
+      value={{ user, loading, signingIn, signInWithEmail, signInWithGoogle, signInWithApple, signOut, refreshUser, setOnboarded }}
     >
       {children}
     </AuthContext.Provider>

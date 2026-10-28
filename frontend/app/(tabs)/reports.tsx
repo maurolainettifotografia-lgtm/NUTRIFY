@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
-import { Dimensions, Pressable, ScrollView, Text, View } from "react-native";
-import { BarChart, LineChart } from "react-native-gifted-charts";
+import { Pressable, RefreshControl, ScrollView, Text, View } from "react-native";
+import { ResponsiveChart } from "@/src/components/responsive-chart";
+import { todayStr } from "@/src/constants";
+import { useAuth } from "@/src/auth-context";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import BottomSheet, { BottomSheetBackdrop, BottomSheetTextInput, BottomSheetView } from "@gorhom/bottom-sheet";
@@ -25,17 +27,18 @@ export default function Reports() {
   const insets = useSafeAreaInsets();
   const qc = useQueryClient();
   const toast = useToast();
+  const { user } = useAuth();
   const [period, setPeriod] = useState<"week" | "month">("week");
   const sheetRef = useRef<BottomSheet>(null);
   const [weightInput, setWeightInput] = useState("");
 
-  const { data } = useQuery<Report>({
-    queryKey: ["reports", period],
+  const { data, isError, refetch, isFetching } = useQuery<Report>({
+    queryKey: ["reports", period, user?.user_id],
     queryFn: () => apiFetch<Report>("/reports", { params: { period } }),
   });
 
   const addWeight = useMutation({
-    mutationFn: () => apiFetch("/weight", { method: "POST", body: { weight_kg: Number(weightInput) } }),
+    mutationFn: () => apiFetch("/weight", { method: "POST", body: { weight_kg: Number(weightInput.replace(",", ".")), date: todayStr() } }),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ["reports"] });
       qc.invalidateQueries({ queryKey: ["profile"] });
@@ -46,7 +49,6 @@ export default function Reports() {
     onError: () => toast.show("Erro ao registrar peso", "error"),
   });
 
-  const chartW = Dimensions.get("window").width - spacing.lg * 2 - spacing.lg * 2;
 
   const calBars = (data?.daily ?? []).map((d) => ({
     value: Math.round(d.calories),
@@ -80,54 +82,22 @@ export default function Reports() {
         ))}
       </View>
 
-      <ScrollView contentContainerStyle={[styles.scroll, { paddingBottom: insets.bottom + 24 }]} showsVerticalScrollIndicator={false}>
+      <ScrollView refreshControl={<RefreshControl refreshing={isFetching} onRefresh={() => refetch()} tintColor={colors.brandPrimary} />} contentContainerStyle={[styles.scroll, { paddingBottom: insets.bottom + 24 }]} showsVerticalScrollIndicator={false}>
+        {isError ? <Text style={styles.empty}>Não foi possível carregar sua evolução. Puxe para atualizar.</Text> : null}
         <Card>
           <Text style={styles.cardTitle}>Evolução do peso</Text>
           {weightLine.length >= 2 ? (
-            <LineChart
-              data={weightLine}
-              color={colors.brandPrimary}
-              thickness={3}
-              dataPointsColor={colors.brandPrimary}
-              startFillColor={colors.brandPrimary}
-              startOpacity={0.3}
-              endOpacity={0.02}
-              areaChart
-              curved
-              hideRules
-              yAxisColor="transparent"
-              xAxisColor={colors.border}
-              yAxisTextStyle={{ color: colors.muted, fontSize: 10 }}
-              xAxisLabelTextStyle={{ color: colors.muted, fontSize: 9 }}
-              width={chartW}
-              height={160}
-              initialSpacing={10}
-              noOfSections={4}
-              adjustToWidth
-            />
+            <ResponsiveChart data={weightLine} />
           ) : (
             <Text style={styles.empty}>Registre ao menos 2 medições para ver o gráfico.</Text>
           )}
+          {(data?.weights ?? []).slice(-5).reverse().map(w => <Text key={w.date} style={{ color: colors.onSurfaceSecondary, marginTop: 6 }}>{w.date.split("-").reverse().join("/")} · {String(w.weight_kg).replace(".", ",")} kg</Text>)}
         </Card>
 
         <Card>
           <Text style={styles.cardTitle}>Calorias por dia</Text>
           {calBars.some((b) => b.value > 0) ? (
-            <BarChart
-              data={calBars}
-              frontColor={colors.brandPrimary}
-              barWidth={period === "week" ? 22 : 8}
-              spacing={period === "week" ? 14 : 4}
-              hideRules
-              yAxisColor="transparent"
-              xAxisColor={colors.border}
-              yAxisTextStyle={{ color: colors.muted, fontSize: 10 }}
-              xAxisLabelTextStyle={{ color: colors.muted, fontSize: 9 }}
-              height={150}
-              width={chartW}
-              noOfSections={4}
-              barBorderRadius={4}
-            />
+            <ResponsiveChart data={calBars} bars />
           ) : (
             <Text style={styles.empty}>Sem dados suficientes para o período.</Text>
           )}
@@ -141,15 +111,7 @@ export default function Reports() {
           <AvgRow label="Gorduras" value={avg.fat} goal={goals.fat} unit="g" color={colors.warning} />
         </Card>
 
-        <Card>
-          <Text style={styles.cardTitle}>Metabolismo (Mifflin-St Jeor)</Text>
-          <View style={styles.metaRow}>
-            <MetaCell label="TMB" value={(data as any)?.goals?.bmr} />
-            <MetaCell label="TDEE" value={(data as any)?.goals?.tdee} />
-            <MetaCell label="Meta kcal" value={goals.calories} />
-          </View>
-          <Text style={styles.disclaimer}>Estimativas calculadas a partir do seu perfil. Não substituem orientação profissional.</Text>
-        </Card>
+
       </ScrollView>
 
       <BottomSheet
@@ -167,7 +129,7 @@ export default function Reports() {
             <BottomSheetTextInput
               testID="weight-input"
               value={weightInput}
-              onChangeText={(t) => setWeightInput(t.replace(/[^0-9.]/g, ""))}
+              onChangeText={(t) => setWeightInput(t.replace(/[^0-9.,]/g, ""))}
               keyboardType="decimal-pad"
               placeholder="72.5"
               placeholderTextColor={colors.muted}
@@ -175,7 +137,7 @@ export default function Reports() {
             />
             <Text style={styles.weightUnit}>kg</Text>
           </View>
-          <Button testID="save-weight" label="Salvar" onPress={() => addWeight.mutate()} disabled={!(Number(weightInput) > 20)} loading={addWeight.isPending} />
+          <Button testID="save-weight" label="Salvar" onPress={() => addWeight.mutate()} disabled={!(Number(weightInput.replace(",", ".")) >= 20 && Number(weightInput.replace(",", ".")) <= 500)} loading={addWeight.isPending} />
         </BottomSheetView>
       </BottomSheet>
     </View>
@@ -196,16 +158,6 @@ function AvgRow({ label, value, goal, unit, color }: { label: string; value: num
       <View style={styles.avgTrack}>
         <View style={[styles.avgFill, { width: `${pct * 100}%`, backgroundColor: color }]} />
       </View>
-    </View>
-  );
-}
-
-function MetaCell({ label, value }: { label: string; value?: number }) {
-  const styles = useStyles();
-  return (
-    <View style={styles.metaCell}>
-      <Text style={styles.metaValue}>{value ?? "--"}</Text>
-      <Text style={styles.metaLabel}>{label}</Text>
     </View>
   );
 }

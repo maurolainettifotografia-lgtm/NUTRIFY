@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { Pressable, Text, TextInput, View } from "react-native";
+import { useRouter } from "expo-router";
 import { KeyboardAwareScrollView } from "react-native-keyboard-controller";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useMutation } from "@tanstack/react-query";
@@ -26,15 +27,17 @@ type Form = {
   goal: string;
 };
 
-const STEPS = ["name", "sex", "birth", "height", "weight", "goal_weight", "activity", "goal"] as const;
+const STEPS = ["consent", "name", "sex", "birth", "height", "weight", "goal_weight", "activity", "goal"] as const;
 
 export default function Onboarding() {
   const styles = useStyles();
   const { colors } = useTheme();
   const insets = useSafeAreaInsets();
   const toast = useToast();
+  const router = useRouter();
   const { user, setOnboarded } = useAuth();
   const [step, setStep] = useState(0);
+  const [accepted, setAccepted] = useState(false);
   const [form, setForm] = useState<Form>({
     name: user?.name ?? "",
     sex: "",
@@ -64,6 +67,7 @@ export default function Onboarding() {
           goal_weight_kg: Number(form.goal_weight_kg),
           activity_level: form.activity_level,
           goal: form.goal,
+          accepted_terms: true,
         },
       });
     },
@@ -83,6 +87,8 @@ export default function Onboarding() {
   };
   const canContinue = useMemo(() => {
     switch (current) {
+      case "consent":
+        return accepted;
       case "name":
         return form.name.trim().length >= 2;
       case "sex":
@@ -100,7 +106,7 @@ export default function Onboarding() {
       case "goal":
         return form.goal !== "";
     }
-  }, [current, form, birthError]);
+  }, [current, form, birthError, accepted]);
 
   const onNext = () => {
     if (step < STEPS.length - 1) setStep((s) => s + 1);
@@ -130,6 +136,23 @@ export default function Onboarding() {
         keyboardShouldPersistTaps="handled"
       >
         <Animated.View key={current} entering={FadeIn.duration(250)} style={{ gap: spacing.lg }}>
+          {current === "consent" && (
+            <View style={{ gap: spacing.lg }}>
+              <StepTitle title="Antes de começar" subtitle="O Nutrify trata dados de saúde (peso, altura, alimentação e treinos) para calcular suas metas e mostrar sua evolução." />
+              <Text style={styles.consentText}>
+                Seus dados ficam na sua conta, não são vendidos, e você pode exportá-los ou excluir tudo quando quiser, em Perfil. Os recursos de IA (foto e chat) só funcionam se você ativá-los depois, e enviam as informações a provedores de IA.
+              </Text>
+              <Pressable testID="consent-privacy-link" onPress={() => router.push("/privacy")} hitSlop={8}>
+                <Text style={styles.consentLink}>Ler a Política de Privacidade</Text>
+              </Pressable>
+              <Pressable testID="consent-checkbox" onPress={() => setAccepted((a) => !a)} style={styles.consentRow}>
+                <Ionicons name={accepted ? "checkbox" : "square-outline"} size={26} color={accepted ? colors.brandPrimary : colors.muted} />
+                <Text style={styles.consentCheckText}>
+                  Tenho 18 anos ou mais e autorizo o tratamento dos meus dados de saúde, conforme a Política de Privacidade.
+                </Text>
+              </Pressable>
+            </View>
+          )}
           {current === "name" && (
             <StepText
               title="Como podemos te chamar?"
@@ -188,7 +211,7 @@ export default function Onboarding() {
           )}
           {current === "goal" && (
             <View style={{ gap: spacing.md }}>
-              <StepTitle title="Qual é o seu objetivo principal?" />
+              <StepTitle title="Qual é o seu objetivo principal?" subtitle="Suas metas serão estimativas e não substituem a orientação de um nutricionista ou médico." />
               {GOALS.map((g) => (
                 <Choice key={g.key} label={g.label} active={form.goal === g.key} onPress={() => set("goal", g.key)} icon={g.icon} testID={`goal-${g.key}`} />
               ))}
@@ -270,7 +293,8 @@ function validateBirth(day: string, month: string, year: string): string | null 
   const now = new Date();
   let age = now.getFullYear() - y;
   if (now.getMonth() < m - 1 || (now.getMonth() === m - 1 && now.getDate() < d)) age -= 1;
-  if (age < 10 || age > 110) return "Informe uma data de nascimento válida (idade entre 10 e 110 anos).";
+  if (age < 18) return "O Nutrify é para maiores de 18 anos.";
+  if (age > 110) return "Informe uma data de nascimento válida.";
   return null;
 }
 
@@ -299,6 +323,10 @@ const useStyles = makeStyles((colors) => ({
   scroll: { padding: spacing.xl, paddingTop: spacing["2xl"], flexGrow: 1 },
   question: { color: colors.onSurface, fontSize: 26, fontWeight: "800", lineHeight: 32 },
   subtitle: { color: colors.muted, fontSize: 15 },
+  consentText: { color: colors.onSurfaceSecondary, fontSize: 14, lineHeight: 21 },
+  consentLink: { color: colors.brandPrimary, fontSize: 14, fontWeight: "700", textDecorationLine: "underline" },
+  consentRow: { flexDirection: "row", alignItems: "flex-start", gap: spacing.md, backgroundColor: colors.surfaceSecondary, borderRadius: radius.lg, padding: spacing.lg },
+  consentCheckText: { flex: 1, color: colors.onSurface, fontSize: 14, lineHeight: 20 },
   inputWrap: {
     flexDirection: "row",
     alignItems: "center",

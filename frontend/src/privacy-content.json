@@ -1,0 +1,100 @@
+{
+  "sections": [
+    {
+      "title": "1. Quem é o responsável",
+      "body": [
+        "O Nutrify é desenvolvido por Mauro Lainetti, que é o controlador dos dados tratados no aplicativo, conforme a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018).",
+        "Contato para assuntos de privacidade: {{CONTATO}}"
+      ]
+    },
+    {
+      "title": "2. Quais dados tratamos",
+      "body": [
+        "• Conta: nome e e-mail, usados para autenticação. No cadastro por e-mail, guardamos apenas uma derivação protegida da senha. Se os logins sociais estiverem ativados, também podemos receber nome, e-mail e foto do provedor.",
+        "• Perfil: data de nascimento, sexo biológico, altura, peso, meta de peso, nível de atividade e objetivo.",
+        "• Registros: diário alimentar, peso, água, treinos feitos e montados, receitas, favoritos e alimentos criados por você.",
+        "• Conversas: mensagens trocadas com a Nutri, a assistente de IA.",
+        "• Fotos: imagens que você envia para reconhecer alimentos. Elas são enviadas ao provedor de IA para análise e não são guardadas pelo Nutrify.",
+        "• Uso técnico: a contagem diária de usos da IA, para limitar abusos."
+      ]
+    },
+    {
+      "title": "3. Dados de saúde",
+      "body": [
+        "Peso, altura, alimentação e treinos são dados pessoais sensíveis (LGPD, art. 11). Tratamos esses dados com base no seu consentimento específico, dado ao começar a usar o app, somente para o funcionamento dele: calcular metas, mostrar sua evolução e personalizar sugestões.",
+        "Você pode retirar o consentimento a qualquer momento excluindo sua conta."
+      ]
+    },
+    {
+      "title": "4. Para que usamos seus dados",
+      "body": [
+        "Calcular suas metas de calorias e macros; registrar e mostrar sua evolução; permitir que você monte treinos e receitas; reconhecer alimentos em fotos, sugerir refeições e conversar com a Nutri (somente se você ativar o uso de IA); e proteger o serviço contra abusos.",
+        "Não vendemos seus dados e não os usamos para publicidade."
+      ]
+    },
+    {
+      "title": "5. Com quem compartilhamos",
+      "body": [
+        "• Google, por meio da plataforma Emergent: somente quando o login Google estiver ativado e você escolher essa opção.",
+        "• Apple: para fazer o login com “Entrar com Apple”.",
+        "Groq (GroqCloud): provedor de IA desta versão de teste. Recebe mensagens, fotos de alimentos e os dados necessários para responder (como objetivos e metas), somente após seu consentimento e quando você usa a IA. Pode haver processamento fora do Brasil. Política do provedor: https://groq.com/privacy-policy.",
+        "• Open Food Facts: recebe apenas o texto da busca ou o código de barras, sem identificar você.",
+        "• Serviços de hospedagem e banco de dados, onde suas informações ficam armazenadas."
+      ]
+    },
+    {
+      "title": "6. Por quanto tempo guardamos",
+      "body": [
+        "Enquanto sua conta existir. Ao excluir a conta, apagamos tudo de forma definitiva: perfil, registros, treinos, receitas, favoritos e conversas.",
+        "Itens que você remove um a um (por exemplo, um treino do histórico) deixam de aparecer para você, mas podem permanecer em nossos sistemas até a exclusão da conta."
+      ]
+    },
+    {
+      "title": "7. Como excluir sua conta e seus dados",
+      "body": [
+        "No aplicativo: abra Perfil e toque em “Excluir minha conta e dados”. A exclusão é imediata e definitiva. Se você entrou com Apple, também revogamos o acesso do Nutrify à sua conta Apple.",
+        "Sem acesso ao aplicativo: escreva para {{CONTATO}}, a partir do e-mail da conta, pedindo a exclusão. Atendemos o pedido em até 30 dias."
+      ]
+    },
+    {
+      "title": "8. Seus direitos",
+      "body": [
+        "Pela LGPD (art. 18) você pode: confirmar que tratamos seus dados; acessá-los e levá-los com você (Perfil > Privacidade > Exportar meus dados); corrigi-los (editando seu perfil); eliminá-los (excluindo a conta); retirar o consentimento de IA (Perfil > Privacidade); e saber com quem compartilhamos (esta política).",
+        "Para qualquer outro pedido, escreva para {{CONTATO}}. Você também pode reclamar à Autoridade Nacional de Proteção de Dados (ANPD)."
+      ]
+    },
+    {
+      "title": "9. Segurança",
+      "body": [
+        "Adotamos medidas técnicas e organizacionais razoáveis para proteger seus dados, mas nenhum sistema é totalmente livre de riscos."
+      ]
+    },
+    {
+      "title": "10. Menores de idade",
+      "body": [
+        "O Nutrify é destinado a maiores de 18 anos e não coleta intencionalmente dados de menores."
+      ]
+    },
+    {
+      "title": "11. Aviso de saúde",
+      "body": [
+        "As metas, estimativas e respostas do app não substituem a orientação de nutricionista, médico ou educador físico. Procure um profissional antes de mudar sua alimentação ou treino, principalmente se você tiver alguma doença, estiver grávida ou tiver histórico de transtorno alimentar."
+      ]
+    },
+    {
+      "title": "12. Mudanças nesta política",
+      "body": [
+        "Podemos atualizar esta política. Quando a mudança for relevante, pediremos seu consentimento novamente."
+      ]
+    },
+    {
+      "title": "13. Conexão opcional com Strava",
+      "body": [
+        "Ao conectar o Strava, você autoriza a leitura das suas atividades, incluindo as privadas se permitir no Strava. Consultamos nome, data, modalidade, duração, distância e calorias informadas para exibir seus treinos recentes. Não coletamos mapas, rotas ou frequência cardíaca nessa integração.",
+        "Os dados ficam separados dos registros do Nutrify, disponíveis somente para você, e não são enviados à IA nem usados para ajustar metas alimentares nesta etapa. O cache é limitado a sete dias. Não exportamos esses dados para terceiros.",
+        "Para interromper a sincronização e apagar os dados importados, use Treinos > Desconectar Strava. Você também pode revogar o acesso nas configurações do Strava. A exclusão da sua conta Nutrify remove a conexão e os dados importados.",
+        "O Strava pode coletar informações de uso da API conforme suas políticas. A sincronização automática depende da disponibilidade do Strava e da hospedagem; o botão Sincronizar agora permite tentar novamente."
+      ]
+    }
+  ]
+}
